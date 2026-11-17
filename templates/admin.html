@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block title %}The keeper's room · Shelf & Screen{% endblock %}
+
+{% block head %}
+<meta name="robots" content="noindex">
+<style>
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 26px 0 40px; }
+    .stat { padding: 22px; }
+    .stat b { display: block; font-size: 38px; font-weight: 900; color: var(--moon); line-height: 1.1; }
+    .stat span { font-size: 14px; }
+
+    .week { display: flex; align-items: flex-end; gap: 10px; height: 160px; padding: 20px; margin-bottom: 40px; }
+    .day { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; gap: 6px; font-size: 13px; }
+    .bar { width: 100%; max-width: 46px; min-height: 4px; border-radius: 8px 8px 4px 4px; background: linear-gradient(var(--star), var(--moonglow)); }
+
+    .notes-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    .notes-table th { text-align: left; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--moonglow); padding: 10px; }
+    .notes-table td { padding: 12px 10px; border-top: 1px solid var(--line); vertical-align: top; }
+    .notes-table td:first-child { color: var(--moon); }
+    .notes-table tr.reported td { background: rgba(255, 180, 200, 0.08); }
+    .notes-table .btn { padding: 6px 14px; font-size: 13px; }
+    .tag-reported { color: #ffb4c8; font-weight: 800; }
+
+    @media (max-width: 800px) {
+        .stats { grid-template-columns: repeat(2, 1fr); }
+        .notes-table th:nth-child(3), .notes-table td:nth-child(3) { display: none; }
+    }
+</style>
+{% endblock %}
+
+{% block main %}
+
+<span class="label">the keeper's room</span>
+<h1 style="font-size: clamp(32px, 5vw, 48px);">Who came to the library ☾</h1>
+<p class="note">Everything is anonymous: a reader is a random id in a cookie, never a name or an address.</p>
+
+<div class="stats">
+    <div class="stat panel"><b>{{ stats.readers }}</b><span>readers in total</span></div>
+    <div class="stat panel"><b>{{ stats.readers_week }}</b><span>readers this week</span></div>
+    <div class="stat panel"><b>{{ stats.pages_read }}</b><span>pages read</span></div>
+    <div class="stat panel"><b>{{ stats.books_opened }}</b><span>books opened</span></div>
+    <div class="stat panel"><b>{{ stats.notes }}</b><span>notes on the margins</span></div>
+    <div class="stat panel"><b>{{ stats.places }}</b><span>places notes came from</span></div>
+    <div class="stat panel"><b>{{ stats.unwrapped }}</b><span>blind dates unwrapped</span></div>
+    <div class="stat panel"><b>{{ stats.posters }}</b><span>sky posters downloaded</span></div>
+</div>
+
+<h3>The last 7 days</h3>
+{% set most = days | map(attribute="readers") | max if days else 1 %}
+<div class="week panel">
+    {% for day in days %}
+        <div class="day">
+            <span>{{ day.readers }}</span>
+            <div class="bar" style="height: {{ (day.readers / most * 100) | round }}%"></div>
+            <span>{{ day.day[5:] }}</span>
+        </div>
+    {% else %}
+        <p class="note">No readers yet. Share the link ☾</p>
+    {% endfor %}
+</div>
+
+<h3>Notes on the margins</h3>
+<p class="note">Notes with {{ reports_to_hide }} or more reports are hidden automatically. Reported notes are shown first.</p>
+<div class="panel" style="padding: 10px; overflow-x: auto;">
+    <table class="notes-table">
+        <tr><th>note</th><th>from</th><th>book</th><th></th></tr>
+        {% for note in notes %}
+            <tr class="{{ 'reported' if note.reports }}">
+                <td>
+                    “{{ note.text }}”
+                    {% if note.reports %}<br><span class="tag-reported">⚑ {{ note.reports }} report{{ 's' if note.reports > 1 }}{{ ' · hidden' if note.reports >= reports_to_hide }}</span>{% endif %}
+                </td>
+                <td>{{ note.place or "somewhere" }}<br><small>{{ note.created[:10] }}</small></td>
+                <td><a href="/book/{{ note.work_id }}">{{ note.work_id }}</a></td>
+                <td>
+                    <form method="post" action="/admin/delete/{{ note.id }}" onsubmit="return confirm('Delete this note forever?')">
+                        <input type="hidden" name="key" value="{{ key }}">
+                        <button class="btn">delete</button>
+                    </form>
+                </td>
+            </tr>
+        {% else %}
+            <tr><td colspan="4">No notes yet.</td></tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

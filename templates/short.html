@@ -1,0 +1,156 @@
+{% extends "layout.html" %}
+
+{% block title %}Short reads · Shelf & Screen{% endblock %}
+
+{% block head %}
+<style>
+    .short-hero { max-width: 760px; margin-bottom: 44px; }
+    .short-hero h1 { margin-bottom: 16px; }
+    .short-hero .note { font-size: 18px; }
+
+    .fact {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        margin: 28px 0 0;
+        padding: 20px 26px;
+        max-width: 700px;
+    }
+    .fact .bars { display: flex; align-items: flex-end; gap: 10px; height: 64px; flex-shrink: 0; }
+    .fact .bar {
+        width: 34px;
+        border-radius: 8px 8px 3px 3px;
+        background: linear-gradient(180deg, var(--moonglow), rgba(200, 194, 255, 0.25));
+        position: relative;
+        animation: grow 1.2s var(--ease) both;
+        transform-origin: bottom;
+    }
+    .fact .bar.low { background: linear-gradient(180deg, rgba(200, 194, 255, 0.55), rgba(200, 194, 255, 0.1)); animation-delay: 0.3s; }
+    .fact .bar b { position: absolute; top: -22px; left: 50%; transform: translateX(-50%); font-size: 13px; color: var(--moon); }
+    .fact .bar small { position: absolute; bottom: -22px; left: 50%; transform: translateX(-50%); font-size: 12px; }
+    @keyframes grow { from { transform: scaleY(0); } }
+    .fact p { margin: 0; font-size: 15px; }
+    .fact p strong { color: var(--moon); }
+    .fact cite { display: block; margin-top: 4px; font-size: 12px; font-style: normal; opacity: 0.7; }
+
+    .stories { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+    .story {
+        --hue: 250;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-height: 230px;
+        padding: 24px 24px 22px;
+        border-radius: var(--radius);
+        border: 1px solid var(--line);
+        background:
+            radial-gradient(260px 160px at 100% 0%, hsla(var(--hue), 70%, 70%, 0.16), transparent 70%),
+            var(--glass);
+        text-decoration: none;
+        color: var(--silver);
+        overflow: hidden;
+        transition: transform 0.4s var(--ease), border-color 0.4s, box-shadow 0.4s;
+    }
+    .story:hover {
+        transform: translateY(-6px);
+        border-color: hsla(var(--hue), 70%, 75%, 0.5);
+        box-shadow: 0 24px 50px rgba(3, 5, 25, 0.55), 0 0 40px hsla(var(--hue), 70%, 70%, 0.15);
+    }
+    .story .time { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 14px; color: var(--moonglow); }
+    .story .clock { width: 30px; height: 30px; flex-shrink: 0; }
+    .story .clock circle { fill: none; stroke-width: 3; }
+    .story .clock .track { stroke: rgba(200, 194, 255, 0.15); }
+    .story .clock .fill {
+        stroke: hsl(var(--hue), 75%, 78%);
+        stroke-linecap: round;
+        stroke-dasharray: 0 100;
+        transform: rotate(-90deg);
+        transform-origin: center;
+        transition: stroke-dasharray 1s var(--ease);
+    }
+    .story h3 { margin: 6px 0 0; font-size: 23px; }
+    .story .author { font-size: 14px; font-weight: 700; }
+    .story .line { margin: 4px 0 0; font-size: 15px; font-style: italic; flex: 1; }
+    .story .go { font-weight: 800; color: var(--moon); font-size: 14px; }
+    .story .go::after { content: " →"; display: inline-block; transition: transform 0.3s var(--ease); }
+    .story:hover .go::after { transform: translateX(5px); }
+
+    @media (max-width: 600px) {
+        .fact { flex-direction: column; align-items: flex-start; }
+        .fact .bars { margin: 10px 0 18px; }
+    }
+</style>
+{% endblock %}
+
+{% block main %}
+
+<section class="short-hero">
+    <h1 class="rise">Short enough for tonight</h1>
+    <p class="note rise" style="animation-delay: 0.08s">
+        Classic stories you can finish in one sitting. Each one takes less time than an evening of scrolling, and all of them stay with you longer.
+    </p>
+
+    <div class="fact panel rise" style="animation-delay: 0.16s">
+        <div class="bars" aria-hidden="true">
+            <div class="bar" style="height: 100%"><b>27%</b><small>2012</small></div>
+            <div class="bar low" style="height: 52%"><b>14%</b><small>2023</small></div>
+        </div>
+        <p>
+            <strong>American 13-year-olds who read for fun almost every day.</strong>
+            In a decade the number fell by half.
+            <cite>National Assessment of Educational Progress (NAEP), long-term trend, 2023</cite>
+        </p>
+    </div>
+</section>
+
+{% if stories %}
+    <div class="stories">
+        {% for story in stories %}
+            <a class="story rise" href="/read/pg{{ story.id }}" data-id="{{ story.id }}"
+               style="--hue: {{ (loop.index0 * 47 + 230) % 360 }}; animation-delay: {{ loop.index0 * 0.05 }}s">
+                <div class="time">
+                    <svg class="clock" viewBox="0 0 36 36" aria-hidden="true">
+                        <circle class="track" cx="18" cy="18" r="15.9"></circle>
+                        <circle class="fill" cx="18" cy="18" r="15.9" pathLength="100"></circle>
+                    </svg>
+                    <span class="minutes">counting the minutes…</span>
+                </div>
+                <h3>{{ story.title }}</h3>
+                <span class="author">{{ story.author }}</span>
+                <p class="line">{{ story.line }}</p>
+                <span class="go">read it now</span>
+            </a>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="panel rise" style="padding: 34px; text-align: center;">
+        <h3>The stories are still asleep</h3>
+        <p class="note" style="margin: 0 auto;">Project Gutenberg didn't answer. Please try again in a moment.</p>
+    </div>
+{% endif %}
+
+<a href="/" class="back">← back home</a>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function() {
+    // Reading time of every story, counted from its real text.
+    // The little clock shows it as a part of one hour.
+    document.querySelectorAll(".story").forEach(function(card) {
+        fetch("/api/minutes/" + card.dataset.id)
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                const label = card.querySelector(".minutes");
+                if (!data.minutes) { label.textContent = "one sitting"; return; }
+                label.textContent = data.minutes + " min";
+                const part = Math.min(100, data.minutes / 60 * 100);
+                card.querySelector(".fill").style.strokeDasharray = part + " 100";
+            })
+            .catch(function() { card.querySelector(".minutes").textContent = "one sitting"; });
+    });
+})();
+</script>
+{% endblock %}

@@ -1,0 +1,273 @@
+{% extends "layout.html" %}
+
+{% set vibe_lines = {
+    "dark & mysterious": "a book for long nights, candles and secrets",
+    "warm & cozy": "a book for a blanket, tea and a soft lamp",
+    "calm & dreamy": "a book for rainy windows and slow thoughts",
+    "soft & romantic": "a book for spring evenings and quiet hearts"
+} %}
+
+{% block title %}{{ title }} · Shelf & Screen{% endblock %}
+
+{% block aura %}
+    {% if palette and palette | length >= 3 %}
+        <div class="aura" style="--c1: {{ palette[0] }}; --c2: {{ palette[1] }}; --c3: {{ palette[2] }};"></div>
+    {% endif %}
+{% endblock %}
+
+{% block head %}
+<style>
+    .book-hero {
+        display: grid;
+        grid-template-columns: minmax(220px, 340px) 1fr;
+        gap: clamp(28px, 5vw, 64px);
+        align-items: start;
+    }
+    .book-cover { position: sticky; top: 110px; }
+    .book-cover img {
+        width: 100%;
+        display: block;
+        border-radius: 16px;
+        box-shadow: 0 30px 70px rgba(3, 5, 25, 0.65), 0 0 90px var(--glow, rgba(200, 194, 255, 0.3));
+        transform: perspective(900px) rotateY(-6deg);
+        transition: transform 0.8s var(--ease);
+    }
+    .book-cover img:hover { transform: perspective(900px) rotateY(0deg) translateY(-6px); }
+    .no-cover {
+        aspect-ratio: 2 / 3;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 64px;
+        background: var(--glass);
+        border: 1px solid var(--line);
+    }
+
+    .book-info h1 { font-size: clamp(34px, 5vw, 56px); }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 30px; }
+    #read-btn { display: none; }
+
+    .vibe-card {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        padding: 24px 28px;
+        margin-bottom: 28px;
+    }
+    .vibe-emoji {
+        flex: none;
+        width: 74px;
+        height: 74px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.12), transparent 70%);
+    }
+    .vibe-card small {
+        display: block;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--moonglow);
+        opacity: 0.8;
+    }
+    .vibe-card strong { display: block; font-size: 28px; font-weight: 900; color: var(--moon); line-height: 1.25; }
+    .vibe-card span { color: var(--silver); }
+
+    .description { position: relative; color: var(--silver); font-size: 17px; line-height: 1.8; }
+    .description.clamped {
+        max-height: 9.2em;
+        overflow: hidden;
+        -webkit-mask-image: linear-gradient(#000 55%, transparent);
+        mask-image: linear-gradient(#000 55%, transparent);
+    }
+    .more {
+        background: none;
+        border: none;
+        padding: 6px 0;
+        color: var(--moonglow);
+        font: inherit;
+        font-weight: 800;
+        cursor: pointer;
+    }
+
+    .films { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
+    .film {
+        position: relative;
+        display: block;
+        padding: 20px 20px 18px;
+        text-decoration: none;
+        transition: transform 0.3s var(--ease), background 0.2s, border-color 0.2s;
+    }
+    .film:hover { transform: translateY(-4px); background: var(--glass-strong); border-color: rgba(200, 194, 255, 0.35); }
+    .film .film-icon { font-size: 22px; opacity: 0.8; }
+    .film strong { display: block; margin: 10px 0 6px; color: var(--moon); font-weight: 800; line-height: 1.3; }
+    .film span { font-size: 14px; color: var(--silver); }
+    .film .rating {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        padding: 3px 10px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 800;
+        color: var(--night);
+        background: var(--star);
+    }
+
+    @media (max-width: 760px) {
+        .book-hero { grid-template-columns: 1fr; }
+        .book-cover { position: static; max-width: 230px; margin: 0 auto; }
+        .book-cover img { transform: none; }
+        .vibe-card { padding: 20px; gap: 16px; }
+        .vibe-card strong { font-size: 23px; }
+    }
+</style>
+{% endblock %}
+
+{% block main %}
+
+<section class="book-hero">
+    <div class="book-cover rise" {% if palette %}style="--glow: {{ palette[0] }}88"{% endif %}>
+        {% if cover %}
+            <img src="{{ cover }}" alt="Cover of {{ title }}">
+        {% else %}
+            <div class="no-cover">📖</div>
+        {% endif %}
+    </div>
+
+    <div class="book-info">
+        <span class="label rise">a book under the moonlight</span>
+        <h1 class="rise" style="animation-delay: 0.05s">{{ title }}</h1>
+
+        <div class="actions rise" style="animation-delay: 0.1s">
+            <a class="btn primary" id="read-btn" href="/read/{{ work_id }}">read it here ☾</a>
+            <button class="btn" id="save-btn">add to my shelf ☾</button>
+            {% if palette %}
+                <button class="btn" id="listen-btn">♪ hear its melody</button>
+            {% endif %}
+        </div>
+        <div id="listen-slot" data-work="{{ work_id }}"></div>
+
+        {% if mood %}
+            <div class="vibe-card panel rise" style="animation-delay: 0.15s">
+                <div class="vibe-emoji">{{ mood.emoji }}</div>
+                <div>
+                    <small>the vibe of this book</small>
+                    <strong>{{ mood.name }}</strong>
+                    <span>{{ vibe_lines.get(mood.name, "") }}</span>
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="rise" style="animation-delay: 0.2s">
+            <div class="description" id="description">{{ description }}</div>
+            <button class="more" id="more" hidden>read more ↓</button>
+        </div>
+    </div>
+</section>
+
+{% if films %}
+    <section class="section">
+        <div class="section-head">
+            <div>
+                <span class="label">for after the last page</span>
+                <h2>Films with the same feeling</h2>
+            </div>
+            <p class="note">Chosen by the vibe of this book from thousands of well-loved films.</p>
+        </div>
+        <div class="films">
+            {% for film in films %}
+                <a class="film panel rise" href="https://www.imdb.com/title/{{ film.id }}/" target="_blank" rel="noopener" style="animation-delay: {{ 0.05 * loop.index0 }}s">
+                    <span class="film-icon">🎬</span>
+                    <span class="rating">★ {{ film.rating }}</span>
+                    <strong>{{ film.title }}</strong>
+                    <span>{{ film.year }}</span>
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+{% endif %}
+
+<a href="/" class="back">← back to the night sky</a>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/music.js"></script>
+<script src="/static/listen.js"></script>
+<script>
+(function() {
+    const thisBook = {{ {"id": work_id, "title": title, "cover": cover, "palette": palette, "mood": mood.name if mood else ""} | tojson }};
+
+    // Save this book to "my shelf" (kept in this browser)
+    const saveBtn = document.getElementById("save-btn");
+
+    function loadShelf() {
+        try { return JSON.parse(localStorage.getItem("shelf")) || []; } catch (e) { return []; }
+    }
+    function isSaved() {
+        return loadShelf().some(function(book) { return book.id === thisBook.id; });
+    }
+    function updateButton() {
+        saveBtn.textContent = isSaved() ? "on my shelf ✓" : "add to my shelf ☾";
+        saveBtn.classList.toggle("done", isSaved());
+    }
+    saveBtn.addEventListener("click", function() {
+        let shelf = loadShelf();
+        if (isSaved()) {
+            shelf = shelf.filter(function(book) { return book.id !== thisBook.id; });
+        } else {
+            shelf.push(thisBook);
+        }
+        try { localStorage.setItem("shelf", JSON.stringify(shelf)); } catch (e) {}
+        updateButton();
+    });
+    updateButton();
+
+    // Long descriptions are folded, with "read more"
+    const description = document.getElementById("description");
+    const more = document.getElementById("more");
+    if (description.scrollHeight > 260) {
+        description.classList.add("clamped");
+        more.hidden = false;
+        more.addEventListener("click", function() {
+            description.classList.toggle("clamped");
+            more.textContent = description.classList.contains("clamped") ? "read more ↓" : "show less ↑";
+        });
+    }
+
+    // ♪ The melody of the cover
+    const listenBtn = document.getElementById("listen-btn");
+    if (listenBtn) {
+        listenBtn.addEventListener("click", function() {
+            if (BookMusic.isPlaying()) {
+                BookMusic.stop();
+            } else {
+                listenBtn.textContent = "■ stop";
+                BookMusic.play(thisBook.palette, thisBook.mood, function() {
+                    listenBtn.textContent = "♪ hear its melody";
+                });
+            }
+        });
+    }
+
+    // "Read it here" appears only if the book is free on Project Gutenberg
+    const readBtn = document.getElementById("read-btn");
+    fetch("/api/readable/" + thisBook.id)
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            if (!data.readable) return;
+            let saved = null;
+            try { saved = parseInt(localStorage.getItem("reading:" + thisBook.id)); } catch (e) {}
+            if (saved > 1) readBtn.textContent = "continue reading · page " + saved + " ☾";
+            readBtn.style.display = "inline-flex";
+        })
+        .catch(function() {});
+})();
+</script>
+{% endblock %}

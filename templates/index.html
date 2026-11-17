@@ -1,0 +1,174 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<style>
+    .hero {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: center;
+        gap: 40px;
+        min-height: 52vh;
+    }
+    .hero h1 span {
+        background: linear-gradient(100deg, var(--moon) 20%, var(--moonglow) 60%, #9fb4ff 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    .hero .note { font-size: 19px; margin: 18px 0 30px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* a big moon with books floating around it */
+    .hero-art { position: relative; aspect-ratio: 1; max-width: 420px; width: 100%; margin-left: auto; }
+    .hero-art .moon {
+        position: absolute;
+        inset: 18%;
+        width: auto;
+        height: auto;
+        box-shadow: 0 0 80px rgba(200, 194, 255, 0.55), 0 0 180px rgba(200, 194, 255, 0.25);
+        animation: float 9s ease-in-out infinite;
+    }
+    .hero-art .moon::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background:
+            radial-gradient(circle at 30% 62%, rgba(169, 179, 214, 0.35) 0 9%, transparent 10%),
+            radial-gradient(circle at 64% 30%, rgba(169, 179, 214, 0.3) 0 6%, transparent 7%),
+            radial-gradient(circle at 70% 70%, rgba(169, 179, 214, 0.25) 0 4%, transparent 5%);
+    }
+    .orbit {
+        position: absolute;
+        width: 26%;
+        aspect-ratio: 2 / 3;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 18px 40px rgba(3, 5, 25, 0.6);
+        animation: float 7s ease-in-out infinite;
+    }
+    .orbit img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .orbit:nth-of-type(2) { top: 2%; left: 4%; transform: rotate(-10deg); animation-delay: -2s; }
+    .orbit:nth-of-type(3) { bottom: 4%; left: 10%; transform: rotate(8deg); animation-delay: -4s; }
+    .orbit:nth-of-type(4) { top: 30%; right: -2%; transform: rotate(6deg); animation-delay: -1s; }
+    @keyframes float { 50% { translate: 0 -12px; } }
+
+    /* what you can do here */
+    .ways { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .way { padding: 24px; }
+    .way b { display: block; font-size: 28px; margin-bottom: 10px; }
+    .way strong { display: block; color: var(--moon); font-size: 17px; margin-bottom: 4px; }
+    .way p { margin: 0; font-size: 15px; }
+
+    .midnight-shelf {
+        padding: 34px;
+        border-radius: var(--radius);
+        border: 1px solid rgba(200, 194, 255, 0.28);
+        background: linear-gradient(160deg, rgba(39, 45, 102, 0.55), rgba(13, 16, 48, 0.4));
+        box-shadow: 0 0 80px rgba(120, 110, 255, 0.15) inset;
+    }
+
+    @media (max-width: 900px) {
+        .hero { grid-template-columns: 1fr; min-height: 0; }
+        .hero-art { max-width: 300px; margin: 10px auto 0; }
+        .ways { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+        .ways { grid-template-columns: 1fr; }
+        .midnight-shelf { padding: 22px; }
+    }
+</style>
+{% endblock %}
+
+{% block main %}
+
+<section class="hero">
+    <div>
+        <span class="label rise only-day">a library under the moonlight</span>
+        <span class="label rise only-midnight">✦ the library after midnight ✦</span>
+        <h1 class="rise" style="animation-delay: 0.1s">Books under <span>the moonlight</span></h1>
+        <p class="note rise" style="animation-delay: 0.2s">
+            Every book has a mood. Find yours, feel its colors, hear its melody, meet films with the same feeling,
+            and read it right here under a sky that changes with the story.
+        </p>
+        <div class="hero-actions rise" style="animation-delay: 0.3s">
+            <a href="/blind" class="btn primary">take a blind date with a book ✧</a>
+            <a href="#picks" class="btn">tonight's picks ☾</a>
+        </div>
+    </div>
+
+    <div class="hero-art rise" style="animation-delay: 0.2s" aria-hidden="true">
+        <span class="moon" data-moon><span class="moon-shadow"></span></span>
+        {% for book in books[:3] %}
+            <span class="orbit"><img src="{{ book.cover }}" alt=""></span>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="section only-midnight">
+    <div class="midnight-shelf">
+        <div class="section-head">
+            <div>
+                <span class="label">open only for night owls · until 5 am</span>
+                <h2>Books for the sleepless 🕯</h2>
+                <p class="note">You found the secret shelf. The rest of the world is asleep, so here are stories that are best read in the dark.</p>
+            </div>
+        </div>
+        <div class="grid">
+            {% for book in night_books %}
+                <div class="card rise" style="animation-delay: {{ loop.index0 * 0.06 }}s">
+                    <a href="/book/{{ book.id }}">
+                        <div class="cover"><img src="{{ book.cover }}" alt="Cover of {{ book.title }}" loading="lazy"></div>
+                        <strong>{{ book.title }}</strong>
+                        <span>{{ book.author }}</span>
+                    </a>
+                    <button class="add-btn" data-id="{{ book.id }}" title="add to my shelf">+</button>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section" id="picks">
+    <div class="section-head">
+        <div>
+            <span class="label">chosen for tonight</span>
+            <h2>Tonight's picks ☾</h2>
+        </div>
+        <p class="note">Press + to put a book on your shelf, or open it to see its vibe.</p>
+    </div>
+
+    {% if books %}
+        <div class="grid">
+            {% for book in books %}
+                <div class="card rise" style="animation-delay: {{ loop.index0 * 0.06 }}s">
+                    <a href="/book/{{ book.id }}">
+                        <div class="cover"><img src="{{ book.cover }}" alt="Cover of {{ book.title }}" loading="lazy"></div>
+                        <strong>{{ book.title }}</strong>
+                        <span>{{ book.author }}</span>
+                    </a>
+                    <button class="add-btn" data-id="{{ book.id }}" title="add to my shelf">+</button>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="note">The shelves are still waking up. Refresh the page in a moment ☾</p>
+    {% endif %}
+</section>
+
+<section class="section">
+    <div class="section-head">
+        <div>
+            <span class="label">what happens here</span>
+            <h2>One book, four ways to feel it</h2>
+        </div>
+    </div>
+    <div class="ways">
+        <div class="way panel"><b>🎨</b><strong>its vibe</strong><p>The colors of the cover tell the mood of the book.</p></div>
+        <div class="way panel"><b>♪</b><strong>its melody</strong><p>Those colors become a little music box tune.</p></div>
+        <div class="way panel"><b>🎬</b><strong>its films</strong><p>Movies with the same feeling, for after the last page.</p></div>
+        <div class="way panel"><b>📖</b><strong>its sky</strong><p>Read it here: the sky changes with every scene, and readers leave notes on the margins.</p></div>
+    </div>
+</section>
+
+{% endblock %}

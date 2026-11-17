@@ -1,0 +1,557 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ info.title }} · reading · Shelf & Screen{% endblock %}
+
+{% block aura %}
+    {% if info.palette and info.palette | length >= 3 %}
+        <div class="aura" style="--c1: {{ info.palette[0] }}; --c2: {{ info.palette[1] }}; --c3: {{ info.palette[2] }}; opacity: 0.18;"></div>
+    {% endif %}
+{% endblock %}
+
+{% block head %}
+<style>
+    .reader-wrap { max-width: 800px; margin: 0 auto; }
+
+    .reader-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 22px;
+    }
+    .reader-top h2 { margin: 0; font-size: 28px; }
+    .reader-top h2 a { color: var(--moon); text-decoration: none; }
+    .reader-top small { display: block; color: var(--silver); margin-top: 4px; }
+
+    .reader-tools { display: flex; gap: 10px; flex-wrap: wrap; }
+    .tool-group {
+        display: flex;
+        gap: 4px;
+        padding: 4px;
+        border-radius: 999px;
+        background: var(--glass);
+        border: 1px solid var(--line);
+    }
+    .tool-group button {
+        border: none;
+        border-radius: 999px;
+        padding: 7px 14px;
+        font: inherit;
+        font-size: 14px;
+        font-weight: 800;
+        cursor: pointer;
+        color: var(--silver);
+        background: transparent;
+        transition: background 0.2s, color 0.2s;
+    }
+    .tool-group button:hover { color: var(--moon); }
+    .tool-group button.active { background: var(--moon); color: var(--night); }
+
+    /* the page of the book */
+    .reader {
+        position: relative;
+        font-size: 19px;
+        line-height: 1.85;
+        padding: 52px 64px 44px 72px;
+        border-radius: 28px;
+        background: rgba(13, 16, 48, 0.72);
+        color: var(--moon);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        transition: background 0.4s, color 0.4s, box-shadow 0.4s;
+    }
+    .reader p { position: relative; margin: 0 0 1.1em; }
+    .reader .chapter {
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: 900;
+        letter-spacing: 1px;
+        margin: 0.4em 0 1.4em;
+    }
+    .reader .divider { text-align: center; letter-spacing: 8px; opacity: 0.55; margin: 1.6em 0; }
+
+    /* ---------- notes on the margins ---------- */
+    .note-mark {
+        position: absolute;
+        left: -46px;
+        top: 0.25em;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: none;
+        padding: 0;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.2s, transform 0.2s var(--ease), background 0.2s;
+    }
+    .reader p:hover .note-mark, .note-mark:focus-visible { opacity: 0.45; }
+    .note-mark:hover { opacity: 1 !important; transform: scale(1.12); }
+    .note-mark.has-notes {
+        opacity: 1;
+        color: var(--night);
+        background: radial-gradient(circle, #fff8d6 0%, #ffd98a 70%);
+        box-shadow: 0 0 18px rgba(255, 217, 138, 0.85);
+        animation: candle 3s ease-in-out infinite;
+    }
+    @keyframes candle { 50% { box-shadow: 0 0 28px rgba(255, 217, 138, 1); } }
+    .reader p.lit { background: linear-gradient(90deg, rgba(255, 217, 138, 0.1), transparent 70%); border-radius: 6px; }
+
+    .note-popover {
+        position: absolute;
+        z-index: 60;
+        width: min(360px, calc(100vw - 32px));
+        padding: 18px;
+        border-radius: 20px;
+        background: rgba(20, 24, 66, 0.97);
+        border: 1px solid rgba(200, 194, 255, 0.28);
+        box-shadow: var(--shadow);
+        color: var(--moon);
+        font-size: 15px;
+        animation: rise 0.35s var(--ease) both;
+    }
+    .note-popover h4 { margin: 0 0 10px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--moonglow); }
+    .note-list { max-height: 220px; overflow-y: auto; margin-bottom: 12px; }
+    .note-item { padding: 10px 12px; margin-bottom: 8px; border-radius: 12px; background: rgba(255, 255, 255, 0.06); }
+    .note-item p { margin: 0 0 4px; line-height: 1.5; }
+    .note-item span { font-size: 12px; color: var(--silver); }
+    .note-report {
+        float: right;
+        border: none;
+        background: none;
+        padding: 0;
+        color: var(--silver);
+        font: inherit;
+        font-size: 12px;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+    .note-item:hover .note-report, .note-report:focus-visible, .note-report:disabled { opacity: 0.8; }
+    .note-report:hover { color: #ffb4c8; }
+    .note-empty { color: var(--silver); margin: 0 0 12px; line-height: 1.5; }
+    .note-popover textarea {
+        width: 100%;
+        min-height: 74px;
+        resize: vertical;
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--moon);
+        font: inherit;
+        outline: none;
+    }
+    .note-popover textarea:focus { border-color: var(--moonglow); }
+    .note-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 10px; }
+    .note-row small { color: var(--silver); font-size: 12px; }
+    .note-row .btn { padding: 8px 16px; font-size: 14px; }
+    .note-error { color: #ffb4c8; font-size: 13px; margin-top: 8px; }
+
+    /* ---------- the sky badge ---------- */
+    .sky-badge {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 40;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 5px;
+        border-radius: 999px;
+        background: rgba(13, 16, 48, 0.82);
+        border: 1px solid var(--line);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
+        color: var(--moon);
+        font-size: 14px;
+        font-weight: 800;
+    }
+    .sky-badge .sky-name { padding: 6px 12px 6px 10px; white-space: nowrap; }
+    .sky-badge .sky-name b { display: inline-block; margin-right: 6px; transition: transform 0.4s var(--ease); }
+    .sky-badge .sky-name.changed b { animation: pop 0.6s var(--ease); }
+    @keyframes pop { 40% { transform: scale(1.5) rotate(-10deg); } }
+    .sky-badge button {
+        border: none;
+        border-radius: 999px;
+        padding: 7px 14px;
+        font: inherit;
+        font-size: 14px;
+        font-weight: 800;
+        cursor: pointer;
+        color: var(--night);
+        background: var(--moon);
+    }
+    .sky-badge button.off { background: var(--glass-strong); color: var(--moon); }
+
+    /* moving between pages */
+    .reader-nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin: 26px 0 10px; }
+    .progress-box { flex: 1; text-align: center; color: var(--silver); font-size: 14px; }
+    .progress { height: 4px; margin-top: 8px; border-radius: 4px; background: var(--line); overflow: hidden; }
+    .progress div { height: 100%; background: linear-gradient(90deg, var(--moonglow), var(--star)); border-radius: 4px; }
+
+    .not-free { max-width: 580px; margin: 6vh auto; padding: 44px 36px; text-align: center; }
+
+    @media (max-width: 700px) {
+        .reader { padding: 30px 20px 26px 40px; border-radius: 20px; }
+        .note-mark { left: -36px; width: 28px; height: 28px; line-height: 28px; opacity: 0.35; }
+        .reader-top h2 { font-size: 22px; }
+        .sky-badge { right: 12px; bottom: 12px; font-size: 13px; }
+        .reader-nav .btn { padding: 9px 14px; }
+    }
+</style>
+{% endblock %}
+
+{% block main %}
+
+{% if not free %}
+
+    <div class="not-free panel rise">
+        <div style="font-size: 46px;">📚</div>
+        <h2>{{ info.title }}</h2>
+        <p class="note" style="margin: 0 auto 10px;">This book isn't free to read online yet. It's still protected by copyright, which is how authors are paid for their work.</p>
+        <p class="note" style="margin: 0 auto 24px;">But it's waiting for you at your library ☾</p>
+        <a href="/book/{{ work_id }}" class="btn">← back to the book</a>
+    </div>
+
+{% else %}
+
+    <div class="reader-wrap" id="reader-wrap" data-theme="night">
+        <div class="reader-top">
+            <div>
+                <span class="label">reading under the moonlight</span>
+                <h2><a href="/book/{{ work_id }}">{{ info.title }}</a></h2>
+                <small>{{ free.author }}</small>
+            </div>
+            <div class="reader-tools">
+                <div class="tool-group" id="themes">
+                    <button type="button" data-theme="night">☾ night</button>
+                    <button type="button" data-theme="light">☀ light</button>
+                    <button type="button" data-theme="sepia">✎ sepia</button>
+                </div>
+                <div class="tool-group">
+                    <button type="button" id="smaller" title="smaller text">A−</button>
+                    <button type="button" id="bigger" title="bigger text">A+</button>
+                </div>
+            </div>
+        </div>
+
+        <article class="reader" id="reader">
+            {% for paragraph in paragraphs %}
+                {% if paragraph.divider %}
+                    <div class="divider">☾ ✦ ☾</div>
+                {% elif paragraph.heading %}
+                    <h3 class="chapter">{{ paragraph.text }}</h3>
+                {% else %}
+                    <p data-i="{{ offset + loop.index0 }}">{{ paragraph.text }}</p>
+                {% endif %}
+            {% endfor %}
+        </article>
+
+        <div class="reader-nav">
+            {% if page > 1 %}
+                <a class="btn" href="?page={{ page - 1 }}">← back</a>
+            {% else %}
+                <span></span>
+            {% endif %}
+
+            <div class="progress-box">
+                page {{ page }} of {{ total }}
+                <div class="progress"><div style="width: {{ (page / total * 100) | round(1) }}%"></div></div>
+            </div>
+
+            {% if page < total %}
+                <a class="btn primary" href="?page={{ page + 1 }}">next →</a>
+            {% else %}
+                <a class="btn primary" href="/book/{{ work_id }}">the end ☾</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="sky-badge" id="sky-badge" title="the sky changes with the words on your screen">
+        <span class="sky-name" id="sky-name"><b>☾</b>a quiet night</span>
+        <button type="button" id="sound-btn" class="off">♪ sound</button>
+    </div>
+
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+{% if free %}
+<script src="/static/sky.js"></script>
+<script>
+(function() {
+    const page = {{ page }};
+    const total = {{ total }};
+    const hasPage = {{ has_page | tojson }};
+    const workId = {{ work_id | tojson }};
+    const bookmarkKey = "reading:" + workId;
+
+    function readValue(key) {
+        try { return localStorage.getItem(key); } catch (e) { return null; }
+    }
+    function writeValue(key, value) {
+        try { localStorage.setItem(key, value); } catch (e) {}
+    }
+
+    // ---------- bookmark: open the page where the reader stopped last time ----------
+    const saved = parseInt(readValue(bookmarkKey));
+    if (!hasPage && saved > 1 && saved <= total) {
+        location.replace("?page=" + saved);
+        return;
+    }
+    writeValue(bookmarkKey, page);
+
+    // ---------- themes: night, light or sepia ----------
+    const THEMES = {
+        night: { background: "rgba(13, 16, 48, 0.72)", color: "#f4f1ff", chapter: "#c8c2ff", shadow: "0 0 0 1px rgba(200, 194, 255, 0.16)" },
+        light: { background: "rgba(251, 250, 255, 0.97)", color: "#23264a", chapter: "#4b4f9a", shadow: "0 30px 70px rgba(0, 0, 0, 0.4)" },
+        sepia: { background: "rgba(244, 234, 213, 0.97)", color: "#4b3a26", chapter: "#8a5a2b", shadow: "0 30px 70px rgba(0, 0, 0, 0.4)" }
+    };
+    const wrap = document.getElementById("reader-wrap");
+    const readerBox = document.getElementById("reader");
+    const themeButtons = document.querySelectorAll("#themes button");
+
+    function setTheme(name) {
+        const theme = THEMES[name] || THEMES.night;
+        readerBox.style.background = theme.background;
+        readerBox.style.color = theme.color;
+        readerBox.style.boxShadow = theme.shadow;
+        readerBox.querySelectorAll(".chapter").forEach(function(h) { h.style.color = theme.chapter; });
+        wrap.dataset.theme = name;
+        themeButtons.forEach(function(button) {
+            button.classList.toggle("active", button.dataset.theme === name);
+        });
+        writeValue("reading-theme", name);
+    }
+    themeButtons.forEach(function(button) {
+        button.addEventListener("click", function() { setTheme(button.dataset.theme); });
+    });
+    setTheme(readValue("reading-theme") || "night");
+
+    // ---------- text size ----------
+    let textSize = parseInt(readValue("reading-size")) || 19;
+    function setSize(newSize) {
+        textSize = Math.max(14, Math.min(30, newSize));
+        readerBox.style.fontSize = textSize + "px";
+        writeValue("reading-size", textSize);
+    }
+    document.getElementById("smaller").addEventListener("click", function() { setSize(textSize - 1); });
+    document.getElementById("bigger").addEventListener("click", function() { setSize(textSize + 1); });
+    setSize(textSize);
+
+    // ---------- turning pages: arrow keys and swipes ----------
+    document.addEventListener("keydown", function(event) {
+        if (event.target.tagName === "INPUT" || event.target.tagName === "TEXTAREA") return;
+        if (event.key === "ArrowRight" && page < total) location.href = "?page=" + (page + 1);
+        if (event.key === "ArrowLeft" && page > 1) location.href = "?page=" + (page - 1);
+    });
+    let touchX = null;
+    readerBox.addEventListener("touchstart", function(event) { touchX = event.touches[0].clientX; }, { passive: true });
+    readerBox.addEventListener("touchend", function(event) {
+        if (touchX === null) return;
+        const dx = event.changedTouches[0].clientX - touchX;
+        if (dx < -80 && page < total) location.href = "?page=" + (page + 1);
+        if (dx > 80 && page > 1) location.href = "?page=" + (page - 1);
+        touchX = null;
+    });
+
+    // ---------- the living sky ----------
+    const paragraphs = readerBox.querySelectorAll("p[data-i]");
+    LivingSky.watch(paragraphs);
+
+    const skyName = document.getElementById("sky-name");
+    LivingSky.onChange(function(scene) {
+        skyName.innerHTML = "";
+        const icon = document.createElement("b");
+        icon.textContent = scene.icon;
+        skyName.appendChild(icon);
+        skyName.appendChild(document.createTextNode(scene.name));
+        skyName.classList.remove("changed");
+        void skyName.offsetWidth;
+        skyName.classList.add("changed");
+    });
+
+    const soundBtn = document.getElementById("sound-btn");
+    soundBtn.addEventListener("click", function() {
+        const on = LivingSky.toggleSound();
+        if (on) fetch("/api/event/sound", { method: "POST" }).catch(function() {});
+        soundBtn.classList.toggle("off", !on);
+        soundBtn.textContent = on ? "♪ on" : "♪ sound";
+    });
+
+    // ---------- notes from strangers on the margins ----------
+    const zone = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    const myPlace = zone.includes("/") ? zone.split("/").pop().replace(/_/g, " ") : "";
+    const first = paragraphs.length ? parseInt(paragraphs[0].dataset.i) : 0;
+    const last = paragraphs.length ? parseInt(paragraphs[paragraphs.length - 1].dataset.i) : 0;
+    let notes = {};
+    let popover = null;
+
+    function timeAgo(iso) {
+        const seconds = (Date.now() - new Date(iso).getTime()) / 1000;
+        if (seconds < 60) return "just now";
+        const steps = [[60, "minute"], [3600, "hour"], [86400, "day"], [2592000, "month"], [31536000, "year"]];
+        let unit = steps[0];
+        steps.forEach(function(step) { if (seconds >= step[0]) unit = step; });
+        const n = Math.floor(seconds / unit[0]);
+        return n + " " + unit[1] + (n > 1 ? "s" : "") + " ago";
+    }
+
+    function drawMark(p) {
+        let mark = p.querySelector(".note-mark");
+        if (!mark) {
+            mark = document.createElement("button");
+            mark.type = "button";
+            mark.className = "note-mark";
+            mark.addEventListener("click", function(event) {
+                event.stopPropagation();
+                openNotes(p);
+            });
+            p.prepend(mark);
+        }
+        const list = notes[p.dataset.i] || [];
+        mark.classList.toggle("has-notes", list.length > 0);
+        mark.textContent = list.length > 0 ? list.length : "✎";
+        mark.title = list.length > 0 ? list.length + " note" + (list.length > 1 ? "s" : "") + " from other readers" : "leave a note for the next reader";
+        mark.setAttribute("aria-label", mark.title);
+    }
+
+    function closeNotes() {
+        if (popover) popover.remove();
+        popover = null;
+        readerBox.querySelectorAll("p.lit").forEach(function(p) { p.classList.remove("lit"); });
+    }
+
+    function openNotes(p) {
+        closeNotes();
+        p.classList.add("lit");
+        const list = notes[p.dataset.i] || [];
+
+        popover = document.createElement("div");
+        popover.className = "note-popover";
+        popover.addEventListener("click", function(event) { event.stopPropagation(); });
+
+        const title = document.createElement("h4");
+        title.textContent = list.length ? "notes on the margin" : "an empty margin";
+        popover.appendChild(title);
+
+        if (list.length) {
+            const box = document.createElement("div");
+            box.className = "note-list";
+            list.forEach(function(note) {
+                const item = document.createElement("div");
+                item.className = "note-item";
+                const text = document.createElement("p");
+                text.textContent = "“" + note.text + "”";
+                const meta = document.createElement("span");
+                meta.textContent = "— a reader" + (note.place ? " near " + note.place : "") + " · " + timeAgo(note.created);
+                item.appendChild(text);
+                item.appendChild(meta);
+
+                // anyone can report an unkind note; after a few reports it disappears
+                if (note.id) {
+                    const report = document.createElement("button");
+                    report.type = "button";
+                    report.className = "note-report";
+                    report.textContent = "⚑ report";
+                    report.title = "this note is unkind";
+                    report.addEventListener("click", function() {
+                        fetch("/api/notes/report/" + note.id, { method: "POST" }).catch(function() {});
+                        report.textContent = "thank you ☾";
+                        report.disabled = true;
+                    });
+                    item.appendChild(report);
+                }
+                box.appendChild(item);
+            });
+            popover.appendChild(box);
+        } else {
+            const empty = document.createElement("p");
+            empty.className = "note-empty";
+            empty.textContent = "Like a pencil note in a library book: leave a few words for the next person who reads this line.";
+            popover.appendChild(empty);
+        }
+
+        const input = document.createElement("textarea");
+        input.maxLength = 140;
+        input.placeholder = "this made me think of…";
+        popover.appendChild(input);
+
+        const row = document.createElement("div");
+        row.className = "note-row";
+        const hint = document.createElement("small");
+        hint.textContent = "anonymous · be kind · 140";
+        const send = document.createElement("button");
+        send.type = "button";
+        send.className = "btn primary";
+        send.textContent = "leave it here ☾";
+        row.appendChild(hint);
+        row.appendChild(send);
+        popover.appendChild(row);
+
+        const error = document.createElement("div");
+        error.className = "note-error";
+        popover.appendChild(error);
+
+        input.addEventListener("input", function() {
+            hint.textContent = "anonymous · be kind · " + (140 - input.value.length);
+        });
+
+        send.addEventListener("click", function() {
+            const text = input.value.trim();
+            if (!text) { input.focus(); return; }
+            send.disabled = true;
+            send.textContent = "…";
+            fetch("/api/notes/" + workId, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ paragraph: parseInt(p.dataset.i), text: text, place: myPlace })
+            })
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    if (data.error) throw new Error(data.error);
+                    (notes[p.dataset.i] = notes[p.dataset.i] || []).push(data.note);
+                    drawMark(p);
+                    openNotes(p);
+                })
+                .catch(function(e) {
+                    error.textContent = e.message || "the note got lost, try again";
+                    send.disabled = false;
+                    send.textContent = "leave it here ☾";
+                });
+        });
+
+        // place the card next to the paragraph
+        document.body.appendChild(popover);
+        const box = p.getBoundingClientRect();
+        const left = Math.max(16, Math.min(window.innerWidth - popover.offsetWidth - 16, box.left - 30));
+        popover.style.left = left + window.scrollX + "px";
+        popover.style.top = box.bottom + window.scrollY + 8 + "px";
+        input.focus({ preventScroll: true });
+    }
+
+    document.addEventListener("click", closeNotes);
+    document.addEventListener("keydown", function(event) { if (event.key === "Escape") closeNotes(); });
+
+    paragraphs.forEach(drawMark);
+    fetch("/api/notes/" + workId + "?start=" + first + "&end=" + last)
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            notes = data.notes || {};
+            paragraphs.forEach(drawMark);
+        })
+        .catch(function() {});
+})();
+</script>
+{% endif %}
+{% endblock %}

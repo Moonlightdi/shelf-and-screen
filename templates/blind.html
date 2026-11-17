@@ -1,0 +1,281 @@
+{% extends "layout.html" %}
+
+{% block title %}A blind date with a book · Shelf & Screen{% endblock %}
+
+{% block head %}
+<style>
+    .blind {
+        display: grid;
+        grid-template-columns: 1fr minmax(260px, 340px);
+        gap: clamp(30px, 6vw, 80px);
+        align-items: center;
+        min-height: 66vh;
+    }
+    .blind .note { font-size: 18px; margin: 16px 0 26px; }
+
+    .hints { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+    .hint {
+        padding: 10px 18px;
+        border-radius: 999px;
+        border: 1px dashed rgba(200, 194, 255, 0.45);
+        color: var(--moon);
+        font-weight: 800;
+        animation: rise 0.7s var(--ease) both;
+    }
+    .hint:nth-child(2) { animation-delay: 0.15s; }
+    .hint:nth-child(3) { animation-delay: 0.3s; }
+    .blind-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    /* ---------- the wrapped book ---------- */
+    .package {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 2 / 3;
+        perspective: 1400px;
+        cursor: pointer;
+        animation: wiggle 5s ease-in-out infinite;
+    }
+    .package.open { cursor: default; animation: none; }
+    @keyframes wiggle {
+        0%, 86%, 100% { transform: rotate(0deg); }
+        89% { transform: rotate(-2.5deg); }
+        92% { transform: rotate(2.5deg); }
+        95% { transform: rotate(-1deg); }
+    }
+
+    .package .inside {
+        position: absolute;
+        inset: 0;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 30px 70px rgba(3, 5, 25, 0.7), 0 0 90px var(--ribbon);
+    }
+    .package .inside img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .paper {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 50.5%;
+        background:
+            radial-gradient(circle at 25% 30%, rgba(255, 248, 214, 0.9) 0 1.2px, transparent 2px) 0 0 / 46px 46px,
+            radial-gradient(circle at 70% 75%, rgba(255, 248, 214, 0.55) 0 1px, transparent 1.6px) 10px 18px / 38px 38px,
+            radial-gradient(circle at 50% 50%, rgba(200, 194, 255, 0.12) 0 9px, transparent 10px) 23px 23px / 92px 92px,
+            linear-gradient(150deg, #2d3478, #161a46 60%, #0f1236);
+        box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.35);
+        transition: transform 1.3s var(--ease), opacity 1.3s;
+        backface-visibility: hidden;
+    }
+    .paper.left { left: 0; border-radius: 14px 0 0 14px; transform-origin: left center; }
+    .paper.right { right: 0; border-radius: 0 14px 14px 0; transform-origin: right center; }
+    .package.open .paper.left { transform: rotateY(-110deg); opacity: 0; }
+    .package.open .paper.right { transform: rotateY(110deg); opacity: 0; }
+
+    .ribbon { position: absolute; background: var(--ribbon); box-shadow: 0 0 14px rgba(0, 0, 0, 0.35); transition: opacity 0.5s, transform 0.6s var(--ease); }
+    .ribbon.v { left: 50%; top: 0; bottom: 0; width: 22px; margin-left: -11px; }
+    .ribbon.h { top: 50%; left: 0; right: 0; height: 22px; margin-top: -11px; }
+    .bow {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 74px;
+        height: 74px;
+        margin: -37px 0 0 -37px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        color: var(--moon);
+        background: radial-gradient(circle, var(--ribbon) 55%, rgba(0, 0, 0, 0.25));
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        transition: opacity 0.5s, transform 0.7s var(--ease);
+    }
+    .package.open .ribbon { opacity: 0; }
+    .package.open .ribbon.v { transform: scaleY(0); }
+    .package.open .ribbon.h { transform: scaleX(0); }
+    .package.open .bow { opacity: 0; transform: scale(2) rotate(90deg); }
+
+    .tag {
+        position: absolute;
+        right: -18px;
+        top: 18%;
+        padding: 10px 16px 10px 22px;
+        border-radius: 8px;
+        background: var(--moon);
+        color: var(--night);
+        font-weight: 900;
+        font-size: 14px;
+        transform: rotate(8deg);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+        transition: opacity 0.4s;
+    }
+    .tag::before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: 50%;
+        width: 7px;
+        height: 7px;
+        margin-top: -3.5px;
+        border-radius: 50%;
+        background: var(--night-2);
+    }
+    .package.open .tag { opacity: 0; }
+
+    /* little stars that fly out when the book is unwrapped */
+    .spark {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: var(--star);
+        font-size: 18px;
+        pointer-events: none;
+        animation: spark 1.2s var(--ease) forwards;
+    }
+    @keyframes spark {
+        from { transform: translate(-50%, -50%) scale(0.4); opacity: 1; }
+        to { transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1.2) rotate(140deg); opacity: 0; }
+    }
+
+    /* ---------- after unwrapping ---------- */
+    .reveal { display: none; }
+    .blind.open .before { display: none; }
+    .blind.open .reveal { display: block; animation: rise 0.9s var(--ease) 0.6s both; }
+    .reveal h1 { font-size: clamp(34px, 5vw, 54px); }
+    .reveal .author { font-size: 19px; color: var(--moonglow); font-weight: 700; margin: -4px 0 18px; }
+    .reveal .vibe { display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px; margin-bottom: 22px; font-weight: 800; color: var(--moon); }
+    #read-now { display: none; }
+
+    @media (max-width: 800px) {
+        .blind { grid-template-columns: 1fr; text-align: center; }
+        .blind .stage { order: -1; max-width: 250px; margin: 0 auto; width: 100%; }
+        .hints, .blind-actions { justify-content: center; }
+        .blind .note { margin-left: auto; margin-right: auto; }
+        .tag { right: -8px; }
+    }
+</style>
+{% endblock %}
+
+{% block main %}
+
+<section class="blind" id="blind">
+    <div>
+        <div class="before">
+            <h1 class="rise" style="animation-delay: 0.05s">A blind date with a book</h1>
+            <p class="note rise" style="animation-delay: 0.1s">
+                Choose a book by its mood, not its cover. Three hints and a melody are all you get.
+                Unwrap it when you're ready.
+            </p>
+            <div class="hints">
+                {% for hint in hints %}
+                    <span class="hint">{{ hint }}</span>
+                {% endfor %}
+            </div>
+            <div class="blind-actions rise" style="animation-delay: 0.4s">
+                <button class="btn primary" id="unwrap-btn">unwrap it</button>
+                {% if info.palette %}
+                    <button class="btn" id="listen-btn">♪ hear it first</button>
+                {% endif %}
+                <a class="btn" href="/blind?skip={{ book.title | urlencode }}">another one</a>
+            </div>
+        </div>
+
+        <div class="reveal">
+            <p class="note" style="margin: 0 0 6px;">your book is</p>
+            <h1>{{ info.title }}</h1>
+            <p class="author">by {{ book.author }}</p>
+            {% if mood %}
+                <div class="vibe panel">{{ mood.emoji }} {{ mood.name }}</div>
+            {% endif %}
+            <p class="note">{{ info.description | truncate(260) }}</p>
+            <div class="blind-actions">
+                <a class="btn primary" id="read-now" href="/read/{{ book.id }}">start reading</a>
+                <a class="btn" href="/book/{{ book.id }}">its vibe and films</a>
+                <a class="btn" href="/blind?skip={{ book.title | urlencode }}">another one</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="stage rise" style="animation-delay: 0.15s">
+        <div class="package" id="package" style="--ribbon: {{ info.palette[0] if info.palette else '#c8c2ff' }};" title="click to unwrap">
+            <div class="inside">
+                {% if book.cover %}<img src="{{ book.cover }}" alt="Cover of the book">{% endif %}
+            </div>
+            <div class="paper left"></div>
+            <div class="paper right"></div>
+            <div class="ribbon v"></div>
+            <div class="ribbon h"></div>
+            <div class="bow">✦</div>
+            <div class="tag">for you</div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/music.js"></script>
+<script>
+(function() {
+    const palette = {{ info.palette | tojson }};
+    const moodName = {{ (mood.name if mood else "") | tojson }};
+    const workId = {{ book.id | tojson }};
+    const blind = document.getElementById("blind");
+    const pack = document.getElementById("package");
+
+    // the ribbon gets the brightest, most colorful color of the hidden cover
+    function liveliness(hex) {
+        const r = parseInt(hex.slice(1, 3), 16), g = parseInt(hex.slice(3, 5), 16), b = parseInt(hex.slice(5, 7), 16);
+        const max = Math.max(r, g, b), min = Math.min(r, g, b);
+        return (max - min) * 1.2 + max * 0.6;
+    }
+    if (palette.length) {
+        const ribbon = palette.slice().sort(function(a, b) { return liveliness(b) - liveliness(a); })[0];
+        pack.style.setProperty("--ribbon", ribbon);
+    }
+
+    // the cover image is ready before you open the gift
+    function unwrap() {
+        if (pack.classList.contains("open")) return;
+        pack.classList.add("open");
+        blind.classList.add("open");
+        fetch("/api/event/unwrap", { method: "POST" }).catch(function() {});
+        for (let i = 0; i < 18; i++) {
+            const spark = document.createElement("span");
+            spark.className = "spark";
+            spark.textContent = i % 3 === 0 ? "✦" : "·";
+            const angle = Math.random() * Math.PI * 2;
+            const distance = 120 + Math.random() * 160;
+            spark.style.setProperty("--x", Math.cos(angle) * distance + "px");
+            spark.style.setProperty("--y", Math.sin(angle) * distance + "px");
+            spark.style.animationDelay = Math.random() * 0.2 + "s";
+            pack.appendChild(spark);
+            setTimeout(function() { spark.remove(); }, 1600);
+        }
+        if (palette.length && !BookMusic.isPlaying()) BookMusic.play(palette, moodName);
+    }
+    document.getElementById("unwrap-btn").addEventListener("click", unwrap);
+    pack.addEventListener("click", unwrap);
+
+    const listenBtn = document.getElementById("listen-btn");
+    if (listenBtn) {
+        listenBtn.addEventListener("click", function() {
+            if (BookMusic.isPlaying()) {
+                BookMusic.stop();
+            } else {
+                listenBtn.textContent = "■ stop";
+                BookMusic.play(palette, moodName, function() { listenBtn.textContent = "♪ hear it first"; });
+            }
+        });
+    }
+
+    fetch("/api/readable/" + workId)
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            if (data.readable) document.getElementById("read-now").style.display = "inline-flex";
+        })
+        .catch(function() {});
+})();
+</script>
+{% endblock %}

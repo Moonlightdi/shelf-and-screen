@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<div class="section-head">
+    <div>
+        <span class="label rise">search results</span>
+        <h2 class="rise">“{{ query }}”</h2>
+    </div>
+    {% if books %}
+        <p class="note rise">{{ books | length }} books found under the moon ☾</p>
+    {% endif %}
+</div>
+
+{% if error %}
+    <div class="panel rise" style="padding: 34px; text-align: center;">
+        <h3>The shelves didn't answer 🌙</h3>
+        <p class="note" style="margin: 0 auto;">Open Library is a little slow tonight. Please try again in a moment.</p>
+    </div>
+{% elif books %}
+    <div class="grid">
+        {% for book in books %}
+            <div class="card rise" style="animation-delay: {{ loop.index0 * 0.05 }}s">
+                <a href="/book/{{ book.id }}">
+                    <div class="cover"><img src="{{ book.cover }}" alt="Cover of {{ book.title }}" loading="lazy"></div>
+                    <strong>{{ book.title }}</strong>
+                    <span>{{ book.author }}{% if book.year %} · {{ book.year }}{% endif %}</span>
+                </a>
+                <button class="add-btn" data-id="{{ book.id }}" title="add to my shelf">+</button>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="panel rise" style="padding: 34px; text-align: center;">
+        <h3>No books found in the dark 🌙</h3>
+        <p class="note" style="margin: 0 auto;">Try another title, or <a href="/blind">take a blind date with a book ✧</a></p>
+    </div>
+{% endif %}
+
+<a href="/" class="back">← back to the night sky</a>
+
+{% endblock %}

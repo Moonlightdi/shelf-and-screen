@@ -1,0 +1,218 @@
+{% extends "layout.html" %}
+
+{% block title %}First lines · Shelf & Screen{% endblock %}
+
+{% block head %}
+<style>
+    .game { max-width: 760px; margin: 0 auto; text-align: center; }
+    .game .note { margin: 0 auto 30px; font-size: 18px; }
+
+    .moons { display: flex; justify-content: center; gap: 8px; margin-bottom: 26px; }
+    .moons i {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1.5px solid rgba(200, 194, 255, 0.35);
+        transition: background 0.4s, box-shadow 0.4s, border-color 0.4s;
+    }
+    .moons i.now { border-color: var(--moon); box-shadow: 0 0 12px rgba(244, 241, 255, 0.5); }
+    .moons i.right { background: var(--star); border-color: var(--star); box-shadow: 0 0 14px rgba(255, 248, 214, 0.6); }
+    .moons i.wrong { background: rgba(200, 194, 255, 0.12); border-color: rgba(200, 194, 255, 0.2); }
+
+    .quote {
+        position: relative;
+        padding: clamp(30px, 6vw, 54px) clamp(24px, 6vw, 60px);
+        margin-bottom: 26px;
+    }
+    .quote::before {
+        content: "“";
+        position: absolute;
+        top: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 90px;
+        line-height: 1;
+        font-weight: 900;
+        color: var(--moonglow);
+        opacity: 0.5;
+    }
+    .quote p {
+        margin: 0;
+        font-size: clamp(20px, 2.8vw, 28px);
+        line-height: 1.45;
+        font-style: italic;
+        color: var(--moon);
+    }
+    .quote.swap p { animation: rise 0.7s var(--ease) both; }
+
+    .options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .option {
+        padding: 16px 18px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: var(--glass);
+        color: var(--moon);
+        font: inherit;
+        font-weight: 800;
+        text-align: left;
+        cursor: pointer;
+        transition: transform 0.3s var(--ease), background 0.3s, border-color 0.3s, opacity 0.3s;
+    }
+    .option small { display: block; font-weight: 600; font-size: 13px; color: var(--silver); }
+    .option:hover:not(:disabled) { transform: translateY(-3px); background: var(--glass-strong); }
+    .option:disabled { cursor: default; }
+    .option.right { background: rgba(255, 248, 214, 0.14); border-color: var(--star); box-shadow: 0 0 24px rgba(255, 248, 214, 0.18); }
+    .option.wrong { border-color: rgba(255, 140, 160, 0.6); animation: shake 0.4s; }
+    .option.faded { opacity: 0.4; }
+    @keyframes shake { 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+
+    .after { display: none; margin-top: 26px; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .after.show { display: flex; animation: rise 0.6s var(--ease) both; }
+    .verdict { width: 100%; margin: 0 0 6px; font-weight: 800; color: var(--moon); }
+
+    .final { display: none; }
+    .game.over .play { display: none; }
+    .game.over .final { display: block; animation: rise 0.8s var(--ease) both; }
+    .final .score { font-size: clamp(64px, 12vw, 110px); font-weight: 900; color: var(--moon); line-height: 1; margin: 10px 0; }
+    .final .rank { font-size: 22px; font-weight: 800; color: var(--moonglow); margin-bottom: 8px; }
+    .final .best { margin-bottom: 26px; }
+    .final .actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 600px) {
+        .options { grid-template-columns: 1fr; }
+    }
+</style>
+{% endblock %}
+
+{% block main %}
+
+<section class="game" id="game">
+    <div class="play">
+        <h1 class="rise">First lines</h1>
+        <p class="note rise" style="animation-delay: 0.08s">Every great book begins with one sentence. Guess the book from its first line.</p>
+
+        <div class="moons" id="moons" aria-label="progress"></div>
+
+        <div class="quote panel" id="quote"><p id="line"></p></div>
+        <div class="options" id="options"></div>
+
+        <div class="after" id="after">
+            <p class="verdict" id="verdict"></p>
+            <a class="btn" id="open-link" href="#">read the first page</a>
+            <button class="btn primary" id="next-btn" type="button">next line →</button>
+        </div>
+    </div>
+
+    <div class="final">
+        <p class="note" style="margin-bottom: 0;">you guessed</p>
+        <div class="score" id="score"></div>
+        <div class="rank" id="rank"></div>
+        <p class="note best" id="best"></p>
+        <div class="actions">
+            <a class="btn primary" href="/first-lines">play again</a>
+            <a class="btn" href="/short">try a short read</a>
+        </div>
+    </div>
+</section>
+
+<div style="text-align: center;"><a href="/" class="back">← back home</a></div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function() {
+    const questions = {{ questions | tojson }};
+    const game = document.getElementById("game");
+    const moons = document.getElementById("moons");
+    const quote = document.getElementById("quote");
+    const lineBox = document.getElementById("line");
+    const optionsBox = document.getElementById("options");
+    const after = document.getElementById("after");
+    const verdict = document.getElementById("verdict");
+    const openLink = document.getElementById("open-link");
+    const nextBtn = document.getElementById("next-btn");
+
+    let round = 0;
+    let score = 0;
+
+    questions.forEach(function() { moons.appendChild(document.createElement("i")); });
+
+    function show() {
+        const q = questions[round];
+        moons.children[round].classList.add("now");
+        quote.classList.remove("swap");
+        void quote.offsetWidth;
+        quote.classList.add("swap");
+        lineBox.textContent = q.line;
+        after.classList.remove("show");
+        optionsBox.innerHTML = "";
+
+        q.options.forEach(function(option) {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "option";
+            button.textContent = option.title;
+            const author = document.createElement("small");
+            author.textContent = option.author;
+            button.appendChild(author);
+            button.addEventListener("click", function() { answer(button, option.title); });
+            optionsBox.appendChild(button);
+        });
+    }
+
+    function answer(button, title) {
+        const q = questions[round];
+        const right = title === q.answer;
+        if (right) score++;
+
+        optionsBox.querySelectorAll(".option").forEach(function(b) {
+            b.disabled = true;
+            if (b.firstChild.textContent === q.answer) b.classList.add("right");
+            else if (b !== button) b.classList.add("faded");
+        });
+        if (!right) button.classList.add("wrong");
+
+        moons.children[round].classList.remove("now");
+        moons.children[round].classList.add(right ? "right" : "wrong");
+
+        verdict.textContent = right ? "Yes! " + q.answer + ", " + q.author + "." : "It was " + q.answer + ", " + q.author + ".";
+        openLink.href = "/open?title=" + encodeURIComponent(q.answer) + "&author=" + encodeURIComponent(q.author);
+        nextBtn.textContent = round === questions.length - 1 ? "see my score" : "next line →";
+        after.classList.add("show");
+    }
+
+    function finish() {
+        const ranks = [
+            [9, "Lives in the library"],
+            [7, "Night reader"],
+            [5, "Bookmark collector"],
+            [3, "Curious beginner"],
+            [0, "A whole shelf to discover"],
+        ];
+        document.getElementById("score").textContent = score + " / " + questions.length;
+        document.getElementById("rank").textContent = ranks.find(function(r) { return score >= r[0]; })[1];
+
+        let best = 0;
+        try { best = parseInt(localStorage.getItem("firstLinesBest") || "0", 10); } catch (e) {}
+        if (score > best) {
+            best = score;
+            try { localStorage.setItem("firstLinesBest", String(score)); } catch (e) {}
+            document.getElementById("best").textContent = "A new personal best!";
+        } else {
+            document.getElementById("best").textContent = "Your best: " + best + " / " + questions.length;
+        }
+        game.classList.add("over");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    nextBtn.addEventListener("click", function() {
+        round++;
+        if (round < questions.length) show();
+        else finish();
+    });
+
+    show();
+})();
+</script>
+{% endblock %}
