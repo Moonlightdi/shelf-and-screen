@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% block title %}Can you judge a book by its cover? · Shelf & Screen{% endblock %}
+
+{% block head %}
+<meta property="og:title" content="Can you judge a book by its cover? · Shelf & Screen">
+<meta property="og:description" content="I looked at the colors of {{ data.total if data else 'hundreds of' }} book covers to find out if colors can tell a book's genre.">
+<style>
+    .r-hero { max-width: 760px; }
+    .r-hero h1 { font-size: clamp(36px, 6vw, 64px); }
+    .r-hero p { font-size: 18px; line-height: 1.75; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin: 30px 0; }
+    .stat { padding: 22px; text-align: center; }
+    .stat strong { display: block; font-size: 44px; font-weight: 900; color: var(--moon); line-height: 1.1; }
+    .stat span { font-size: 14px; color: var(--silver); }
+    .finding { padding: 18px 22px; margin-bottom: 10px; font-size: 17px; color: var(--moon); }
+    .genre-row { display: grid; grid-template-columns: 170px 1fr; gap: 18px; align-items: center; padding: 18px 22px; margin-bottom: 10px; }
+    .genre-row h3 { margin: 0; font-size: 20px; }
+    .genre-row small { color: var(--silver); }
+    .swatches { display: flex; gap: 6px; margin-bottom: 12px; }
+    .swatches i { flex: 1; height: 38px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.15); }
+    .bar-line { display: grid; grid-template-columns: 110px 1fr 46px; gap: 10px; align-items: center; font-size: 13px; margin: 4px 0; }
+    .bar { height: 10px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); overflow: hidden; }
+    .bar b { display: block; height: 100%; border-radius: 999px; background: var(--moonglow); }
+    .moods { display: flex; height: 14px; border-radius: 999px; overflow: hidden; margin-top: 8px; }
+    .moods i { display: block; height: 100%; }
+    .m-dark { background: #3b3a5a; } .m-warm { background: #e8894a; } .m-calm { background: #4f8fd6; } .m-soft { background: #f1b8cf; }
+    .legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px; margin: 6px 0 18px; }
+    .legend span::before { content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 4px; margin-right: 6px; vertical-align: -1px; background: var(--c); }
+    .decades { display: flex; align-items: flex-end; gap: 10px; height: 230px; padding: 24px 22px 12px; }
+    .decade { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; font-size: 12px; color: var(--silver); }
+    .decade b { width: 100%; border-radius: 10px 10px 4px 4px; margin-bottom: 8px; }
+    .big-number { font-size: clamp(64px, 12vw, 120px); font-weight: 900; color: var(--moon); line-height: 1; }
+    .method { color: var(--silver); line-height: 1.8; }
+    .method code { color: var(--moonglow); }
+    @media (max-width: 700px) { .genre-row { grid-template-columns: 1fr; } }
+</style>
+{% endblock %}
+
+{% block main %}
+<section class="r-hero rise">
+    <span class="label">a small research project</span>
+    <h1>Can you judge a book by its cover?</h1>
+    <p>Everyone says you shouldn't. I wanted to check with data: do horror books really have dark covers, and romance books pink ones? Can a computer guess a book's genre just from the colors of its cover, without reading a single word?</p>
+</section>
+
+{% if not data %}
+    <section class="panel finding">The covers are still being collected. Come back soon ☾</section>
+{% else %}
+
+<div class="stats">
+    <div class="stat panel"><strong>{{ data.total }}</strong><span>book covers analyzed</span></div>
+    <div class="stat panel"><strong>{{ data.genres | length }}</strong><span>genres</span></div>
+    <div class="stat panel"><strong>{{ data.accuracy | round | int }}%</strong><span>genre guessed by color alone</span></div>
+    <div class="stat panel"><strong>{{ data.chance | round | int }}%</strong><span>if you just guess randomly</span></div>
+</div>
+
+<section class="section">
+    <div class="section-head"><div><span class="label">in short</span><h2>What the colors said</h2></div></div>
+    {% for f in data.findings %}<div class="finding panel">✦ {{ f }}</div>{% endfor %}
+</section>
+
+<section class="section">
+    <div class="section-head">
+        <div><span class="label">the palette of every genre</span><h2>The colors of each genre</h2></div>
+        <p class="note">The five main colors of all covers in a genre together, found with k-means, the same way the site reads one cover.</p>
+    </div>
+    <div class="legend">
+        <span style="--c:#3b3a5a">dark & mysterious</span><span style="--c:#e8894a">warm & cozy</span><span style="--c:#4f8fd6">calm & dreamy</span><span style="--c:#f1b8cf">soft & romantic</span>
+    </div>
+    {% for g in data.genres %}
+        <div class="genre-row panel">
+            <div><h3>{{ g.name }}</h3><small>{{ g.count }} covers</small></div>
+            <div>
+                <div class="swatches">{% for c in g.colors %}<i style="background: {{ c }}" title="{{ c }}"></i>{% endfor %}</div>
+                <div class="bar-line"><span>brightness</span><div class="bar"><b style="width: {{ (g.brightness / 255 * 100) | round }}%"></b></div><span>{{ (g.brightness / 255 * 100) | round | int }}</span></div>
+                <div class="bar-line"><span>colorfulness</span><div class="bar"><b style="width: {{ (g.saturation / 255 * 100) | round }}%"></b></div><span>{{ (g.saturation / 255 * 100) | round | int }}</span></div>
+                <div class="bar-line"><span>guessed right</span><div class="bar"><b style="width: {{ g.recognized }}%; background: var(--star)"></b></div><span>{{ g.recognized }}%</span></div>
+                <div class="moods">{% for m in ["dark", "warm", "calm", "soft"] %}<i class="m-{{ m }}" style="width: {{ g.moods[m] }}%" title="{{ m }} {{ g.moods[m] }}%"></i>{% endfor %}</div>
+            </div>
+        </div>
+    {% endfor %}
+</section>
+
+{% if data.decades | length >= 3 %}
+<section class="section">
+    <div class="section-head">
+        <div><span class="label">through the years</span><h2>Are covers getting darker?</h2></div>
+        <p class="note">Average brightness of covers by the decade the book was first published. Taller is brighter.</p>
+    </div>
+    {% set top = data.decades | map(attribute="brightness") | max %}
+    <div class="decades panel">
+        {% for d in data.decades %}
+            <div class="decade">
+                <b style="height: {{ (d.brightness / top * 100) | round }}%; background: rgb({{ d.brightness | int }}, {{ d.brightness | int }}, {{ (d.brightness * 1.1) | int if d.brightness * 1.1 < 255 else 255 }})"></b>
+                {{ d.decade }}s
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+<section class="section">
+    <div class="section-head"><div><span class="label">how I did it</span><h2>Method</h2></div></div>
+    <div class="panel finding method">
+        I took up to 150 books per genre from Open Library's subject lists and skipped books that appear in more than one genre.
+        For each cover I found its five main colors with k-means clustering (<code>palette.py</code>) and measured brightness, colorfulness and the main hue.
+        Then a simple "judge" (a nearest-centroid classifier) learned the average colors of each genre from 80% of the covers and tried to guess the genre of the other 20%, five times in a row with different splits (5-fold cross-validation).
+        It never sees the title or the text, only colors. The code is in <code>research.py</code>, and the raw data in <code>research_covers.csv</code>.
+        <br><br>Updated {{ data.updated }}.
+    </div>
+</section>
+
+{% endif %}
+
+<a href="/" class="back">← back to the night sky</a>
+{% endblock %}

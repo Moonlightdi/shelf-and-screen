@@ -385,6 +385,7 @@
             <a href="/first-lines" class="{{ 'here' if request.path == '/first-lines' }}">first lines ❝</a>
             <a href="/blind" class="{{ 'here' if request.path == '/blind' }}">blind date ✧</a>
             <a href="/shelf" class="{{ 'here' if request.path == '/shelf' }}">my shelf ☾</a>
+            <a href="/research" class="{{ 'here' if request.path == '/research' }}">research ◐</a>
         </nav>
         <form action="/search" method="get" class="search">
             <input name="q" placeholder="what are you reading tonight?" autocomplete="off" aria-label="search for a book" value="{{ query or '' }}">

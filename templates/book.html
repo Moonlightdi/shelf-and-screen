@@ -16,6 +16,12 @@
 {% endblock %}
 
 {% block head %}
+{% set og_line = vibe_lines.get(mood.name, "") if mood else "" %}
+<meta property="og:type" content="book">
+<meta property="og:title" content="{{ title }}{% if mood %} · {{ mood.emoji }} {{ mood.name }}{% endif %}">
+<meta property="og:description" content="{% if og_line %}{{ og_line | capitalize }}. {% endif %}Hear its melody and find films with the same feeling on Shelf & Screen.">
+{% if cover %}<meta property="og:image" content="{{ cover }}">{% endif %}
+<meta name="twitter:card" content="summary_large_image">
 <style>
     .book-hero {
         display: grid;
@@ -119,6 +125,28 @@
         background: var(--star);
     }
 
+    .share-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background: rgba(5, 6, 20, 0.82);
+        backdrop-filter: blur(6px);
+    }
+    .share-modal[hidden] { display: none; }
+    .share-box { display: flex; flex-direction: column; align-items: center; gap: 16px; max-height: 100%; }
+    .share-box img {
+        max-height: 70vh;
+        max-width: 100%;
+        border-radius: 18px;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    }
+    .share-box .note { margin: 0; color: var(--silver); text-align: center; }
+    .share-box .actions { margin: 0; justify-content: center; }
+
     @media (max-width: 760px) {
         .book-hero { grid-template-columns: 1fr; }
         .book-cover { position: static; max-width: 230px; margin: 0 auto; }
@@ -150,6 +178,7 @@
             {% if palette %}
                 <button class="btn" id="listen-btn">♪ hear its melody</button>
             {% endif %}
+            <button class="btn" id="share-btn">✦ share this vibe</button>
         </div>
         <div id="listen-slot" data-work="{{ work_id }}"></div>
 
@@ -195,6 +224,19 @@
 
 <a href="/" class="back">← back to the night sky</a>
 
+<div class="share-modal" id="share-modal" hidden>
+    <div class="share-box">
+        <img id="share-img" alt="Your book vibe card">
+        <p class="note">Post it to your story ✦ tag a friend who needs this book</p>
+        <div class="actions">
+            <button class="btn primary" id="share-go">share ✦</button>
+            <a class="btn" id="share-dl" download>download</a>
+            <button class="btn" id="share-copy">copy link</button>
+            <button class="btn" id="share-close">close</button>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
 
 {% block scripts %}
@@ -203,6 +245,7 @@
 <script>
 (function() {
     const thisBook = {{ {"id": work_id, "title": title, "cover": cover, "palette": palette, "mood": mood.name if mood else ""} | tojson }};
+    const cardInfo = {{ {"emoji": mood.emoji if mood else "📖", "line": vibe_lines.get(mood.name, "") if mood else "", "films": films[:3] | map(attribute="title") | list} | tojson }};
 
     // Save this book to "my shelf" (kept in this browser)
     const saveBtn = document.getElementById("save-btn");
@@ -255,6 +298,188 @@
             }
         });
     }
+
+    // ✦ Share card: a story-sized picture of the book's vibe
+    const shareBtn = document.getElementById("share-btn");
+    const modal = document.getElementById("share-modal");
+    let cardFile = null;
+
+    function loadCover(url) {
+        return new Promise(function(resolve) {
+            if (!url) return resolve(null);
+            const img = new Image();
+            img.crossOrigin = "anonymous";
+            img.onload = function() { resolve(img); };
+            img.onerror = function() { resolve(null); };
+            img.src = url;
+        });
+    }
+
+    function roundRect(ctx, x, y, w, h, r) {
+        ctx.beginPath();
+        ctx.moveTo(x + r, y);
+        ctx.arcTo(x + w, y, x + w, y + h, r);
+        ctx.arcTo(x + w, y + h, x, y + h, r);
+        ctx.arcTo(x, y + h, x, y, r);
+        ctx.arcTo(x, y, x + w, y, r);
+        ctx.closePath();
+    }
+
+    function wrapLines(ctx, text, maxWidth, maxLines) {
+        const words = text.split(" ");
+        const lines = [];
+        let line = "";
+        words.forEach(function(word) {
+            const test = line ? line + " " + word : word;
+            if (ctx.measureText(test).width > maxWidth && line) { lines.push(line); line = word; } else { line = test; }
+        });
+        if (line) lines.push(line);
+        if (lines.length > maxLines) {
+            lines.length = maxLines;
+            lines[maxLines - 1] = lines[maxLines - 1].replace(/\s*\S*$/, "") + "…";
+        }
+        return lines;
+    }
+
+    async function drawCard(withCover) {
+        const W = 1080, H = 1920;
+        const canvas = document.createElement("canvas");
+        canvas.width = W;
+        canvas.height = H;
+        const ctx = canvas.getContext("2d");
+        const pal = (thisBook.palette && thisBook.palette.length) ? thisBook.palette : ["#c8c2ff", "#272d66", "#1a1f4a"];
+
+        // night sky tinted by the cover colors
+        const bg = ctx.createLinearGradient(0, 0, 0, H);
+        bg.addColorStop(0, "#090b22");
+        bg.addColorStop(1, "#0d1030");
+        ctx.fillStyle = bg;
+        ctx.fillRect(0, 0, W, H);
+        [[0.2, 0.15, pal[0]], [0.85, 0.45, pal[1 % pal.length]], [0.3, 0.85, pal[2 % pal.length]]].forEach(function(g) {
+            const glow = ctx.createRadialGradient(W * g[0], H * g[1], 0, W * g[0], H * g[1], 650);
+            glow.addColorStop(0, g[2] + "66");
+            glow.addColorStop(1, g[2] + "00");
+            ctx.fillStyle = glow;
+            ctx.fillRect(0, 0, W, H);
+        });
+        for (let i = 0; i < 140; i++) {
+            ctx.fillStyle = "rgba(255,255,255," + (0.2 + Math.random() * 0.7) + ")";
+            ctx.beginPath();
+            ctx.arc(Math.random() * W, Math.random() * H, Math.random() * 2.2 + 0.4, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        ctx.textAlign = "center";
+        ctx.fillStyle = "#c8c2ff";
+        ctx.font = "800 30px Nunito, sans-serif";
+        ctx.fillText("☾  SHELF & SCREEN", W / 2, 120);
+
+        // the cover
+        const coverId = (thisBook.cover || "").match(/\/b\/id\/(\d+)/);
+        const cover = withCover ? await loadCover(coverId ? "/api/cover/" + coverId[1] : thisBook.cover) : null;
+        const cw = 500, ch = 750, cx = (W - cw) / 2, cy = 190;
+        ctx.save();
+        ctx.shadowColor = pal[0];
+        ctx.shadowBlur = 90;
+        roundRect(ctx, cx, cy, cw, ch, 28);
+        ctx.fillStyle = "#1a1f4a";
+        ctx.fill();
+        ctx.restore();
+        ctx.save();
+        roundRect(ctx, cx, cy, cw, ch, 28);
+        ctx.clip();
+        if (cover) {
+            ctx.drawImage(cover, cx, cy, cw, ch);
+        } else {
+            ctx.font = "200px sans-serif";
+            ctx.fillText("📖", W / 2, cy + ch / 2 + 70);
+        }
+        ctx.restore();
+
+        // title
+        ctx.fillStyle = "#f4f1ff";
+        ctx.font = "900 68px Nunito, sans-serif";
+        let y = 1050;
+        wrapLines(ctx, thisBook.title, 920, 2).forEach(function(l) { ctx.fillText(l, W / 2, y); y += 80; });
+
+        // the vibe
+        if (thisBook.mood) {
+            y += 30;
+            ctx.fillStyle = "#c8c2ff";
+            ctx.font = "800 28px Nunito, sans-serif";
+            ctx.fillText("T H E   V I B E   O F   T H I S   B O O K", W / 2, y);
+            y += 90;
+            ctx.fillStyle = "#f4f1ff";
+            ctx.font = "900 76px Nunito, sans-serif";
+            ctx.fillText(cardInfo.emoji + " " + thisBook.mood, W / 2, y);
+            y += 66;
+            ctx.fillStyle = "#a9b3d6";
+            ctx.font = "italic 400 38px Nunito, sans-serif";
+            wrapLines(ctx, cardInfo.line, 900, 2).forEach(function(l) { ctx.fillText(l, W / 2, y); y += 50; });
+        }
+
+        // the cover's colors = its melody
+        y += 40;
+        const n = Math.min(pal.length, 5), r = 38, gap = 34;
+        let x = W / 2 - (n * 2 * r + (n - 1) * gap) / 2 + r;
+        for (let i = 0; i < n; i++) {
+            ctx.fillStyle = pal[i];
+            ctx.beginPath();
+            ctx.arc(x, y, r, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.strokeStyle = "rgba(255,255,255,0.5)";
+            ctx.lineWidth = 3;
+            ctx.stroke();
+            x += 2 * r + gap;
+        }
+        y += 110;
+
+        // films
+        if (cardInfo.films.length) {
+            ctx.fillStyle = "#c8c2ff";
+            ctx.font = "800 28px Nunito, sans-serif";
+            ctx.fillText("🎬  WATCH NEXT", W / 2, y);
+            y += 56;
+            ctx.fillStyle = "#f4f1ff";
+            ctx.font = "700 40px Nunito, sans-serif";
+            cardInfo.films.forEach(function(f) { wrapLines(ctx, f, 900, 1).forEach(function(l) { ctx.fillText(l, W / 2, y); }); y += 54; });
+        }
+
+        ctx.fillStyle = "#a9b3d6";
+        ctx.font = "700 30px Nunito, sans-serif";
+        ctx.fillText("what's YOUR book's vibe?  ✦  " + location.host, W / 2, H - 70);
+
+        return new Promise(function(resolve, reject) {
+            try { canvas.toBlob(function(blob) { blob ? resolve(blob) : reject(); }, "image/png"); } catch (e) { reject(e); }
+        });
+    }
+
+    shareBtn.addEventListener("click", async function() {
+        shareBtn.textContent = "making your card…";
+        try { await document.fonts.ready; } catch (e) {}
+        let blob;
+        try { blob = await drawCard(true); } catch (e) { blob = await drawCard(false); }
+        const name = thisBook.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "book";
+        cardFile = new File([blob], name + "-vibe.png", {type: "image/png"});
+        const url = URL.createObjectURL(blob);
+        document.getElementById("share-img").src = url;
+        const dl = document.getElementById("share-dl");
+        dl.href = url;
+        dl.download = cardFile.name;
+        document.getElementById("share-go").hidden = !(navigator.canShare && navigator.canShare({files: [cardFile]}));
+        modal.hidden = false;
+        shareBtn.textContent = "✦ share this vibe";
+        fetch("/api/event/share", {method: "POST"}).catch(function() {});
+    });
+    document.getElementById("share-go").addEventListener("click", function() {
+        navigator.share({files: [cardFile], title: thisBook.title, text: "the vibe of " + thisBook.title + " ✦ " + location.href}).catch(function() {});
+    });
+    document.getElementById("share-copy").addEventListener("click", function(e) {
+        const btn = e.currentTarget;
+        navigator.clipboard.writeText(location.href).then(function() { btn.textContent = "copied ✓"; setTimeout(function() { btn.textContent = "copy link"; }, 1500); }).catch(function() {});
+    });
+    document.getElementById("share-close").addEventListener("click", function() { modal.hidden = true; });
+    modal.addEventListener("click", function(e) { if (e.target === modal) modal.hidden = true; });
 
     // "Read it here" appears only if the book is free on Project Gutenberg
     const readBtn = document.getElementById("read-btn");

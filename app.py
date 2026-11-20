@@ -11,7 +11,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 
-from flask import Flask, jsonify, redirect, render_template, request, url_for
+from flask import Flask, jsonify, redirect, render_template, request, url_for, Response
 import requests
 
 from gutenberg import find_free_book, load_pages
@@ -422,6 +422,18 @@ def shelf():
     return render_template("shelf.html")
 
 
+@app.route("/research")
+def research():
+    """Can you judge a book by its cover? Results made by research.py"""
+    try:
+        with open("research_results.json", encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, ValueError):
+        data = None
+    count("research")
+    return render_template("research.html", data=data)
+
+
 @app.route("/api/readable/<work_id>")
 def api_readable(work_id):
     """Tells the book page if this book can be read for free"""
@@ -452,9 +464,21 @@ def api_book(work_id):
 @app.route("/api/event/<kind>", methods=["POST"])
 def api_event(kind):
     """Small things that happen in the browser: unwrapping a blind date, downloading a sky poster"""
-    if kind in ("unwrap", "poster", "sound"):
+    if kind in ("unwrap", "poster", "sound", "share"):
         count(kind)
     return jsonify({"ok": True})
+
+
+@app.route("/api/cover/<int:cover_id>")
+def cover_image(cover_id):
+    """Pass an Open Library cover through our own site, so the share card can draw it"""
+    try:
+        r = requests.get(f"https://covers.openlibrary.org/b/id/{cover_id}-L.jpg", timeout=10)
+        r.raise_for_status()
+    except requests.RequestException:
+        return Response(status=404)
+    return Response(r.content, mimetype=r.headers.get("Content-Type", "image/jpeg"),
+                    headers={"Cache-Control": "public, max-age=86400"})
 
 
 @app.route("/api/notes/<work_id>", methods=["GET"])
