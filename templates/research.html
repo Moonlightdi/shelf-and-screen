@@ -33,6 +33,7 @@
     .big-number { font-size: clamp(64px, 12vw, 120px); font-weight: 900; color: var(--moon); line-height: 1; }
     .method { color: var(--silver); line-height: 1.8; }
     .method code { color: var(--moonglow); }
+    .method p { margin: 0 0 14px; }
     @media (max-width: 700px) { .genre-row { grid-template-columns: 1fr; } }
 </style>
 {% endblock %}
@@ -86,7 +87,7 @@
 <section class="section">
     <div class="section-head">
         <div><span class="label">through the years</span><h2>Are covers getting darker?</h2></div>
-        <p class="note">Average brightness of covers by the decade the book was first published. Taller is brighter.</p>
+        <p class="note">Average brightness of covers by the decade the book was first published. Taller is brighter. ⚠ Careful: this compares the year a book was written, not the year its cover was made (see "What I learned").</p>
     </div>
     {% set top = data.decades | map(attribute="brightness") | max %}
     <div class="decades panel">
@@ -99,6 +100,17 @@
     </div>
 </section>
 {% endif %}
+
+<section class="section">
+    <div class="section-head"><div><span class="label">in my own words</span><h2>What I learned</h2></div></div>
+    <div class="panel finding method">
+        <p>Before running the code, I wrote down my predictions. I was correct that horror has the darkest covers and is the easiest genre to identify, but most of the other results surprised me.</p>
+        <p>I thought colors would help guess the genre about 60% of the time, but the actual result was only 20%. This is still better than random guessing (12%), which means colors do provide some clues, but not many. Overall, you really can't judge a book by its cover, at least not based on its colors.</p>
+        <p>Science fiction was especially difficult to recognize, with only 1% accuracy. I think this is because sci-fi covers often use dark blues and blacks, similar to horror, causing the &ldquo;judge&rdquo; to confuse the two genres.</p>
+        <p>One of the biggest lessons was discovering a mistake in my own results. The data showed that book covers became darker since the 1850s, but this comparison was not accurate. Open Library provides the year a book was first written, while its cover usually belongs to a much newer edition. For example, a book written in 1850 might have a cover from 2015. Next time, I would use the publication year of each edition instead.</p>
+        <p>I also noticed that some genre labels were incorrect. For example, Open Library classified <em>The Mayor of Casterbridge</em> as horror. This reminded me that real-world data is not always reliable and that checking its accuracy is an important part of any project.</p>
+    </div>
+</section>
 
 <section class="section">
     <div class="section-head"><div><span class="label">how I did it</span><h2>Method</h2></div></div>
