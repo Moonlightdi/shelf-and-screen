@@ -1,0 +1,1226 @@
+genre,cover_id,title,year,palette,mood,brightness,saturation,hue
+horror,14314858,The Picture of Dorian Gray,1890,#514b38 #5a5340 #4b4532 #7a7866 #403c29,dark,76.5,24.5,45.6
+horror,12356249,"Frankenstein; or, The Modern Prometheus",1818,#555a3d #38352d #45413b #837f77 #e7e2e2,dark,84.7,16.5,70.3
+horror,12216503,Dracula,1897,#f9fbe5 #1b211b #eae7d4 #7b7c6d #b7b6a6,dark,161.5,16.5,65.5
+horror,1260617,The Mayor of Casterbridge,1800,#fdfee0 #dedaac #867e99 #e5e4d9 #fcfdec,soft,209.6,31.5,62.0
+horror,2760301,The Jewel of Seven Stars,1902,#85998d #c6c6c6 #8a8b8a #a2aca7 #8e9c94,dark,160.1,9.1,144.0
+horror,448130,Herland,1915,#f3eeeb #c2c5b8 #959681 #635e4e #282923,dark,173.8,13.5,22.5
+horror,8028797,Bram Stoker's Dracula omnibus,1897,#fbf5f1 #faf2e8 #e2dbd5 #bab4b0 #6c6661,soft,221.0,12.8,24.0
+horror,973851,Carmilla,1871,#443d44 #544850 #716b74 #96485c #c6b9bf,dark,92.0,18.6,300.0
+horror,181493,The Turn of the Screw,1898,#023373 #524c4e #858373 #c6be9e #355683,dark,95.2,53.4,214.0
+horror,921610,The Great God Pan,1894,#000000 #f0eff0 #9c939d #483e48 #141014,dark,105.0,3.9,0.0
+horror,2039484,Dracula's Guest and Other Weird Stories,1937,#effba8 #23d403 #1fd701 #63cf45 #9cc578,warm,139.0,149.7,68.7
+horror,295773,The Strange Case of Dr. Jekyll and Mr. Hyde,1875,#2a292b #423739 #c5b9bf #6c6161 #212125,dark,83.7,7.7,270.0
+horror,1803998,The White People,2004,#fdfdfd #facc1e #dddaca #bfb388 #6f6653,warm,199.2,71.7,0.0
+horror,11838138,The Fall of the House of Usher,1704,#0488d8 #fcfdfd #b124da #4f6fd9 #a3abb2,calm,165.1,126.7,202.6
+horror,2011286,Brood of the Witch-Queen,1924,#000000 #9e9d8f #575850 #242421 #000000,dark,62.4,6.0,0.0
+horror,8369722,"Dracula's guest, and other weird stories",1914,#0a070a #b69174 #6f4c47 #3b292b #f0e7d6,dark,81.2,30.7,300.0
+horror,8311421,Tales of Terror and Mystery,1963,#710302 #060403 #732214 #644332 #301b13,dark,37.3,65.4,0.5
+horror,4871002,The Vampyre,1819,#fefefe #f8f8f8 #e5e5e5 #c0c0c0 #8d8d8d,soft,231.6,0.0,0.0
+horror,8863360,Tales of the Grotesque and Arabesque,1840,#131d20 #eef7fc #423f3c #7e7a71 #c5ccc6,dark,116.4,11.5,193.8
+horror,9256043,Carrie,1974,#010101 #090807 #1f221e #9ebaa7 #445f5f,dark,37.2,6.9,0.0
+horror,2808419,The Damned,2002,#f7dca8 #3f71ae #b17260 #784b43 #c0ab95,warm,150.5,82.1,39.5
+horror,8259296,Misery,1978,#030202 #2c1c17 #8f8f97 #504d52 #a40506,dark,52.9,18.8,0.0
+horror,12376585,The Shining,1977,#0a0b0c #4074b9 #19191f #302b31 #384b6b,dark,53.0,38.3,210.0
+horror,8569284,It,1986,#030202 #271b17 #93938d #e00406 #504c46,dark,53.1,35.8,0.0
+horror,8396638,The Gunslinger,1976,#ada99b #40110e #5b3031 #140606 #996249,dark,84.8,35.1,46.7
+horror,9334567,The Green Mile,1996,#030202 #616d52 #191813 #9ca280 #3b3d2e,dark,54.4,14.3,0.0
+horror,12015500,Pet Sematary,1983,#1e120f #3b1d17 #9f1211 #a48f73 #5e4636,dark,53.4,52.2,12.0
+horror,14653991,The Dead Zone,1979,#130e0d #c78f0c #804d20 #3b291a #978977,dark,67.0,77.6,10.0
+horror,9255992,The Stand,1978,#c2ac85 #c1c8c1 #b8834d #0e0b0c #7a4533,warm,140.7,48.7,38.4
+horror,8753716,In the Midst of Life. Tales of Civilians,1891,#5b5a31 #4e4e24 #45461c #807748 #3c3c16,dark,71.1,43.6,58.6
+horror,11860130,The Masque of the Red Death,1922,#fbf2e6 #f2e4cc #a8a283 #dac7ac #706555,warm,203.8,32.5,34.3
+horror,8570003,Cujo,1981,#a3806b #24201d #896b59 #604c41 #3f332b,dark,89.1,35.6,22.5
+horror,12015446,Firestarter,1980,#9b8b71 #8a6d51 #9a2205 #9b411b #352d1f,dark,101.1,77.5,37.1
+horror,12715730,The Exorcist,1971,#1f2124 #131619 #343333 #615650 #9b9585,dark,48.6,7.2,216.0
+horror,14657166,Skeleton crew,1985,#060606 #a8a496 #2a211e #534c44 #7e7c72,dark,70.0,10.0,0.0
+horror,2788688,"The Haunted and the Haunters, Or, The House and the Brain",1800,#fdca19 #fcfcfb #a0a0a0 #d9cb97 #85713d,warm,184.6,89.9,46.6
+horror,11851436,The Tell-Tale Heart,1958,#6a6362 #20090b #9a1b29 #4d4242 #d6cfcd,dark,76.3,36.3,7.5
+horror,8404327,Needful Things,1991,#060202 #2c1314 #74160e #cc3117 #6e86a1,dark,39.9,55.9,0.0
+horror,14651566,The talisman,1925,#050102 #8c0504 #300b07 #5d1109 #9f7b0f,dark,30.4,66.6,345.0
+horror,14655985,Christine,1983,#0f0d0b #c51405 #40301b #90471e #7d8573,dark,52.5,76.3,30.0
+horror,14651337,Night Shift,1960,#9e9d7a #948f6b #040403 #837051 #4d442c,dark,103.3,32.0,58.3
+horror,8524085,The Eyes of the Dragon,1959,#179b60 #0b6135 #381d12 #81130e #7e6649,dark,65.5,93.4,153.2
+horror,8413143,Four Past Midnight,1990,#04030c #b2823d #35241d #765530 #deab5e,dark,64.8,56.9,246.7
+horror,8274288,Thinner,1984,#000000 #da1910 #261110 #693834 #000000,dark,37.2,65.3,0.0
+horror,535027,The Day of the Triffids,1951,#1f2925 #4b2b1f #6e6360 #16140b #b6bab9,dark,60.3,19.6,156.0
+horror,8585782,Everything's Eventual. 14 Dark Tales,2002,#fafbfa #eaedec #cfd2d1 #9da0a2 #535253,soft,214.8,2.5,120.0
+horror,14654054,Cell,2006,#d7d4ca #c63418 #9d948d #100f0f #5a4a44,dark,131.2,55.5,46.2
+horror,9358432,Petals on the Wind,1980,#030202 #9c0608 #211f1a #4a5e51 #c3bdbd,dark,45.7,44.8,0.0
+horror,8530409,The Dark Half,1989,#0e0b08 #49412f #e67410 #a45c20 #93a19a,dark,67.3,70.3,30.0
+horror,14655761,Different Seasons,1982,#271f24 #524944 #93a6b9 #677277 #b8cadb,dark,93.2,18.5,322.5
+horror,9346340,Something Wicked This Way Comes,1962,#302c23 #5d523c #020202 #aa9262 #161511,dark,55.1,23.1,41.5
+horror,6125355,A thin ghost and others,1919,#fefefe #838383 #b7b7b7 #e8e8e8 #f7f7f7,soft,203.6,0.0,0.0
+horror,7886954,Insomnia,1994,#dfdbcd #e60202 #da2c28 #de635c #dfa397,warm,143.1,124.5,46.7
+horror,8578049,Rose Madder,1995,#0a0203 #78220e #3d0e08 #af6c13 #dfb83a,dark,45.9,73.3,352.5
+horror,10705875,Gerald's Game,1992,#e0dcce #13090b #b19062 #644331 #bc1010,warm,118.1,42.7,46.7
+horror,6502777,From a Buick 8,2002,#e5e5df #151020 #cebfc1 #a79695 #7c4565,dark,148.4,15.3,60.0
+horror,8536326,Hearts in Atlantis,1998,#d1d6dc #aaabb4 #878289 #6d545b #37272b,dark,160.2,12.1,212.7
+horror,14651906,The Regulators,1996,#977937 #584826 #b6c1a1 #2c2317 #120905,dark,94.9,55.4,41.2
+horror,9255774,The Queen of the Damned,1988,#e8edcf #d6dbb1 #bcc185 #938d54 #41341f,warm,183.4,43.9,70.0
+horror,8757374,Desperation,1996,#100b09 #433225 #6e6045 #8f907a #b8baa9,dark,66.2,22.6,17.1
+horror,14652972,Doctor Sleep,2013,#0f0b0c #201313 #3a2d2b #715f5b #7e0c0b,dark,36.8,18.4,345.0
+horror,8387657,Lisey's Story,2006,#870001 #960807 #720203 #c48c7c #361b1c,dark,60.6,116.9,359.6
+horror,13153196,If There Be Thorns,1981,#252422 #9dac7b #666b54 #ccc9bc #ac1e22,dark,103.2,30.3,40.0
+horror,9255997,Dolores Claiborne,1992,#1a1515 #40302e #8b3d2e #b78a43 #d0c7c2,dark,68.6,41.5,0.0
+horror,12856808,Can Such Things Be? [24 stories],1924,#e8b408 #ce8f13 #a26313 #3f2f10 #e6c855,warm,115.1,169.1,46.1
+horror,12640575,Eaters of the Dead,1976,#1a191c #402b20 #911916 #695a4c #a79b8b,dark,56.2,39.9,260.0
+horror,8311524,The Works of Edgar Allan Poe in Five Volumes,1903,#181812 #0d0e08 #080903 #31312e #060701,dark,18.5,5.6,60.0
+horror,1846228,The Human Chord,1910,#f2cc08 #bb1f04 #b07b11 #39170a #f7e971,warm,108.4,173.8,50.3
+horror,8443662,Danse Macabre,1980,#1b181e #483d44 #787780 #9a4d51 #dcdbdd,dark,79.9,17.1,270.0
+horror,8261369,The Passage,2010,#000000 #020205 #060816 #131b32 #436371,dark,13.7,11.2,0.0
+horror,14653120,Mr. Mercedes,2013,#c3b7af #a39492 #2c1c36 #b02626 #bb7973,dark,131.1,39.6,24.0
+horror,168106,World War Z,2006,#c46931 #9e412b #70201d #3f0d0f #d4895c,dark,87.9,110.9,22.9
+horror,11239784,The Premature Burial,2013,#050503 #594f36 #8e8166 #2d291a #c9beae,dark,63.6,22.3,60.0
+horror,12678357,Present at a Hanging and Other Ghost Stories,1913,#fefefd #f7d39b #efc58d #e3dace #8d8cb0,warm,216.6,49.7,60.0
+horror,14540542,Great Short Stories of the World -- a collection of complete short stories chosen from the literatures of all periods and countries,1922,#562623 #4e201e #5f2f2b #451c1a #6e412b,dark,52.8,50.4,3.5
+horror,312216,The return,1910,#2362a5 #16498a #113062 #0b204a #a6c2d9,dark,82.7,102.3,210.9
+horror,542561,The House on the Borderland,1946,#141410 #dbd8b2 #989270 #615438 #332b1c,dark,101.3,27.3,60.0
+horror,12018685,"Full Dark, No Stars",2010,#1f1e1f #2f282a #523a39 #191819 #957d69,dark,46.5,10.3,300.0
+horror,118762,In a glass darkly,1872,#383710 #7a681b #dee1c1 #3b759b #aba552,dark,103.3,63.8,58.5
+horror,8494916,Just After Sunset,2008,#0a080b #421d10 #784c2b #2b455c #c87a3a,dark,46.5,45.7,280.0
+horror,14653609,The Long Walk,1979,#0d1012 #1a2543 #131825 #555f6e #a1abb2,dark,46.3,20.7,204.0
+horror,7099583,The Graveyard Book,2008,#000003 #193052 #050614 #0e152c #445c75,dark,25.8,26.5,240.0
+horror,11290170,Welcome to Dead House,1992,#05030c #12132b #938083 #770d2b #6c3c4a,dark,49.6,30.8,253.3
+horror,1174846,The Terror,2007,#c0c4b7 #96a39b #637a78 #d7dacb #2e4240,dark,160.0,15.7,78.5
+horror,14654718,Nightmares & Dreamscapes,1993,#b3b7b6 #9c9b98 #7a7c7a #cc5a19 #484b4a,warm,145.2,26.9,165.0
+horror,9196533,Lasher,1993,#000000 #442f17 #6e563a #1b150e #d8d5d3,dark,46.2,24.5,0.0
+horror,8432367,Fallen Hearts,1988,#090707 #211f23 #4f5f7b #c4a4ae #4f3736,dark,59.1,16.5,0.0
+horror,6661617,The Voice of the Night,1980,#000000 #040607 #0e1414 #342e2b #7f594c,dark,17.9,6.6,0.0
+horror,10722591,My Sweet Audrina,1982,#040303 #302b2d #777373 #d4d1c8 #9b0709,dark,67.9,13.9,0.0
+horror,9324101,Blood and Gold,1998,#6b4b2e #987d55 #492e20 #261e1b #110c0b,dark,72.7,48.3,28.5
+horror,14651941,Roadwork,1981,#090b08 #8da195 #2f3d2b #725c47 #116991,dark,71.5,24.2,100.0
+horror,484868,Darkness Comes,1984,#0b0c0c #483b2b #7d754f #241d13 #b9b2b6,dark,56.6,20.0,180.0
+horror,12634210,Scary stories to tell in the dark,1981,#060202 #c8cac2 #7c7f7a #383a38 #5b090b,dark,89.0,10.2,0.0
+horror,9324122,Blackwood Farm,1998,#a7a7ac #050305 #43373d #70636b #20151a,dark,85.5,7.1,240.0
+horror,13241018,Kentukis,2014,#000001 #0e0b14 #321d29 #b7c0bc #705c61,dark,43.8,9.5,240.0
+horror,11412999,The Outsider,2018,#0f0f10 #29292b #1a1919 #443d23 #585855,dark,34.4,5.7,240.0
+horror,11290299,The Ghost Next Door,1993,#295170 #c88e62 #3f3b16 #0c1018 #935332,dark,83.2,67.1,206.2
+horror,294663,A Fine and Private Place,1960,#575a3d #b6bca7 #3a3d2c #899864 #6f7550,dark,109.2,28.1,66.2
+horror,12634239,Scary Stories 3,1991,#999b92 #67605c #1c0f12 #333037 #050304,dark,87.5,9.6,73.3
+horror,12884539,Someone Like You [18 stories],1953,#518588 #c0b59e #8e9483 #b46b64 #55574f,warm,136.9,42.0,183.3
+horror,10712767,The Institute,2019,#28242b #18171e #101014 #663f1b #6a8659,dark,39.4,18.0,274.3
+horror,10665151,Mrs. March,2021,#0d0d0c #75a18a #5a5748 #050505 #2b2821,dark,61.0,16.3,60.0
+horror,7998647,Fright Night,1988,#020302 #162b12 #588d1c #5c3a28 #c3a78f,dark,45.0,40.0,120.0
+horror,8315130,Night Chills,1976,#030101 #2c0f0e #c5080a #700708 #736b62,dark,34.1,61.6,0.0
+horror,11841090,Tales of Mystery and Imagination [29 stories],1902,#060606 #0c0c0b #030303 #adaa8a #625938,dark,32.5,7.7,0.0
+horror,6629330,Koko,1988,#010001 #111210 #4b8647 #443228 #ecd6aa,dark,44.2,21.6,300.0
+horror,14651552,Cycle of the Werewolf,1983,#010101 #73797c #261719 #45494b #751324,dark,51.5,12.7,0.0
+horror,14652892,Revival,2014,#131317 #6f0708 #195373 #584443 #767d77,dark,50.8,50.3,240.0
+horror,11895049,The Damned Thing,2007,#0114e3 #fcfcfc #0bb254 #b1b6b9 #3a60b3,calm,144.5,117.9,235.0
+horror,48006,Skulduggery Pleasant,2006,#0d0708 #312a35 #5b5764 #a4c179 #dfdcd7,dark,70.3,17.7,350.0
+horror,8315097,The Spook's Curse,2005,#4b4248 #6f6369 #242124 #a19597 #dbd5d3,dark,93.4,8.9,320.0
+horror,12881343,Demon Seed,1973,#010101 #0f100b #29281a #5d5825 #93a64b,dark,29.5,17.9,0.0
+horror,8408974,Annihilation,2014,#fbeec9 #17130f #889c4f #b7c668 #d8d6aa,warm,141.4,49.8,44.4
+horror,11762960,Histoires Extraordinaires (Balloon-Hoax / Descent into the Maelstrom / Facts in the Case of M. Valdemar / Gold-Bug / Ligeia / Mesmeric Revelation / Metzengerstein / Morella / MS. Found in a Bottle / Murders in the Rue Morgue / Purloined Letter / Tale of the Ragged Mountains / Unparalleled Adventure of One Hans Pfaall),1857,#020202 #040404 #000101 #000000 #090a09,dark,2.5,0.3,0.0
+horror,12634238,More Scary Stories to Tell in the Dark,1605,#f1f1ed #7d6c71 #b2a0a4 #2f2f34 #d7cfce,dark,164.6,10.7,60.0
+horror,6908464,Goosebumps - Deep Trouble,1994,#20648b #171444 #093971 #9a7d6f #5e3b44,dark,74.2,77.3,201.9
+horror,10581977,Twilight's Child,1991,#15100f #241e26 #4e2311 #b79c88 #6a5d51,dark,51.0,24.3,10.0
+horror,1532038,Wings in the Night,2005,#361716 #e0bb5c #8f7150 #5b3a27 #ea4f17,dark,93.9,79.5,1.9
+horror,10713424,Sleeping Beauties,2014,#121218 #1b2838 #5a1719 #21537b #8493a3,dark,47.2,37.2,240.0
+horror,6425948,Shadow souls,2010,#090e04 #9c514a #d1b9b4 #491a13 #4a433a,dark,78.6,39.3,90.0
+horror,6987378,La fête du mais,1969,#c9c5af #86846e #4f4f3f #29281d #0a0906,dark,117.3,20.1,50.8
+horror,297240,Bitten,2001,#131410 #1b1a16 #ac622e #283620 #564623,dark,43.7,34.2,75.0
+horror,7117271,Nightfall,2005,#dacbc4 #020101 #9e7c6f #753b3b #381616,dark,107.8,27.0,19.1
+horror,8075533,The Silver Eyes (Five Nights At Freddy's #1),2001,#93442c #291f20 #511e0f #cbc6c2 #0e0403,dark,73.3,52.1,14.0
+horror,297430,Stolen,2002,#0d0d09 #81818d #5a5961 #30302f #dbdddd,dark,78.8,6.4,60.0
+horror,13937407,The Wolf Gift,2012,#060606 #7f8c9f #566379 #22252d #3c4453,dark,70.1,18.5,0.0
+horror,14556071,Great American Short Stories,1957,#2f2d2e #262629 #1c1a1c #5d5648 #08080b,dark,43.0,4.9,330.0
+horror,14654512,If It Bleeds,2020,#d0c7c2 #c5b8b2 #ac918a #3a3431 #c85540,dark,161.6,26.8,21.4
+horror,9330636,The Mist,1925,#010302 #1d5926 #0c290f #bdd7b7 #56905c,dark,52.3,30.6,150.0
+horror,109761,Ancient Sorceries,1906,#202328 #404048 #6d6e78 #f4f5f6 #b3b6c1,dark,97.2,8.2,217.5
+horror,12144935,Selected English Short Stories (Nineteenth Century),1914,#28060b #1c0407 #370e17 #bdbabc #140304,dark,41.6,27.5,351.2
+horror,2840111,The Ghost Pirates,1909,#bcedf8 #96b8cc #41709d #bbd3dd #090d16,dark,173.4,58.2,191.0
+horror,11763627,"Great Tales and Poems of Edgar Allan Poe [21 stories, 34 poems]",1940,#040403 #74c3be #1b1b18 #41413b #7a6f72,dark,67.1,23.5,60.0
+horror,3328756,Nightmare Hour - Time for Terror,1999,#e0e1e2 #c4c8cb #9fa4ab #313a49 #6f7172,dark,176.7,8.3,210.0
+horror,846914,Fledgling,2005,#f4f3f2 #3c1b20 #e7dcd9 #aa7b6d #ccb4ac,dark,166.3,22.5,30.0
+horror,385118,Night of the Living Dummy III,1995,#3f292e #644838 #eecfa1 #dd643a #8f806e,warm,102.6,58.4,346.4
+horror,6522304,Julia,1975,#645b50 #0a0808 #383230 #867f71 #d3490b,dark,65.9,24.9,33.0
+horror,8565607,The Bachman Books (Long Walk / Rage / Roadwork / Running Man),1985,#000000 #b85e1b #51423a #cececa #1f1411,dark,69.6,47.9,0.0
+horror,3198296,The Hunger,1981,#ecebe7 #cad9de #c69ea2 #935462 #e5091f,warm,190.1,38.1,48.0
+horror,14540555,The Collected Writings of Ambrose Bierce,1946,#060707 #0d4b4b #395f58 #767c6b #202624,dark,50.6,27.1,180.0
+horror,10526739,Authority,2014,#edac28 #dae3de #1a130f #8cb6bd #887849,dark,143.2,81.0,40.2
+horror,10111196,Innocence,2013,#111a1b #0d1111 #1b2a2e #2f494e #737a75,dark,36.3,12.8,186.0
+horror,11695570,The Fall of the House of Usher and Other Tales [15 stories],1960,#000000 #cb8440 #69432a #361c15 #140808,dark,55.1,54.9,0.0
+horror,7388014,La última noche en Tremore Beach,2014,#1b3223 #1c3175 #3b5298 #6f83b0 #a3b3d4,dark,80.1,61.9,140.9
+horror,815085,Grendel,1986,#e9c69d #f5ebcc #624958 #be5643 #b8968b,warm,169.2,60.7,32.4
+horror,10239163,Mexican Gothic,2020,#1a0406 #412618 #425d2a #a36143 #bfb8b4,dark,55.6,42.0,354.5
+horror,12992962,Haunting Adeline,2021,#191918 #2b2927 #413e3d #5b5a58 #898988,dark,52.8,2.7,60.0
+horror,934905,Are You Loathsome Tonight?,1998,#030308 #5a7285 #39424e #1a1e28 #8cb2c2,dark,60.6,22.8,240.0
+horror,3235633,The Haunting Hour - Chills in the Dead of Night,2001,#040305 #ba7844 #cabeb4 #463123 #556779,dark,86.4,43.6,270.0
+horror,45180,Everville,1994,#66150f #a38d70 #46150f #8b3223 #30120d,dark,71.1,69.8,4.1
+romance,12818862,Wuthering Heights,1846,#1a1925 #212026 #2b292c #3d3731 #635844,dark,40.5,9.9,245.0
+romance,9278312,Emma,1815,#29080a #43211e #604235 #8b6e56 #c5aa84,dark,58.4,40.9,356.4
+romance,9278292,Sense and Sensibility,1811,#44191c #572629 #321112 #160707 #693c3d,dark,40.5,39.0,355.8
+romance,8775559,Little Women,1848,#d42b2f #df5a41 #e99759 #f5ded1 #769842,warm,136.2,137.8,358.6
+romance,2560652,Анна Каренина,1876,#010001 #090404 #1c150f #533f2b #ae9e89,dark,24.8,12.1,300.0
+romance,10590366,The Great Gatsby,1920,#9c9690 #a51603 #ae260d #222b35 #737372,dark,95.3,82.0,30.0
+romance,8235363,Jane Eyre,1847,#b77a48 #a56c3e #7f5331 #593920 #dfc5a3,warm,109.8,91.7,27.0
+romance,8237041,The Moonstone,1800,#a5a38d #999782 #2a5962 #0c0e10 #676c66,dark,114.8,26.3,55.0
+romance,12567961,Northanger Abbey,1818,#7f7953 #0b120d #6b6843 #464a2e #d2ccc6,dark,81.1,29.1,51.8
+romance,8303480,Ethan Frome,1910,#71131f #630d15 #7e232c #5f1c1e #51070a,dark,52.6,86.3,352.3
+romance,1748132,A Room with a View,1905,#ffffff #e0e0e0 #fcfcfc #7d7d7d #f0f0f0,soft,227.8,0.0,0.0
+romance,14566393,Le Comte de Monte-Cristo,1830,#353b3a #2e3434 #424744 #a89c7a #222929,dark,68.3,11.2,170.0
+romance,872066,Riders of the Purple Sage,1912,#593c4b #a48f65 #195e71 #e0d4de #1d2b31,dark,108.6,47.0,329.0
+romance,12728198,Uncle Tom's Cabin,1850,#2f3058 #282943 #454149 #5d5b6c #1c181e,dark,62.1,25.1,238.5
+romance,8243609,This Side of Paradise,1920,#27343e #222c32 #344049 #c5c6c8 #111516,dark,68.8,16.9,206.1
+romance,13140934,Women in Love,1877,#0a192e #122235 #061328 #040d1e #030612,dark,25.4,32.6,215.0
+romance,12307847,Heart of Darkness,1899,#2e2e55 #4f5963 #2a2b4e #3a4150 #906e6e,dark,71.4,30.7,240.0
+romance,295537,She,1886,#a78f3a #bcaf7b #72652d #e8dec1 #15190b,warm,131.4,73.6,46.8
+romance,8235207,Howards End,1910,#5ac14c #178d4a #ddd8af #0a1f0f #a8cd65,warm,114.9,89.4,112.8
+romance,5188445,Cranford,1853,#fefefe #fcfcfc #ececec #cfcfcf #fefefe,soft,243.6,0.0,0.0
+romance,3352367,The Portrait of a Lady,1881,#4c4a4a #a78785 #393938 #726261 #30302f,dark,91.8,12.3,0.0
+romance,902186,"Under the Greenwood Tree or, The Mellstock quire",1872,#88814b #69673b #ddd8bd #aba573 #4c4c2a,warm,127.6,48.7,53.1
+romance,12973053,Jude the Obscure,1895,#3b0f0f #360e0e #321211 #2f0f0e #47261b,dark,29.2,39.3,0.0
+romance,8231413,Le rouge et le noir,1830,#f8f2ce #555245 #87826f #dcd8b9 #b5b097,warm,162.3,29.7,51.4
+romance,8243078,The Woodlanders,1800,#e02e2e #dd2222 #df433b #df855b #d22924,warm,110.3,171.2,0.0
+romance,9000512,The pioneers,1800,#090303 #c27b41 #f9d35d #4c2719 #a52e0c,dark,83.7,84.6,0.0
+romance,4813849,The Lone Star Ranger,1914,#fefefd #ecd13d #cdc178 #dcdacb #757065,warm,199.9,67.3,60.0
+romance,5877895,The ghost,1907,#fefefe #eaeaea #040404 #919191 #c4c4c4,dark,180.3,0.0,0.0
+romance,8288051,Framley Parsonage,1861,#000000 #938054 #261407 #0d0403 #524313,dark,40.9,28.5,0.0
+romance,11196262,The Age of Innocence,1920,#f6d590 #fbdf9b #e9c786 #cb9b6d #8d7555,warm,189.0,95.7,40.6
+romance,6482238,Daisy Miller,1877,#a9ab9a #88826b #696245 #3b4225 #14180a,dark,114.6,25.4,67.1
+romance,313610,The Ambassadors,1903,#eaddd1 #776b70 #3f3a3a #a7a4b2 #d5c1b2,dark,151.4,16.7,28.8
+romance,8243278,Washington Square,1880,#151010 #0e0a09 #201b18 #050303 #564331,dark,19.3,7.3,0.0
+romance,13670505,Poirot investigates,1924,#9a301b #cfbdac #ad7e63 #261716 #67483c,warm,111.4,71.5,9.9
+romance,8162989,The Return of the Native,1878,#faf2e5 #f7eede #d7d0c5 #ece4d6 #b7b0a6,soft,226.1,21.3,37.1
+romance,14066646,Death on the Nile,1937,#3d1412 #88592b #84090b #5e3822 #976d49,dark,60.5,76.9,2.8
+romance,1045432,Доктор Живаго,1957,#2a280b #393911 #a78d71 #d8d3c4 #6f5634,dark,83.3,38.4,56.1
+romance,12648183,Fifty Shades of Grey,2000,#0f0f13 #0a0a0a #838a87 #1b2129 #425157,dark,44.7,6.0,240.0
+romance,13148521,Pride and Prejudice,1813,#e1d6cb #2595ba #56504d #9a9794 #1f6f8f,calm,147.1,57.1,30.0
+romance,12641977,Twilight,2005,#010000 #ab9b78 #271811 #836d48 #6f1f10,dark,62.5,32.5,0.0
+romance,10096404,El amor en los tiempos del cólera,1985,#d5d7c7 #c7c9b6 #d9d8a9 #bcba8c #9f9463,warm,193.4,30.4,67.5
+romance,14575533,The Mystery of the Blue Train,1928,#c1b2a5 #395a44 #4e6d58 #314236 #8b827a,dark,113.2,27.7,27.9
+romance,6614001,Genji monogatari,1900,#d0c6a4 #a79e7d #783723 #917e43 #0f0b08,warm,133.1,53.7,46.4
+romance,228066,In Cold Blood,1965,#fbe6b4 #0b0a09 #671f18 #c9b18d #8e7059,dark,117.3,51.5,42.3
+romance,5622287,Comus,1738,#9f8466 #a99071 #937a5d #7e6a50 #62513b,warm,124.8,53.5,31.6
+romance,6507069,The Godfather,1969,#050403 #cec495 #847c55 #463e29 #c9b826,dark,90.1,40.0,30.0
+romance,8974809,Pelham,1828,#f5d78f #efbd7f #efe3c6 #b39a79 #6b6352,warm,187.2,81.5,42.4
+romance,4902483,Abel Sánchez,1917,#554846 #c49860 #76614f #98805f #c7b896,warm,112.8,50.3,8.0
+romance,8765960,Jamaica Inn,1936,#1c2646 #3a4872 #5c6e95 #809eb9 #cad2d0,calm,94.9,48.5,225.7
+romance,8242844,The Eustace diamonds,1872,#010101 #9f8346 #2e1a10 #0f0a07 #69411f,dark,44.1,35.7,0.0
+romance,7334887,The Last Chronicle of Barset,1867,#868d94 #9f9f8c #594936 #917845 #ece4b9,warm,131.4,30.3,210.0
+romance,6985969,Dead Man's Folly,1956,#0f0f0f #d5ccb4 #474744 #b5a593 #d35241,dark,101.9,23.7,0.0
+romance,12643410,Eclipse,2006,#121013 #0a090b #3d0f17 #7a0816 #060607,dark,22.3,26.0,280.0
+romance,9329535,The Custom of the Country,1900,#710b0e #670a0b #5d090b #71241a #520507,dark,43.8,92.3,358.2
+romance,998445,Der Vorleser,1995,#fcfcdf #384133 #6d7054 #dbdbc2 #a5a489,dark,154.8,24.2,60.0
+romance,7418786,The Fault in Our Stars,2010,#3a3938 #c9ab82 #504e47 #837063 #238dba,dark,102.1,35.7,30.0
+romance,12643406,New Moon,2006,#010000 #350f0b #ada6b6 #664044 #000000,dark,52.3,19.8,0.0
+romance,13274634,Divergent,2010,#0d1118 #7a7a8d #525565 #2f3035 #cfb69d,dark,76.8,16.7,218.2
+romance,1994527,Les Dieux Ont Soif,1900,#292121 #789192 #c35240 #6c4d3d #da9946,warm,91.9,51.9,0.0
+romance,6559532,Sad Cypress,1939,#303e27 #a45540 #030303 #aaab9c #1d628a,dark,73.0,43.6,96.5
+romance,14566702,Fifty Shades Darker,2011,#020203 #19222c #d4e1e8 #516474 #87a0b2,dark,78.2,16.9,240.0
+romance,893834,Frenchman's Creek,1940,#452731 #3b1b29 #d68d56 #69383d #985750,dark,75.1,55.5,340.0
+romance,8293225,The Thorn Birds,1977,#c3310a #a8c4c5 #290b07 #f3e7d2 #bb8f60,dark,121.9,86.7,12.6
+romance,14566669,Fifty Shades Freed,2011,#000001 #3a3c3f #111114 #757a7f #000000,dark,36.1,3.6,240.0
+romance,8239488,The Talisman,1800,#ad7729 #966320 #76501d #5d3d14 #834d0d,warm,89.8,110.9,35.5
+romance,9276728,Novels (Emma / Mansfield Park / Northanger Abbey / Persuasion / Pride and Prejudice / Sense and Sensibility),1818,#0d1229 #111d3e #0b0d1b #203357 #070811,dark,29.3,32.5,229.3
+romance,14621022,The Horse Whisperer,1995,#bbbfbe #050807 #1e201f #8f8f8f #564f4d,dark,95.5,3.1,165.0
+romance,250778,The Price of Salt,1952,#767980 #252e33 #162124 #9caeb5 #47555b,dark,87.0,14.5,222.0
+romance,8242184,The well-beloved,1897,#dcddca #8b1e26 #935855 #ba9581 #4b2f33,dark,135.6,57.3,63.2
+romance,8443630,A Torre Negra,1991,#070204 #2a120d #5a2d15 #05031a #91762f,dark,26.7,32.8,336.0
+romance,8245499,Can you forgive her?,1800,#b5b8ae #9ea197 #090c0c #767973 #464b46,dark,124.4,7.7,78.0
+romance,824359,High Fidelity,1995,#0d0910 #442623 #72694d #f0282d #e4c729,dark,61.3,57.7,274.3
+romance,10513792,The God of Small Things,1997,#332c29 #282421 #463932 #706551 #584c3f,dark,54.7,15.0,18.0
+romance,6685979,My Secret Life,1966,#b96d86 #f8e6d1 #5b4f48 #d8beb4 #9b938d,warm,160.6,45.3,340.3
+romance,14830396,Potterism,1920,#4e0f17 #450a0f #5f2328 #390908 #979290,dark,45.7,55.7,352.4
+romance,8241379,The Wings of the Dove,1902,#577367 #4e6a5f #466256 #070806 #3d5447,dark,81.4,24.2,154.3
+romance,3221009,O mandarim,1889,#faf61c #cbc538 #ebe62c #948c28 #131005,warm,148.2,166.7,58.9
+romance,1364882,Maurice,1971,#280e6e #65785d #bac773 #1a2b26 #e6f2ca,dark,99.2,60.9,256.2
+romance,8474037,Americanah,1969,#b69c85 #a1846d #7b5e53 #4f403d #c9dadc,warm,131.3,41.9,28.2
+romance,1471330,The Minister's Wooing,1800,#604f42 #402e27 #0d0d0d #ad6557 #d1c3be,dark,71.9,29.4,26.0
+romance,8231779,Night Over Water,1981,#080202 #1b100b #5c604b #352f22 #8b8d7d,dark,38.6,14.1,0.0
+romance,8345075,Seta,1920,#c6cbc5 #484730 #1e2016 #a6a67b #747043,dark,115.8,19.4,110.0
+romance,3197725,Nichts ist stärker als die Liebe,1981,#0c0f8e #e79242 #e2c8ad #4760bc #6a4e49,dark,119.6,115.7,238.6
+romance,8097148,Cidade e as serras,1900,#fcf2e1 #f8ecda #eadecd #c7c0b1 #9a9285,soft,221.2,27.1,37.8
+romance,8579529,The Vampire Lestat,1986,#c40405 #8b0c0c #3b1915 #916755 #ced3ce,dark,72.9,113.8,359.7
+romance,7382153,The Notebook,1996,#f9f9f8 #f1ecbf #434038 #a4a08b #dddcd5,soft,189.8,19.7,60.0
+romance,5731773,Paper Towns,2008,#f3d394 #2e3730 #cd9666 #46463a #806d54,dark,126.5,59.2,39.8
+romance,8246240,The Duke's Children,1880,#000000 #070404 #1d1412 #5a3d39 #a7a599,dark,25.8,8.3,0.0
+romance,14315052,The Perks of Being a Wallflower,1999,#c7c001 #bab302 #483115 #d1c258 #826928,warm,113.6,147.4,57.9
+romance,14428230,Outlander,1991,#867552 #454337 #24211b #aea289 #be343a,dark,88.1,37.0,40.4
+romance,6160786,Ken Ward in the Jungle,1912,#fefefe #b8b8b8 #888888 #d9d9d9 #f1f1f1,soft,205.9,0.0,0.0
+romance,12507658,Oryx and Crake,2002,#171615 #74533b #8a7c62 #0b0d0d #442e27,dark,59.3,26.1,30.0
+romance,11650648,Il était une fois l'amour,1981,#212218 #464628 #28443e #727250 #9c3f39,dark,57.3,28.1,66.0
+romance,5229439,Light a Penny Candle,1970,#eab3c9 #8a706e #d39fa6 #b18186 #5a5756,warm,161.4,42.9,336.0
+romance,14419339,Me Before You,2012,#64bb71 #fa81a5 #f28c19 #f5b0ab #e2e8df,warm,161.4,115.1,129.0
+romance,14338940,Royal Escape,1938,#a4a18d #8f8c79 #1c1b19 #403e34 #68685a,dark,107.6,16.7,52.2
+romance,2310666,Mistress of Mellyn,1960,#231a16 #62544e #ad9996 #a94333 #e3ddda,dark,91.6,30.6,18.5
+romance,8277208,The Glimpses of the Moon,1922,#102241 #0c1932 #1c202a #3d393a #0a101c,dark,36.3,31.0,218.0
+romance,9406145,"Landfall, a channel story",1940,#3d2d60 #342b2c #634c48 #916959 #c2afaf,dark,78.4,33.5,258.8
+romance,3344527,Echoes,1985,#7d8ead #5a5c7e #cfb998 #2e2d58 #ae806c,dark,129.6,46.7,218.7
+romance,6920490,Dragonfly in Amber,1992,#000000 #0a0505 #1a1a19 #240707 #34332f,dark,12.5,5.7,0.0
+romance,4147865,Lie Down With Lions,1985,#fefefe #9d9d9d #d0d0d0 #454545 #ededed,dark,193.1,0.0,0.0
+romance,7314248,Four,2001,#282a34 #3b4053 #77615b #111114 #bdb0a1,dark,67.8,18.3,230.0
+romance,1514198,The Thundering Herd,1924,#434a37 #b5d1bb #92783e #a4ac8f #789a86,dark,125.3,36.7,82.1
+romance,14559681,An Abundance of Katherines,2006,#cdcec8 #a72e0b #b4a739 #869890 #3b4771,warm,139.2,74.2,70.0
+romance,1016864,Narziss und Goldmund,1930,#050716 #0c1222 #274a5e #1a283a #4f7082,dark,35.9,30.2,232.9
+romance,7285783,The Secret Woman,1970,#dddce9 #8d95a5 #5a5f6e #babac7 #1f1f28,dark,162.6,17.1,244.6
+romance,6627849,No Longer at Ease,1960,#874cac #0a81a8 #0e0d49 #5e3688 #93a3b2,calm,100.0,99.1,276.9
+romance,14434985,Le premier homme,1994,#6f483a #725e59 #828382 #45403f #232628,dark,90.5,25.7,15.8
+romance,9362782,Floodtide,1950,#872e2c #bea885 #a38160 #8d5543 #dfc7ab,warm,120.7,72.3,1.3
+romance,1009414,Sushi für Anfänger,2000,#b6daf4 #a8c0d6 #7a5a59 #d7bf9d #8694a5,warm,177.6,49.3,205.2
+romance,4195318,Hold the dream,1625,#fefefe #747474 #adadad #f3f3f3 #d9d9d9,soft,197.1,0.0,0.0
+romance,6920952,Beauvallet (Beauvallet Dynasty #2),1929,#ddca9c #69343e #43252d #8c6d66 #241720,dark,111.4,47.7,42.5
+romance,10835122,Destinos Errantes,1986,#b1b6af #a2a594 #8b8972 #70684b #353c2a,dark,143.9,18.0,102.9
+romance,6921432,The Conqueror,1931,#cb933e #131214 #e2c49c #6d4e3a #3b2a22,dark,103.3,70.0,36.2
+romance,223032,The hours,1998,#3e2d13 #644f35 #b9a57f #8b7658 #e6d8ac,warm,95.5,49.1,36.3
+romance,10121449,City of Bones,2007,#010101 #030303 #050506 #010101 #030303,dark,2.5,0.2,0.0
+romance,15254465,A Court of Thorns and Roses,2013,#0e0c0c #231413 #462221 #7b1013 #74625a,dark,33.7,28.3,0.0
+romance,569618,Tres novelas ejemplares y un prólogo,1920,#b84d17 #e49239 #1c0504 #682c09 #f7da8d,dark,92.8,123.8,20.1
+romance,10186221,The Rosie Project,2013,#ad9c85 #9e8e79 #827658 #191610 #683a30,warm,118.6,36.5,34.5
+romance,7141469,The Princess Casamassima,1886,#4f310d #545b3e #7c490e #1d1c11 #a48645,dark,62.2,59.7,32.7
+romance,8242249,At the Foot of the Rainbow,1907,#927e6c #472121 #643030 #370b0d #76665a,dark,77.9,40.9,28.4
+romance,8118938,After You,2014,#fefef6 #fefef8 #e2e1dc #efefe9 #b0aea9,soft,238.8,6.7,60.0
+romance,6920126,Simon the Coldheart (Beauvallet Dynasty #1),1925,#512e35 #545252 #796b64 #979497 #8c8687,dark,93.0,17.2,348.0
+romance,9273734,The Time Traveler's Wife,2003,#342a22 #191511 #564c3b #808961 #b5cdb3,dark,63.2,20.6,26.7
+romance,1008996,Honest Illusions,1992,#0518a0 #1c51c7 #01010c #040763 #b5ccbc,dark,66.9,113.7,232.6
+romance,979858,Therese Raquin,1900,#fb7925 #44273a #eb833e #8d4b34 #e4ae7f,warm,112.3,132.3,23.6
+romance,3197486,Born in Fire,1994,#2b65b0 #a5d8ab #150f3f #cb7355 #772931,dark,113.8,88.5,213.8
+romance,3103579,Ladder of Years,1993,#1c2d45 #f8f3c8 #e4be84 #554a43 #b17c3d,dark,132.0,55.8,215.1
+romance,6690864,Water for Elephants,2006,#11110c #534634 #2d2618 #976e43 #d7b988,dark,57.0,30.6,60.0
+romance,6459670,Les Amities Particulaires,1945,#241a1e #433536 #77615a #18226c #c5bdad,dark,65.9,25.7,336.0
+romance,13206767,A woman of substance,1979,#8aa2d2 #000101 #6d7d9b #1f2229 #454c58,dark,92.7,36.1,220.0
+romance,13816048,Shadow and Bone,2012,#464948 #333534 #0d0b0b #261e1e #747573,dark,52.2,3.1,160.0
+romance,7434883,Red Queen,2015,#eef2f6 #d4dfe6 #bdc7cf #8c8e92 #43383a,dark,202.5,12.6,210.0
+romance,8244499,Rachel Ray,1863,#5a6e36 #7a8e4f #262823 #353c2a #d7d592,dark,85.9,43.5,81.4
+romance,1818530,Carolina Moon,2000,#93b4d3 #acc4db #88a3b6 #6a7b82 #344448,calm,164.2,47.6,209.1
+romance,4115711,The Harvester,1911,#233127 #d0181d #4f5243 #a39c84 #975d3f,dark,78.9,66.7,137.1
+romance,3202659,Hidden Riches,1994,#020570 #bf805e #160b19 #646988 #0e2c97,dark,73.6,79.3,238.4
+romance,6998634,Cinder,2011,#010203 #d3d8cd #1e1e31 #7a323c #858896,dark,83.7,18.1,210.0
+romance,2664649,Memorial de Aires (Classicos Da Literatura Brasileira),1908,#edc037 #786b4d #2f9753 #aab68b #f3f4eb,warm,137.4,99.3,45.2
+romance,531899,"44 Cranberry Point (Cedar Cove, Book 4)",2004,#ae6539 #863c24 #d4995c #5c2515 #e7c9a8,warm,107.8,102.8,22.6
+romance,1875359,The Ivy Tree,1961,#bebb9d #857f67 #221e0f #4a4635 #020202,dark,105.8,25.6,54.5
+romance,2815386,Back on Blossom Street,2007,#f9f8f5 #d8d1c2 #9aaaa1 #6e7964 #cc9975,warm,195.0,19.0,45.0
+romance,12726447,Lipstick Jungle,1753,#9e9b94 #95928c #8d837b #805550 #571a19,dark,132.3,19.9,42.0
+romance,5372465,High Noon,2007,#ed9937 #d7731c #f8bf60 #a75214 #4a1f0a,warm,131.4,164.8,32.3
+romance,771674,"204 Rosewood Lane (Cedar Cove, Book 2)",2002,#e1dce2 #907a75 #b39e9d #664f4c #cfc3c4,soft,166.2,17.9,290.0
+romance,6975928,Born in Ice,1995,#71cef2 #5b136a #cde4ee #7e89b5 #24ab68,calm,152.9,89.1,196.7
+romance,497022,At First Sight,2001,#d94a6c #cd717e #7d5f6b #20091a #e7cbbb,warm,122.4,84.2,345.7
+romance,419952,Bend sinister,1947,#e6e6e5 #cbcdce #646986 #8a9cb3 #1e1e20,dark,176.8,13.5,60.0
+romance,14621188,The divide,2005,#cfc6bd #383735 #a38a86 #6c5e5a #1c1c1d,dark,124.4,15.1,30.0
+fantasy,10527843,Alice's Adventures in Wonderland,1865,#3c0404 #330303 #40120e #572e1d #8b6c41,dark,33.2,54.1,0.0
+fantasy,552443,The Wonderful Wizard of Oz,1899,#77aa67 #31773f #d4bb39 #2d3b1f #9e5c1f,warm,106.7,84.2,105.7
+fantasy,13859660,Treasure Island,1880,#839595 #b4bfbb #576362 #f9faf9 #282c2a,dark,152.2,11.7,180.0
+fantasy,12717083,Gulliver's Travels,1726,#000000 #040403 #1e1b12 #0e0c09 #342f1e,dark,10.4,4.8,0.0
+fantasy,7205924,A Midsummer Night's Dream,1600,#c4af7d #b9a370 #aa9462 #948154 #796842,warm,146.2,69.7,42.3
+fantasy,12726168,The Prince,1515,#563416 #4d2b0f #442309 #3a1a04 #6c4c26,dark,46.1,61.5,28.1
+fantasy,11272464,Through the Looking-Glass,1865,#540101 #680101 #420202 #601c13 #7e3a26,dark,34.9,84.1,0.0
+fantasy,13335427,The Wind in the Willows,1908,#023109 #106513 #7c922d #c5dbb1 #58280f,dark,69.3,69.0,128.9
+fantasy,28174,Five Children and It,1905,#e7f0de #dfb18e #603136 #a86c63 #a5d8dd,dark,168.5,49.9,90.0
+fantasy,14363454,The Princess and the Goblin,1872,#262019 #b99668 #a37946 #7b5937 #44534c,warm,90.1,54.6,32.3
+fantasy,8231444,The Lost World,1900,#35475d #2a3c52 #6b747b #a3acb2 #c0a271,dark,96.7,34.5,213.0
+fantasy,9267242,Nineteen Eighty-Four,1949,#999083 #aca296 #867d6f #71675b #51443f,dark,133.6,21.9,35.5
+fantasy,12648656,The Marvelous Land of Oz,1904,#bc3b40 #251e24 #815f6d #8b313a #bbb8c6,dark,89.5,64.6,357.7
+fantasy,12648657,Ozma of Oz,1907,#ede1d5 #4b575c #b8ae85 #e2d7c9 #c5484b,warm,166.5,34.4,30.0
+fantasy,10708272,Le petit prince,1943,#b3a78b #ad9e80 #4a463c #9e8f71 #7c7252,warm,133.8,36.9,42.0
+fantasy,8595966,Alice's Adventures in Wonderland / Through the Looking Glass,1881,#9b2b1a #504e35 #4a301a #1a2a14 #7a6c56,dark,64.4,65.1,7.9
+fantasy,1473556,The Emerald City of Oz,1910,#482a38 #8b794b #1d1f1a #cbceb3 #3e6a37,dark,85.5,35.1,332.0
+fantasy,12648659,Dorothy and the Wizard in Oz,1908,#f4d391 #b49c75 #847a66 #564337 #d7bd87,warm,151.9,65.3,40.0
+fantasy,854819,The Lost Princess of Oz,1917,#6f9393 #644636 #b4c6d2 #99a9aa #221510,dark,127.6,33.7,180.0
+fantasy,13241470,The Story of the Amulet,1905,#731522 #6d0f1d #7a2226 #9e462d #be6839,dark,65.4,97.9,351.7
+fantasy,1979059,The Complete Life and Adventures of Santa Claus,1902,#000000 #251e16 #645c3a #0a0506 #d7c2a4,dark,38.2,16.5,0.0
+fantasy,8243922,The Road to Oz,1909,#d7e6db #afbbae #88755a #dbb26a #4b3627,dark,170.4,35.1,136.0
+fantasy,1814237,The Sea Fairies,1911,#f4db9b #06041b #e1c590 #aa806b #873b32,warm,133.1,66.1,43.1
+fantasy,709869,Baum's American Fairy Tales,1901,#bd3220 #5f7eb3 #c3d7e8 #b4b0ad #a07e4d,warm,140.0,88.6,6.9
+fantasy,2752804,Sky Island,1912,#d28934 #572319 #020102 #944920 #dbab54,dark,79.5,93.9,32.3
+fantasy,431586,The Scarecrow of Oz,1915,#373f28 #ceba1e #926d2b #cfc759 #328220,warm,101.6,97.5,80.9
+fantasy,1473369,The Patchwork Girl of Oz,1913,#cd4415 #a88554 #b2a18b #79603c #483b22,warm,114.7,102.2,15.3
+fantasy,5071176,The Magic of Oz,1919,#f6a643 #c0687b #6f4c48 #efe4d2 #c5b0ad,warm,150.0,96.4,33.2
+fantasy,8243277,Tik-Tok of Oz,1914,#e2dfcf #847752 #b8b07b #d3191a #37241a,warm,148.9,58.6,50.5
+fantasy,765814,Rinkitink in Oz,1916,#fefefe #a5a5a5 #fafafa #646464 #dadada,soft,206.5,0.0,0.0
+fantasy,14627509,The Hobbit,1937,#564735 #6d5c47 #31342c #142525 #601a18,dark,64.6,29.8,32.7
+fantasy,6644514,The Enchanted Castle,1907,#101d16 #2f4335 #4d614e #737c69 #9fa79c,dark,65.1,16.9,147.7
+fantasy,14358814,Phantastes,1850,#112b27 #19332d #4d4b3c #abaab2 #091d19,dark,60.4,21.4,170.8
+fantasy,755973,The Tin Woodman of Oz,1918,#020102 #cc6405 #c4df23 #87a8d0 #6d6048,warm,87.2,103.2,300.0
+fantasy,207226,A Princess of Mars,1912,#262608 #4e4c1f #87803e #d0cc95 #1789b1,dark,79.9,55.3,60.0
+fantasy,758814,Glinda of Oz,1920,#fefefe #fbfbfb #787878 #bdbdbd #e3e3e3,soft,215.9,0.0,0.0
+fantasy,1673063,The Magic City,1910,#f6f4fc #4c4e57 #959180 #d9d3a6 #e9e8ed,soft,174.0,16.9,255.0
+fantasy,8237052,Peter Pan,1911,#a08b2a #8d7821 #624f19 #281a09 #999347,dark,89.1,92.3,49.3
+fantasy,902122,The Phoenix and the Carpet,1903,#f6c6a0 #f3ee7c #4c4339 #c7b571 #89785a,warm,163.8,78.8,26.5
+fantasy,8597022,Le avventure di Pinocchio,1883,#d3d2a8 #dfe1bb #eaedc9 #c2ba90 #908c6d,warm,198.7,40.7,58.6
+fantasy,6976035,Le Tour du Monde en Quatre-Vingts Jours,1872,#334f2f #152817 #a78b4f #243823 #0c180d,dark,59.5,36.9,112.5
+fantasy,15155833,Harry Potter and the Philosopher's Stone,1997,#c4435e #e67b71 #87858b #c8bcc0 #51545e,warm,139.8,77.9,347.4
+fantasy,103235,The description of a new world,1666,#6f3d32 #0d070a #3a211f #f8f7cf #a07154,dark,74.6,37.9,10.8
+fantasy,338173,"News from nowhere, or, An epoch of rest, being some chapters from a utopian romance",1890,#020b86 #051090 #22167c #767cbb #791d49,dark,67.0,116.8,235.9
+fantasy,13170209,À rebours,1884,#bab46e #adacad #a8a063 #63605d #8f845d,warm,148.4,43.5,55.3
+fantasy,8239401,The Secret Agent,1907,#3b3739 #575455 #bcb39f #110f10 #827d75,dark,87.2,9.1,330.0
+fantasy,8242296,Puck of Pook's Hill,1900,#f9c134 #ebb321 #e5522e #4a3c22 #e7b1a0,warm,138.5,166.2,42.9
+fantasy,14627060,The Fellowship of the Ring,1954,#296b96 #25638e #205c88 #255a80 #475f60,calm,92.3,98.9,203.7
+fantasy,15158664,Harry Potter and the Chamber of Secrets,1998,#4a4494 #b4b5ca #828b7e #6b9ed8 #9e454f,calm,136.8,55.6,244.5
+fantasy,14627564,The Two Towers,1954,#31618f #3b6e9d #295582 #4b7dab #4e5355,calm,100.1,88.5,209.4
+fantasy,1755697,The Enchanted Island of Yew,1903,#0a0406 #d78c36 #512c27 #856960 #d3d1c5,dark,78.1,59.2,340.0
+fantasy,14627062,The Return of the King,1950,#296480 #265d78 #28586c #255160 #43544b,calm,82.5,73.5,199.3
+fantasy,2841895,After London,1885,#313030 #5a5654 #89827a #c4baac #f5f2ea,dark,105.8,8.9,0.0
+fantasy,10580435,Harry Potter and the Prisoner of Azkaban,1999,#946031 #59483c #60103d #d9a048 #2f2426,dark,86.4,76.8,28.5
+fantasy,709865,The Royal Book of Oz,1921,#c4c2c3 #72824e #2f2824 #6c492b #cc8f30,warm,120.6,35.8,330.0
+fantasy,5553063,Jurgen,1919,#140805 #0b0403 #070302 #25140c #020100,dark,9.2,11.6,12.0
+fantasy,5895767,The wood beyond the world,1894,#fefbc5 #faedbc #efd9ac #c2b994 #857f66,warm,211.3,57.1,56.8
+fantasy,15158666,Harry Potter and the Order of the Phoenix,2003,#a19126 #836a4e #6b3933 #969988 #355e93,warm,106.6,74.9,52.2
+fantasy,12459564,Charlie and the Chocolate Factory,1964,#b8ab93 #7f816e #2b2510 #274d3d #805d24,dark,108.3,34.0,38.9
+fantasy,12059372,Harry Potter and the Goblet of Fire,2000,#b31005 #9d552b #5e3129 #221b25 #842519,dark,68.5,107.5,3.8
+fantasy,12947486,Мастер и Маргарита,1966,#cdbc9e #bfab8e #d8c8ad #a59278 #2b211a,warm,166.7,44.5,38.3
+fantasy,8243045,Sylvie and Bruno,1889,#9d1a15 #a42720 #a73f34 #900f0a #bc6d48,dark,78.1,129.1,2.2
+fantasy,9317374,The Moon Pool,1919,#dfd3a3 #bea97d #9c7d5f #805743 #6b3f2d,warm,151.7,61.8,48.0
+fantasy,6557137,The reluctant dragon,1938,#000000 #b8b091 #1e2f1f #090a08 #496d48,dark,58.9,16.5,0.0
+fantasy,5262289,The Story of Doctor Dolittle,1920,#fcf46d #76667a #f0e77f #ab9e4f #eeece0,warm,171.1,88.8,56.6
+fantasy,2404583,The Well at the World's End,1892,#171b17 #2e2e26 #4e879e #645a4a #9b9f92,dark,66.4,23.8,120.0
+fantasy,6062095,The water-babies: a fairy tale for a land-baby,1863,#faeacf #f8e7c9 #eedfc2 #d6c9b0 #b8ac93,soft,218.3,43.2,37.7
+fantasy,8461797,Charlotte's Web,1952,#d4e0e0 #bdc5c3 #999894 #717270 #374349,dark,174.6,8.6,180.0
+fantasy,12627383,Cien años de soledad,1967,#18181a #403f3e #862e3c #b32e49 #7b716c,dark,61.9,37.5,240.0
+fantasy,9184792,The Horse and His Boy,1954,#845a0c #837256 #6f3030 #211912 #62380e,dark,76.3,72.2,39.0
+fantasy,1979061,Fifty-one tales,1915,#dce8e3 #b7c5b8 #9b9485 #7f5e4c #32271d,dark,170.5,20.3,155.0
+fantasy,10716273,Harry Potter and the Half-Blood Prince,2005,#172a70 #2c3a23 #c17528 #a82810 #ba9e74,dark,75.4,91.3,227.2
+fantasy,2808666,"The little white bird, or, Adventures in Kensington gardens",1902,#f7dca9 #c2392d #b47f64 #d8b58d #644f4b,warm,153.7,93.4,39.2
+fantasy,8252454,James and the Giant Peach,1961,#bcba92 #b2ad83 #a49d6f #807a55 #46432f,warm,148.4,44.4,57.1
+fantasy,854565,Wet Magic,1937,#a5a699 #bfd7ca #887e6c #c84d41 #debda2,warm,160.4,38.3,64.6
+fantasy,1072931,The Magician's Nephew,1955,#c0c799 #8faa85 #7f7d51 #faeac6 #464430,warm,156.7,42.8,69.1
+fantasy,2977086,Peter Pan in Kensington Gardens,1906,#464a45 #313331 #e2f0f6 #6a6d67 #9fa49e,dark,109.2,7.4,108.0
+fantasy,2838027,The Master Key,1901,#eeefea #0d0f0f #e1e3dc #b7bdb7 #727d75,dark,160.2,5.1,72.0
+fantasy,1979130,Morning Star,1910,#0a0404 #dad29e #573f31 #291a14 #947e5c,dark,79.4,32.1,0.0
+fantasy,8441376,"The Lion, the Witch and the Wardrobe",1950,#c9c5c3 #816b62 #1e1d1a #d7941f #ecaf3a,dark,129.2,47.5,20.0
+fantasy,281218,The Voyages of Doctor Dolittle,1922,#ca6e93 #c3bab5 #e4e4e7 #9f897a #785b4a,warm,171.7,43.0,335.9
+fantasy,14627042,The Silmarillion,1977,#0d0818 #644942 #928a7b #252428 #080412,dark,59.1,20.5,258.8
+fantasy,12177594,The house of the Wolfings,1889,#3a2417 #321b0f #453122 #584735 #2a1409,dark,42.3,34.9,22.3
+fantasy,5548056,The Crock of Gold,1912,#838b7d #7a7e68 #2a4b2f #959a8f #5d654b,dark,111.9,20.3,94.3
+fantasy,9176033,The BFG,1980,#d1bb9e #98a398 #d3d1c5 #c59f79 #777462,warm,172.8,34.3,34.1
+fantasy,8747028,Northern Lights,1995,#050203 #260a06 #412613 #574833 #051020,dark,24.6,25.3,340.0
+fantasy,45897,Prince Caspian,1951,#14171c #43665d #5f8977 #2a3f40 #86ac93,dark,72.2,25.9,217.5
+fantasy,15158660,Harry Potter and the Deathly Hallows,2007,#161b20 #9c8655 #51514e #7c94a2 #74242d,dark,82.0,33.3,210.0
+fantasy,6950992,The Silver Chair,1953,#8b8371 #383933 #0f0f0b #395e6a #72502f,dark,76.6,22.1,41.5
+fantasy,9269962,A Game of Thrones,1996,#100909 #c9c8b6 #a2a198 #7c7470 #55413c,dark,107.6,12.7,0.0
+fantasy,4656607,Lost Horizon,1933,#e77d42 #d8894d #a18744 #cabd4a #825433,warm,135.9,133.0,21.5
+fantasy,430876,Little Wizard stories of Oz,1914,#b8af85 #3c5982 #988b67 #7c5645 #373833,warm,121.7,53.1,49.4
+fantasy,12646539,Catching Fire,2009,#491a12 #320e10 #1b0f0f #331e1e #403d3f,dark,33.0,33.3,8.7
+fantasy,5647709,A strange manuscript found in a copper cylinder,1888,#000000 #1d1c18 #44433d #000000 #000000,dark,20.3,2.7,0.0
+fantasy,7421,Mary Poppins,1934,#7f9fad #111010 #2b774d #a0c823 #ae3727,dark,94.8,61.8,198.3
+fantasy,6522230,Jonathan Livingston Le Goeland,1970,#02020d #d5ce9f #181e2a #494b37 #888754,dark,76.6,27.8,240.0
+fantasy,8574580,"Momo oder Die seltsame Geschichte von den Zeit-Dieben und von dem Kind, das den Menschen die gestohlene Zeit zurückbrachte",1973,#1b1310 #72402d #e02b0d #cc9a70 #ebe3db,warm,81.4,77.6,16.4
+fantasy,7239831,The Lightning Thief,2005,#114c49 #5c8871 #3e6350 #0b2b31 #8db08b,dark,79.5,46.3,176.9
+fantasy,6450196,Watership Down,1972,#fefefe #6d4c21 #ac8133 #d6aa66 #fefcf3,warm,165.8,60.1,0.0
+fantasy,6529226,The Last Battle,1956,#0a5f7d #966c34 #9a9d84 #343329 #35788f,dark,96.1,76.9,195.7
+fantasy,12614549,The Subtle Knife,1997,#0c3124 #114c17 #7e7c2d #475a1d #1f201a,dark,51.2,52.8,158.9
+fantasy,605907,The house behind the cedars,1900,#dab08c #0a0806 #f9f9e2 #946d50 #493b30,dark,128.7,42.4,27.7
+fantasy,12627341,Bridge to Terabithia,1972,#88857d #36361b #474c3f #4e6667 #735c26,dark,87.8,21.9,43.6
+fantasy,9184719,The Voyage of the Dawn Treader,1952,#a9a18a #485b6c #8b825c #26220b #3b413b,dark,107.9,33.3,44.5
+fantasy,14171421,Coraline,2001,#261a11 #040101 #cb872c #15100c #734622,dark,42.0,46.2,25.7
+fantasy,255052,My father's dragon,1948,#1f4411 #65a945 #9aed31 #aa4732 #bccdc3,warm,98.4,98.4,103.5
+fantasy,10212689,Artemis Fowl,1999,#26120b #1a0e0a #3b150e #562b19 #232b2b,dark,27.7,30.9,15.6
+fantasy,14647238,The Colour of Magic,1983,#d2ac45 #c6842a #aa501f #7f633d #5f3320,warm,118.6,129.4,43.8
+fantasy,854317,Figures of Earth,1921,#f7f7f4 #cdc47b #221913 #6e6a65 #92682e,dark,154.4,33.7,60.0
+fantasy,10618463,The Left Hand of Darkness,1969,#63b4c4 #e7f3f6 #12201e #436b6f #a7d5df,calm,148.2,48.7,189.9
+fantasy,13921600,Eragon,2000,#dcd9d1 #f8f5ee #babcbd #3a4556 #7d8898,soft,192.9,12.5,43.6
+fantasy,5683599,The wonderful visit,1895,#f8e5c4 #f3ddbc #e6cfb1 #c2b199 #9c8d7a,warm,206.3,50.3,38.1
+fantasy,3216410,The Centaur,1962,#f0d89e #43573b #7d8b6a #aeb186 #d8f1d1,warm,148.2,49.3,42.4
+fantasy,12613246,The Amber Spyglass,1999,#665518 #4f410c #0a0608 #382c07 #817542,dark,50.6,55.4,46.9
+fantasy,13617691,A Wizard of Earthsea,1968,#97b1b8 #6f8c93 #cbe0ec #4e6a6b #363035,dark,152.8,31.5,192.7
+fantasy,1758137,Vikram and the Vampire,1870,#400101 #783438 #9e675b #380302 #521e22,dark,57.0,63.2,0.0
+fantasy,2327393,Hänsel und Gretel,1900,#f3eee7 #dcc9b0 #b8a17a #7e7056 #343225,warm,180.8,34.5,35.0
+fantasy,11342,The Cat in the Hat,1957,#0695ce #892e2c #ebf3f4 #8fa6ae #287797,calm,136.8,104.8,197.1
+fantasy,108909,The Sea of Monsters,2005,#0b93c7 #c7d4d8 #17595d #6da9ba #be6e38,dark,137.6,100.4,196.6
+fantasy,10579734,"Chitty-Chitty-Bang-Bang, the magical car",1964,#69522d #624c2a #5b4827 #553e24 #462a1c,dark,69.7,54.7,37.0
+fantasy,9173884,The Mysterious Stranger,1916,#3d3121 #6c5a3c #1e1710 #090704 #9d9281,dark,53.9,27.5,34.3
+fantasy,4846571,The Magical Monarch of Mo,1903,#fdfce6 #faf6dc #abaaa7 #d7d6cd #575b64,soft,213.5,18.7,57.4
+fantasy,6630521,The Once and Future King,1939,#cda542 #ac7d27 #d0b289 #772b3f #a66e70,warm,131.8,109.9,42.7
+fantasy,1755515,Prince Prigio,1889,#db8a34 #020102 #b46628 #98501d #6a442c,warm,83.8,104.5,30.9
+fantasy,1357775,Thumbelina,1911,#fbf40d #6b7920 #b3bf29 #e17b12 #d9dabc,warm,137.1,162.7,58.2
+fantasy,10306696,Dragonflight,1968,#3f1f55 #73477b #caa44f #9778c2 #c9abbf,dark,110.2,68.3,275.6
+fantasy,2895898,A Prisoner in Fairyland,1913,#060c06 #f4f2e1 #c1b563 #e9e094 #1c6870,dark,129.7,42.8,120.0
+fantasy,6262377,The demi-gods,1914,#fefefe #bdbdbd #8e8e8e #f7f7f7 #e3e3e3,soft,211.5,0.0,0.0
+fantasy,8231751,A Clash of Kings,1998,#a58361 #735f4f #c5b480 #5e332c #eeeaaa,warm,125.7,57.3,30.0
+fantasy,11480483,The Name of the Wind,2007,#212021 #302a29 #5b4439 #19191a #a1775c,dark,48.6,13.7,300.0
+fantasy,767614,Indian Fairy Tales,1892,#bd9f0a #bf5138 #824911 #ddca2a #25110a,warm,105.7,143.9,49.9
+fantasy,10482258,Good Omens,1990,#39383b #554e4f #807371 #292a2d #cbbfb6,dark,82.8,7.8,260.0
+fantasy,12848701,Eldest,2005,#7b2a2e #b23d3a #421821 #e45d51 #a68283,warm,85.4,89.4,357.0
+fantasy,8596271,The Nursery Alice,1889,#e0c7ad #74625e #f2e4ca #a99386 #2f262f,dark,161.3,36.1,30.6
+fantasy,14657088,Wizard and Glass,1997,#070303 #2d0905 #8e250b #570d07 #453312,dark,27.2,52.3,0.0
+fantasy,8494659,American Gods,2001,#60757a #44535f #9aaca2 #2b3544 #121623,dark,100.6,23.9,191.5
+fantasy,9244269,Doctor Doolittle's circus,1924,#a3b4ae #deb355 #e0c896 #b2a87c #748581,warm,168.2,65.3,158.8
+fantasy,3330314,Tintenherz,2003,#696e47 #c64c40 #80986c #af8858 #d6d8b6,warm,119.0,71.4,67.7
+fantasy,980232,The Eye of the World,1990,#b56e39 #afbdcd #e4a954 #9d9fb2 #87778c,warm,152.0,82.3,25.6
+fantasy,6274739,The Battle of the Labyrinth,2005,#963f37 #5c1b1a #3a1316 #81261b #e49067,dark,68.4,79.0,5.1
+fantasy,6501256,A Feast for Crows,2005,#7f0405 #500c06 #320603 #64391d #8e7f7c,dark,44.8,80.8,359.5
+fantasy,5267445,Nils Holgerssons underbara resa genom Sverige,1907,#fefefd #7f7f74 #b4aa9a #9e703f #dad4c7,warm,179.8,22.4,60.0
+fantasy,767591,Don Rodriguez,1922,#f0eeea #e8e6e1 #2e2f2e #c3c3bf #888985,dark,184.3,4.9,40.0
+fantasy,6633403,The Tombs of Atuan,1971,#f2e9c6 #141414 #57433e #76867e #b6b5a5,dark,123.0,22.9,47.7
+fantasy,4435421,Le chat botté,1865,#c3b2a0 #0664a5 #958d64 #2a70ac #426f7b,calm,130.5,85.0,30.9
+fantasy,8442100,Doctor Dolittle's post office,1923,#8a9bbf #cbbfc1 #858398 #b08271 #65443d,warm,157.4,36.1,220.8
+fantasy,284443,Tarzan the Invincible,1931,#bca67f #ae8a57 #8a7960 #d4be9f #6b4e33,warm,142.8,62.7,38.4
+fantasy,8443596,Doctor Dolittle in the moon,1928,#9a80b2 #c4b0b9 #f0e9ec #62505c #de935e,warm,170.2,34.3,271.2
+fantasy,14601475,The Titan's Curse,2007,#132847 #173d66 #637a93 #3a546e #a6b0c8,dark,78.8,57.2,215.8
+fantasy,6624107,The Last Olympian,2008,#101f1c #707e69 #37493f #c5cdb9 #010101,dark,77.7,16.9,168.0
+science_fiction,9009316,The Time Machine,1895,#0c0c0b #bdbcb8 #e7e7e2 #8b8b84 #4e4d49,dark,122.9,3.9,60.0
+science_fiction,8231823,Brave New World,1932,#060704 #918c57 #d0ac14 #46432a #967f1f,dark,76.4,65.7,80.0
+science_fiction,8243314,The Iron Heel,1907,#030516 #091124 #626150 #1f262f #010108,dark,32.6,19.7,233.7
+science_fiction,10069547,Flatland,1884,#ffffff #fcfcfc #b6b6b6 #e3e3e3 #424242,soft,223.3,0.0,0.0
+science_fiction,6419199,The Invisible Man,,#63a19c #2a2f31 #7ab2ae #615b54 #dcede1,dark,117.3,36.6,175.2
+science_fiction,14357835,The Princess and Curdie,1832,#63441c #4a2f13 #311a0d #130703 #84714c,dark,48.4,51.4,33.8
+science_fiction,36314,The War of the Worlds,,#c27830 #714f35 #eacd2d #1b1c1e #c2bb9c,warm,110.0,105.4,29.6
+science_fiction,6980094,The Napoleon of Notting Hill,1904,#514c3c #ae9d6e #73674d #958761 #ba6141,warm,107.6,46.7,45.7
+science_fiction,882662,The Last Man,1826,#434a6e #2b2d28 #f7f5f9 #cec7da #8f8a97,dark,126.0,19.9,230.2
+science_fiction,207141,The warlord of Mars #3,1914,#102f06 #93983b #346116 #c8d1a3 #256f5a,dark,81.6,64.5,105.4
+science_fiction,6573517,Vingt mille lieues sous les mers,1870,#cfc5a9 #c7bc9f #baae90 #a2987c #625f4d,warm,171.3,38.2,44.2
+science_fiction,5788361,The Poison Belt,1913,#53554e #5d5f56 #40423b #4c4e47 #33342f,dark,77.6,7.4,77.1
+science_fiction,207132,The Gods of Mars,1918,#759885 #0f1e1d #826730 #295e5f #e3dad3,dark,94.8,40.3,147.4
+science_fiction,1930755,The Chessmen of Mars,1922,#b1a099 #f6f7ec #767494 #a46652 #6a3152,warm,165.4,32.1,17.5
+science_fiction,7793883,The Machine Stops,1909,#bdbdbd #f3f3f3 #b6b6b6 #525252 #8d8a87,soft,184.3,0.4,0.0
+science_fiction,968312,The Island of Dr. Moreau,1896,#0f0d0f #f3f4f4 #2a2828 #58524c #a38e75,dark,98.2,6.0,300.0
+science_fiction,573770,Gullivar of Mars,1964,#1b0911 #5d3f3c #8d5a4c #3a1f21 #c48c65,dark,60.7,37.7,333.3
+science_fiction,12993656,Fahrenheit 451,1953,#d12214 #e16223 #da9a4f #e3b798 #683428,warm,120.4,155.7,4.4
+science_fiction,2751882,The Coming Race,1871,#070505 #d48c3b #604748 #ddccb6 #5d789f,dark,89.6,56.1,0.0
+science_fiction,5884126,"The king of the Golden River; or, The black brothers",1839,#c6b793 #c0af8a #b18730 #b99855 #b9a375,warm,156.6,75.1,42.4
+science_fiction,9317372,At the Earth's Core,1914,#34190b #080201 #60260a #64522f #867f5d,dark,38.4,42.5,20.5
+science_fiction,5783892,In the days of the comet,1906,#efe4c1 #e9deba #dfd3b1 #c8bfa2 #a39c84,warm,205.6,44.2,45.7
+science_fiction,5484189,Мы,1924,#fbfcf9 #7eb3ce #e6855d #62767f #b8c5c8,warm,187.5,54.7,80.0
+science_fiction,5943556,De la terre à la lune,1865,#e3c98f #ebd49e #d5b87f #5a4f37 #8f815d,warm,170.2,73.7,41.4
+science_fiction,5890987,Voyage au Centre de la Terre,1867,#ccbc9d #beaf93 #ad9e84 #857c69 #47443a,warm,157.8,39.9,39.6
+science_fiction,284442,"Thuvia, Maid of Mars",1916,#787a66 #96937a #c3b491 #61604e #b8764a,warm,130.5,34.0,66.0
+science_fiction,574886,When the Sleeper Awakes,1899,#050202 #421e0c #ca7a14 #6d4e17 #a2210b,dark,47.4,73.3,0.0
+science_fiction,314687,The food of the gods and how it came to earth,1900,#f7f0d3 #c19f7e #dbcbaa #542e2c #99695a,warm,175.0,49.2,48.3
+science_fiction,2421421,"The Beasts of Tarzan (Classic Ace SF, F-203)",1914,#c43730 #73544b #432826 #a38e78 #c8713e,warm,94.5,80.7,2.8
+science_fiction,2976990,When the World Shook,1919,#000000 #5f2d20 #220f0d #d66d19 #000000,dark,34.9,46.2,0.0
+science_fiction,8231851,The Handmaid's Tale,1985,#e6e1ad #2d140d #7a4023 #c6bd88 #ad8f56,warm,123.6,59.0,54.7
+science_fiction,12719018,It Can't Happen Here,1935,#121341 #10113b #0f0e37 #171a43 #101033,dark,32.1,43.5,238.7
+science_fiction,11481354,Dune,1965,#0e0b0a #453915 #696030 #251a0f #a8a7a3,dark,48.1,28.8,15.0
+science_fiction,4291026,R.U.R. and The insect play,1920,#fd859a #f9899e #e07284 #ba5a6a #ed8093,warm,168.0,111.9,349.5
+science_fiction,14430663,A Clockwork Orange,1962,#f88810 #e8d5c3 #f79d36 #d9bda2 #9e7a66,warm,165.6,136.9,31.0
+science_fiction,12646537,The Hunger Games,2008,#0c0c0d #131213 #27231f #454546 #080809,dark,25.9,2.4,240.0
+science_fiction,12727001,Slaughterhouse-Five,1956,#d9b061 #758559 #bb9250 #197b6c #2a2518,warm,125.8,87.4,39.5
+science_fiction,13898460,A Fighting Man Of Mars,1931,#bdb37f #a2986f #936d50 #553e30 #dad2ae,warm,137.2,55.5,50.3
+science_fiction,9346537,The Martian Chronicles,1950,#ad958b #642e28 #846055 #d6c8bd #2e1715,dark,117.4,41.7,17.6
+science_fiction,2889485,The Master Mind of Mars,1928,#fefefe #050505 #b53820 #9c8062 #c0c0c0,dark,133.7,37.5,0.0
+science_fiction,12986869,The Hitchhiker's Guide to the Galaxy,1979,#303436 #7d4a39 #1f777f #24535d #b4a086,dark,78.3,50.0,200.0
+science_fiction,1230950,Armageddon 2419 AD,1962,#813d2c #d55816 #413b33 #d1ad68 #a36137,warm,95.0,103.3,12.0
+science_fiction,7893583,Charlie and the Great Glass Elevator,1972,#e3dad8 #c7bdbb #a5999d #443e40 #8d7d5d,dark,172.8,13.3,10.9
+science_fiction,997896,On the Beach,1957,#495140 #f5f5f5 #8fd25b #738c5e #b8b8b8,warm,146.9,35.6,88.2
+science_fiction,11344400,2001,1968,#26291e #1f2318 #3d3c33 #69665d #a8a189,dark,55.3,12.3,76.4
+science_fiction,207344,Synthetic Men of Mars,1940,#3e2410 #6f2c1b #1e1206 #af452b #d3b75c,dark,56.0,68.1,26.1
+science_fiction,8081288,The First Men in the Moon,1900,#cec7b5 #9a9498 #504858 #3c3341 #6d6a80,dark,136.9,16.5,43.2
+science_fiction,8179189,Cinq semaines en ballon,1867,#f7f3f1 #f0eceb #d9d5d2 #a29f9d #565250,soft,213.8,5.8,20.0
+science_fiction,1591936,Little Fuzzy,1961,#0a1210 #2d3e2f #116c7d #6a7657 #55aec1,dark,59.1,40.1,165.0
+science_fiction,6567528,Swords of Mars,1936,#080302 #2f1618 #4b4416 #735d14 #9b7914,dark,37.4,40.9,10.0
+science_fiction,12762270,Llana of Gathol (Mars #10),1948,#c8aca1 #c1a79b #b79d92 #caa692 #b09286,warm,170.4,40.8,16.9
+science_fiction,8709146,A Wrinkle in Time,1962,#15202a #84b5b2 #677e7a #3d4e50 #d9ddbf,dark,101.3,29.2,208.6
+science_fiction,8352502,The Giver,1993,#c9bb99 #d8d0b7 #c1b187 #f1f0e8 #b39861,warm,188.9,43.1,42.5
+science_fiction,12996033,Ender's Game,1985,#221d1e #3d3630 #515752 #8f6841 #b6a499,dark,66.4,18.7,348.0
+science_fiction,2114295,Lord of the World,1907,#554547 #95a0d1 #b1ae9c #7d7f77 #3a2419,dark,124.0,28.8,352.5
+science_fiction,7266552,The ship of Ishtar,1924,#95556d #684548 #3d3132 #5e5b68 #d5b096,warm,95.4,39.0,337.5
+science_fiction,8232021,A Modern Utopia,1900,#0d0101 #080000 #040000 #010000 #170b08,dark,3.6,8.1,0.0
+science_fiction,14612610,Foundation,1951,#0b0909 #271611 #4e311d #050505 #6b7165,dark,28.4,17.1,0.0
+science_fiction,980253,Dune Messiah,1969,#adaab1 #d99535 #8c6665 #3e1516 #e4bba1,warm,135.4,63.8,265.7
+science_fiction,12385229,"I, Robot",1950,#6a3955 #0c0b0c #828187 #060706 #332930,dark,60.9,18.6,325.7
+science_fiction,12646459,Mockingjay,2010,#9cb9f2 #c4d8f8 #7c9bdc #657bbb #494870,calm,180.7,75.9,219.8
+science_fiction,5866566,The water of the Wondrous isles,1897,#fefefe #c8c8c8 #a5a5a5 #000000 #e8e8e8,dark,186.5,0.0,0.0
+science_fiction,14553479,Deception Point,2001,#780302 #2b0a08 #a41b0d #64433c #9a7d6e,dark,51.6,87.1,0.5
+science_fiction,12882940,Jurassic Park,1990,#cfcbc3 #10282d #bbafa8 #747479 #b33026,dark,133.1,25.6,40.0
+science_fiction,12714921,The Restaurant at the End of the Universe,1980,#d5d3c6 #718881 #a2aba2 #505952 #252621,dark,149.3,14.5,52.0
+science_fiction,9839176,Plague Ship,1956,#fefefe #454047 #7e8279 #86c8d3 #e5e5de,dark,167.3,14.4,0.0
+science_fiction,8311641,The Time Traders,1958,#050406 #4e5644 #292b28 #691410 #868c75,dark,45.5,19.5,270.0
+science_fiction,207515,Do Androids Dream of Electric Sheep?,1968,#030302 #1b160e #464129 #995f38 #c3c68a,dark,43.5,26.5,60.0
+science_fiction,5542954,Star Born,1957,#604e24 #9c927e #7a714d #d8be95 #b17260,warm,115.4,51.3,42.0
+science_fiction,11041760,The Blind Assassin,2000,#25171a #4e4a37 #94875c #8a3b26 #806942,dark,70.0,39.5,347.1
+science_fiction,4927546,La casa verde,1966,#fbfafa #6a3921 #d68918 #f6d86d #c0bfbc,dark,163.9,76.3,0.0
+science_fiction,1861004,Junkyard Planet,1631,#040405 #648684 #b9ceb2 #12191c #365149,dark,79.7,18.1,240.0
+science_fiction,12709654,Cat's Cradle,1963,#a49884 #988b79 #686f75 #b4693a #37413a,dark,127.7,38.5,37.5
+science_fiction,12313764,Solaris,1961,#fcfcfc #a52c25 #2b5467 #2f1615 #a79f9c,dark,135.9,50.3,0.0
+science_fiction,12625278,The Adventures of Captain Underpants,1997,#5c5e77 #728fbc #2e324c #b4a196 #ccd3e9,dark,121.1,40.7,235.6
+science_fiction,362277,Atlas Shrugged (Centennial Ed. HC),1936,#7b836c #65564f #c26375 #9da28d #e4e2cb,warm,126.2,37.0,80.9
+science_fiction,1277096,L'Île mystérieuse,1870,#c6c9e4 #96b7e4 #0f4682 #5fa9dd #3579b4,calm,163.3,79.1,234.0
+science_fiction,420452,The Man in the High Castle,1962,#6b6d79 #32203c #a1c592 #c33225 #a95e46,warm,103.6,50.0,231.4
+science_fiction,9300695,Foundation and Empire,1945,#938c65 #060c0a #182f2d #756c46 #424a3c,dark,70.9,28.7,50.9
+science_fiction,9345484,The Illustrated Man,1951,#c9b4a6 #d4c1b3 #82787d #b8a198 #58484c,warm,165.0,27.8,24.0
+science_fiction,210200,Childhood’s End,1952,#302822 #8d6686 #bf9cac #eae3e5 #743e36,warm,117.5,27.1,25.7
+science_fiction,9261324,Second Foundation,1953,#75450f #a0691c #2f1d20 #769390 #81724d,dark,80.9,80.1,31.8
+science_fiction,14630668,Stranger in a Strange Land,1961,#040101 #1e0c0b #70533c #352e2a #5e140b,dark,31.4,23.5,0.0
+science_fiction,12947700,Flowers for Algernon,1966,#d1c5b0 #29241a #5b4c35 #8b7f61 #b1a38b,warm,115.3,30.7,38.2
+science_fiction,6379250,The man who ended war,1908,#d8cca8 #d5c79e #cfbf94 #aca181 #85795d,warm,180.6,50.9,45.0
+science_fiction,9981342,Storm Over Warlock,1960,#fefefe #6e4a30 #ac9361 #c9bfa3 #e9e4da,warm,172.8,37.6,0.0
+science_fiction,10656102,The Lost World,1995,#fcfbfb #040404 #8c5554 #dcd0cf #b69998,dark,144.5,15.3,0.0
+science_fiction,5813880,Tales of space and time,1899,#fefefe #fbfbfb #ebebeb #cccccc #949494,soft,235.7,0.0,0.0
+science_fiction,911107,Star Maker,1937,#7e5a48 #c49374 #483326 #211812 #080506,dark,87.3,48.3,20.0
+science_fiction,6976407,Children of Dune,1976,#030101 #150504 #8e1807 #36180f #695033,dark,24.1,41.0,0.0
+science_fiction,4113422,Válka s mloky,1936,#fefefe #666666 #a0a0a0 #ececec #cccccc,soft,188.9,0.0,0.0
+science_fiction,6979680,The Dispossessed,1974,#9c160a #521407 #cd6426 #993f1d #e6b462,dark,75.6,127.4,4.9
+science_fiction,11465415,"So long, and thanks for all the fish",1984,#0a0b0d #070707 #18171a #4f453c #898872,dark,28.4,5.7,220.0
+science_fiction,11447888,The Martian,2011,#d53d0b #aa0f07 #301519 #d06133 #c5947e,dark,81.3,141.9,14.9
+science_fiction,911106,Last and First Men,1930,#ea4c26 #533542 #96322b #efae78 #1e1012,dark,97.9,111.5,11.6
+science_fiction,10221348,A Canticle for Leibowitz,1959,#000000 #2b1112 #0d0505 #423a37 #858585,dark,25.3,10.0,0.0
+science_fiction,9377992,The Scarlet Plague,1910,#522121 #3d1718 #7a342c #ad4835 #de693e,dark,62.5,68.7,0.0
+science_fiction,4437872,Key Out of Time,1963,#ededed #c3c3c3 #636363 #404040 #969696,dark,169.3,0.0,0.0
+science_fiction,280246,Player Piano,1952,#fbbe4d #0bbd72 #576095 #999875 #dfbe71,warm,138.0,130.0,39.0
+science_fiction,9255939,On Writing,1999,#cac18b #afa068 #d8e0cf #7f724a #18140f,warm,156.8,51.0,51.4
+science_fiction,9254423,Sphere,1980,#fcfdfd #0d1815 #1e5c4b #5d9e98 #b1d0d1,dark,133.6,26.5,180.0
+science_fiction,9330577,The Andromeda Strain,1969,#f1f2f6 #c5cbd3 #98a2af #516d8e #191316,dark,184.1,18.5,228.0
+science_fiction,8246102,"Looking Backward, 2000-1887",1888,#2c3210 #353a17 #21260a #6e4f15 #926a1f,dark,45.2,45.8,70.6
+science_fiction,5018327,Ubik,1969,#f98e06 #f77f05 #e49d37 #bad49d #85874f,warm,139.5,191.2,33.6
+science_fiction,4627686,Triplanetary,1948,#fefefe #dedede #f2f2f2 #b6b6b6 #636363,soft,223.1,0.0,0.0
+science_fiction,10984324,Prey,2002,#cbc4bc #2c2b2d #b4a7a2 #bb0b0d #a16461,dark,128.2,36.9,32.0
+science_fiction,5542553,Galactic Derelict,1959,#2a271a #50585d #a9a48a #413e3e #9a5d31,dark,81.5,22.4,48.8
+science_fiction,8569244,"Life, the Universe and Everything",1982,#060227 #240f45 #28535d #5a789c #c0c7cd,dark,59.8,47.0,246.5
+science_fiction,9321665,Out of the Silent Planet,1938,#27451c #536631 #10180c #9f822d #abb28f,dark,65.2,47.7,103.9
+science_fiction,283860,Neuromancer,1984,#1e7aa6 #055a7e #4f94b7 #a6cfe1 #412114,calm,111.5,109.3,199.4
+science_fiction,12451613,Timeline,1999,#030304 #7f8285 #454446 #1d191c #d30d0e,dark,58.5,16.1,240.0
+science_fiction,7083755,Insurgent,2011,#7a8262 #afb989 #4d5041 #e7edcc #5f9aa6,warm,137.0,35.6,75.0
+science_fiction,12636263,Artemis Fowl and the Eternity Code,2003,#340b0b #4f0a0a #3a211c #150b0a #59392f,dark,31.1,42.3,0.0
+science_fiction,2895165,The Colors of Space,1963,#0f5248 #d6a09d #1e8ff8 #436b81 #ad0b0e,dark,111.9,100.2,171.0
+science_fiction,13790511,The Caves of Steel,1953,#272d2e #18191b #574b32 #8e8b0f #878279,dark,57.1,28.4,188.6
+science_fiction,2891923,The Door Through Space,1961,#e66d20 #b89a7a #2d3552 #a47d5a #af5420,warm,117.4,109.3,23.3
+science_fiction,1364468,The Sirens of Titan,1959,#79719a #a3999f #46375e #1b0d31 #edecee,dark,119.7,29.1,251.7
+science_fiction,6622699,The End of Eternity,1955,#880b16 #63040d #ba1912 #a34d23 #c59855,dark,66.2,125.1,354.7
+science_fiction,5542981,Star Hunter,1961,#e1db60 #9c9f55 #2b2322 #5b5c4c #4cbfdb,dark,125.3,76.2,57.2
+science_fiction,1009545,La planète des singes,1963,#010101 #975632 #120d0c #402921 #dfc3a5,dark,47.8,36.1,0.0
+science_fiction,14648805,Mort,1987,#282838 #768384 #574d4c #c7c3a4 #36231d,dark,92.4,17.6,240.0
+science_fiction,1047334,Never Let Me Go,2005,#fdfc96 #7c9547 #434f2f #a9ba6c #e1e18a,warm,149.9,77.7,59.4
+science_fiction,14630746,Starship Troopers,1959,#5c0606 #322b4e #975a1d #170606 #ab936e,dark,55.8,68.7,0.0
+science_fiction,280213,Breakfast of Champions,1973,#025602 #537f83 #ebe8b8 #366e33 #e15938,dark,101.5,70.1,120.0
+science_fiction,5240626,Ante la bandera (Face au drapeau),1897,#104589 #d35070 #786480 #2285c4 #bdc3c9,calm,112.8,103.3,213.7
+science_fiction,239848,Mother Night,1961,#eee495 #889bbf #3d3f40 #7f7669 #c5b58d,dark,150.8,51.6,53.3
+science_fiction,7276393,Allegiant,2011,#c66639 #d99e6d #933b22 #ddd7c4 #89877e,warm,135.6,102.5,19.1
+science_fiction,6700720,Foundation's Edge,1977,#060d28 #272734 #b7a17a #695c4c #070407,dark,61.7,31.1,227.6
+science_fiction,13472608,Rendezvous with Rama,1973,#061025 #010206 #1c304b #afb4b9 #5e6876,dark,48.4,24.0,220.6
+science_fiction,2325082,Redwall,1986,#0b2711 #051b07 #1a361e #a27d47 #675630,dark,39.4,36.6,132.9
+science_fiction,929104,First Lensman,1950,#232268 #71718d #dddadd #e72159 #8e2e62,dark,117.9,64.2,240.9
+science_fiction,1876947,Four-Day Planet,1961,#2c2a29 #623f33 #ad5d3b #f2bb57 #28261f,dark,80.0,57.6,20.0
+science_fiction,6460763,Edison's conquest of Mars,1947,#1d1721 #48484d #997461 #eee3c0 #b7ac9a,dark,94.0,23.9,276.0
+science_fiction,6869654,Captain Underpants and the Attack of the Talking Toilets,1996,#6b6c54 #27412e #070806 #a0a098 #550d0b,dark,71.4,21.3,62.5
+science_fiction,12077053,Dragonquest,1971,#e2b74e #61431d #a77842 #f6f6f4 #c7af9e,warm,139.3,90.7,42.6
+science_fiction,574739,The Purple Cloud,1901,#020001 #e3a441 #a6601f #5b261a #270c0c,dark,68.7,81.3,330.0
+science_fiction,6121297,Columbus of Space,1911,#ffffff #fdfdfd #929292 #f1f1f1 #dedede,soft,228.6,0.0,0.0
+science_fiction,6925774,Equal Rites,1987,#261811 #080504 #939880 #51341c #6e6646,dark,52.2,22.6,20.0
+science_fiction,12373928,The Big Time,1958,#343b51 #fbfbf2 #6d7a78 #aca49c #dad3c6,dark,146.7,18.1,225.5
+science_fiction,574890,The war in the air,1908,#202229 #a66759 #eabc3f #37292d #703a41,dark,87.5,63.2,226.7
+science_fiction,6502517,The Foundation Trilogy,1950,#010201 #1e1a16 #3c4641 #a09e8b #6f2b1b,dark,44.7,12.9,120.0
+science_fiction,14648232,Small Gods,1992,#071025 #06080d #071c40 #221a19 #36332e,dark,22.8,25.0,222.0
+science_fiction,524060,Down and out in the Magic Kingdom,2001,#cbfd8e #b8fb89 #9fe98d #83bb8b #ddf9b3,warm,187.6,97.9,87.0
+science_fiction,11465755,Mostly Harmless,1991,#0b0d0f #141718 #232a24 #334848 #7b806f,dark,34.5,7.7,210.0
+science_fiction,580388,The Book Of Three,1964,#115f41 #040811 #c7c7c6 #10232b #48303a,dark,70.1,34.9,156.9
+science_fiction,6542967,The Naked Sun,1954,#080504 #3d341b #933917 #bbb334 #b0a985,dark,58.7,56.1,15.0
+science_fiction,12625274,Captain Underpants and the Invasion of the Incredibly Naughty Cafeteria Ladies from Outer Space,1999,#0e0607 #2a1a16 #3b392d #674f3f #828170,dark,40.9,17.3,352.5
+science_fiction,14424685,One Shot,2005,#0f0001 #220202 #000000 #040000 #622b11,dark,8.8,19.5,356.0
+science_fiction,284580,Space Viking,1963,#a09e6d #878b5f #5d4c40 #341e1d #9d424f,warm,107.4,43.7,57.6
+science_fiction,8393255,State of Fear,2004,#010101 #dedcde #4f0f0e #b3a39d #796156,dark,95.5,18.8,0.0
+mystery_and_detective_stories,12622062,The Secret Garden,1911,#616040 #96934a #2c2819 #95a8a1 #7b8a87,dark,98.8,38.6,58.2
+mystery_and_detective_stories,13405534,A Study in Scarlet,1887,#9b1008 #a7180f #7b130e #510e0b #921c14,dark,57.6,129.1,3.3
+mystery_and_detective_stories,8063264,The Hound of the Baskervilles,1900,#a71912 #7d0d0b #ba5534 #cd7f4f #e7b06f,warm,87.9,131.7,2.8
+mystery_and_detective_stories,6717853,The Adventures of Sherlock Holmes [12 stories],1892,#2a5c7e #326a8e #254c65 #142737 #57747b,calm,82.0,72.4,204.3
+mystery_and_detective_stories,9247987,The Sign of Four,1889,#af3a41 #b84c50 #875152 #683939 #c18779,warm,102.9,89.7,356.4
+mystery_and_detective_stories,4684227,The Woman in White,1800,#130d0c #ddc9a1 #786a54 #473c2f #db793e,dark,94.2,39.2,8.6
+mystery_and_detective_stories,9246467,The Return of Sherlock Holmes,1903,#010101 #0d0b08 #281d12 #5f4924 #b8a155,dark,27.6,20.2,0.0
+mystery_and_detective_stories,9246429,Memoirs of Sherlock Holmes [11 stories],1893,#5f6a46 #515a36 #3c3f28 #252819 #74561c,dark,70.6,34.1,78.3
+mystery_and_detective_stories,8350410,The Case-Book of Sherlock Holmes,1927,#fefefe #909090 #bfbfbf #e0e0e0 #f5f5f5,soft,207.5,0.0,0.0
+mystery_and_detective_stories,8923621,"Tom Sawyer, Detective",1897,#dab978 #e8d9b7 #aba288 #a27b54 #164958,warm,166.0,67.5,39.8
+mystery_and_detective_stories,5815381,The Old Man in the Corner,1908,#fefefe #dddddd #9a9a9a #c0c0c0 #efefef,soft,215.9,0.0,0.0
+mystery_and_detective_stories,11777143,The Gold-Bug,1845,#6f5a33 #ac9362 #a38757 #503f22 #8b7448,warm,105.9,65.5,39.0
+mystery_and_detective_stories,14573514,The A.B.C. Murders,1936,#8f0903 #8c2415 #a46222 #b29580 #2c0c08,dark,76.1,113.5,2.6
+mystery_and_detective_stories,11674884,The Purloined Letter,1931,#cecce2 #222130 #08070b #4e4e5c #8d8ea0,dark,103.5,15.3,245.5
+mystery_and_detective_stories,12501284,"The Complete Sherlock Holmes [4 novels, 56 stories]",1900,#142029 #236873 #9aa08c #624f4b #a06238,dark,81.4,42.3,205.7
+mystery_and_detective_stories,7268475,The Big Sleep,1939,#120c0c #534c43 #a5cda8 #f3eed5 #749e80,dark,100.4,21.1,0.0
+mystery_and_detective_stories,12996535,After the Funeral,1953,#2f1913 #4b2219 #881d18 #ae513c #535a4c,dark,54.2,61.2,12.9
+mystery_and_detective_stories,11165070,Elephants Can Remember,1969,#bba988 #775a38 #d73f09 #ba8260 #b94042,warm,122.7,95.1,38.8
+mystery_and_detective_stories,2784157,Scarhaven Keep,1922,#fefefe #fbfbfb #b1b1b1 #676767 #dadada,soft,215.3,0.0,0.0
+mystery_and_detective_stories,7890719,The Curious Incident of the Dog in the Night-Time,2002,#c73228 #c1271d #b62018 #c56a5d #ceb4a4,warm,101.0,145.0,3.8
+mystery_and_detective_stories,10249139,Nemesis,1970,#854234 #0b0504 #6d080a #301913 #5a2d22,dark,46.0,56.7,10.4
+mystery_and_detective_stories,6874620,Murder in Three Acts,1934,#a69979 #080403 #978365 #8a634a #921b14,dark,93.9,43.3,42.7
+mystery_and_detective_stories,11160095,Hallowe'en Party,1969,#0b0812 #08040c #5f4434 #291c1b #987656,dark,32.8,20.3,258.0
+mystery_and_detective_stories,12846782,They Came to Baghdad,1951,#408b80 #36857a #347d71 #472b2f #464a49,calm,95.6,64.7,171.2
+mystery_and_detective_stories,9831097,Why Didn't they Ask Evans?,1934,#040404 #000000 #0c0e0f #2e302c #767350,dark,17.2,3.7,0.0
+mystery_and_detective_stories,3065314,Emil und die Detektive,1930,#d6dfcc #78c6ac #ad888e #62647d #181b1d,dark,161.0,38.5,88.4
+mystery_and_detective_stories,12643419,Breaking Dawn,2000,#12161a #1c2023 #3d3a3d #c1b6ad #83766f,dark,60.1,9.1,210.0
+mystery_and_detective_stories,13014831,Hickory Dickory Death,1952,#aca7a7 #a29d9c #666b68 #8f8485 #34353c,dark,141.1,6.3,0.0
+mystery_and_detective_stories,11349395,The Boxcar Children,1924,#301106 #a37e05 #402d13 #713c13 #7c6859,dark,58.1,80.0,15.7
+mystery_and_detective_stories,14570937,Five on a Treasure Island,1942,#7f785a #5c5b48 #233732 #550806 #080b07,dark,74.4,32.5,48.6
+mystery_and_detective_stories,12855084,Endless Night,1905,#0c152c #080b14 #5a5517 #2e2d1d #8f7357,dark,38.2,33.3,223.1
+mystery_and_detective_stories,97527,The confidential agent,1939,#1d2420 #333835 #bcb5a8 #707065 #f7f7f3,dark,91.6,9.4,145.7
+mystery_and_detective_stories,6299936,The Red House Mystery,1922,#fcfaf2 #0a0505 #c73432 #bfaaa3 #533635,dark,132.0,40.2,48.0
+mystery_and_detective_stories,482463,The Nine Tailors,1934,#f4df9f #cda07f #aa6747 #454248 #ede9ca,warm,160.4,72.1,45.2
+mystery_and_detective_stories,935927,The Haunted Bookshop,1919,#151515 #f8f8f8 #cdcdcd #545454 #9d9d9d,dark,135.8,0.0,0.0
+mystery_and_detective_stories,9322929,The Rainmaker,1995,#090302 #c60605 #3e1510 #850a09 #bb4633,dark,40.3,88.6,8.6
+mystery_and_detective_stories,12569145,Harriet the Spy,1960,#e1daca #b6afa0 #ea930d #6f5743 #3db2dc,warm,165.9,74.2,41.7
+mystery_and_detective_stories,12659896,The millionaire baby,1905,#3b3b39 #4f4640 #994e3b #333432 #b39277,dark,74.4,27.7,60.0
+mystery_and_detective_stories,6997898,Red Dragon,1981,#96272a #722526 #93717a #4e1818 #d8cfd4,dark,87.6,72.1,358.4
+mystery_and_detective_stories,4992137,Cover Her Face,1962,#fbfbfa #5d535e #9a8381 #ece4e1 #c5b8ba,soft,178.4,10.6,60.0
+mystery_and_detective_stories,541206,From the Mixed-Up Files of Mrs. Basil E. Frankweiler,1967,#efeeed #c0bfbf #0f0d11 #8e8285 #504448,dark,156.2,4.1,30.0
+mystery_and_detective_stories,8517526,The Adventure of the Speckled Band,1912,#babcad #7b8281 #060403 #464642 #1f1a15,dark,106.5,8.7,68.0
+mystery_and_detective_stories,4989400,The Woods,1849,#c75407 #7b85a4 #291d08 #874516 #ced9e6,dark,99.3,98.2,24.1
+mystery_and_detective_stories,7888268,"""A"" is for Alibi",1982,#030202 #201b15 #4a4036 #777167 #37110d,dark,37.5,12.2,0.0
+mystery_and_detective_stories,14601324,Five Go Adventuring Again,1943,#75060d #6f040a #680309 #5f030a #4f060c,dark,40.9,102.9,356.2
+mystery_and_detective_stories,6380577,The Bad Place,1901,#020101 #11090d #221d24 #1a424e #456471,dark,24.3,13.7,0.0
+mystery_and_detective_stories,14605167,Five Run Away Together,1942,#765c40 #1a1010 #594639 #3d2c25 #4d0a0e,dark,58.6,34.7,31.1
+mystery_and_detective_stories,12369402,A Case of Need,1968,#747167 #a09683 #534e46 #292120 #9e7f59,dark,104.5,20.5,46.2
+mystery_and_detective_stories,5081706,Stormbreaker,2000,#35426b #343a3f #333e58 #819c66 #596859,dark,77.4,36.5,225.6
+mystery_and_detective_stories,436197,"Over Sea, Under Stone (The Dark Is Rising #1)",1965,#2e383b #404849 #4e607f #ab693c #a2b2b6,dark,83.1,32.7,193.8
+mystery_and_detective_stories,2203594,A Taste for Death,1986,#0c0a0a #2d282a #5f5952 #a1c1b8 #dba235,dark,66.1,19.9,0.0
+mystery_and_detective_stories,3348719,Herr der Diebe,2000,#a1cfdf #93938f #92afc4 #c5c7be #615f57,calm,171.2,33.6,195.5
+mystery_and_detective_stories,259930,Point Blanc,2001,#291c21 #5e292a #121014 #c34638 #9f9c9e,dark,55.4,38.0,336.9
+mystery_and_detective_stories,4813665,Aunt Jane's Nieces Out West,1914,#fefefd #fbca1b #9b8b53 #e8e3cf #b7b3a4,warm,193.6,79.1,60.0
+mystery_and_detective_stories,14599541,Five Go to Smuggler's Top,1945,#be1c17 #b91713 #c22622 #ac1714 #891715,warm,78.3,159.9,1.8
+mystery_and_detective_stories,2203537,Innocent Blood,1980,#171412 #283436 #581d17 #ad2f1f #878675,dark,48.8,38.5,24.0
+mystery_and_detective_stories,8536550,Bunnicula,1979,#bd6124 #160706 #702e1c #c8988b #d01a10,dark,78.7,93.0,23.9
+mystery_and_detective_stories,4813654,Aunt Jane's Nieces in Society,1910,#fefefd #fbca1b #998b56 #cec7af #e8e9e3,warm,193.6,78.0,60.0
+mystery_and_detective_stories,13180737,The tower treasure,1927,#88674c #7e5c42 #735138 #2e1515 #51342a,dark,84.8,53.7,27.0
+mystery_and_detective_stories,14596524,Five on Kirrin Island Again,1947,#71696c #5d5054 #31231f #513632 #a68a6e,dark,84.2,17.6,337.5
+mystery_and_detective_stories,753744,"Bobbsey Twins in the Country, The",1907,#fefefe #dddddd #7c7c7c #eaeaea #fafafa,soft,216.3,0.0,0.0
+mystery_and_detective_stories,12519082,Novels (Sign of Four / Study in Scarlet),1902,#152822 #10231d #0a0b0a #151615 #29302b,dark,25.5,12.2,161.1
+mystery_and_detective_stories,4813649,Aunt Jane's Nieces at Millville,1908,#fefefd #fbca1b #998c5b #cec8b0 #e9e9e3,warm,194.1,76.9,60.0
+mystery_and_detective_stories,3203398,Touch the Devil,1982,#3b3346 #211f1d #626481 #e1ae42 #a04a34,dark,77.1,42.0,265.3
+mystery_and_detective_stories,4796285,Where Are the Children?,1975,#3f3f3f #4c4d4c #393937 #767680 #c0b9be,dark,81.4,2.5,0.0
+mystery_and_detective_stories,15150728,The Hidden Staircase,1930,#a46b51 #bda087 #422d35 #7e4c47 #b08c72,warm,114.8,57.7,18.8
+mystery_and_detective_stories,14608017,Five Go Off in a Caravan,1946,#9a120e #960f0b #8d120d #9c2016 #691410,dark,60.2,133.1,1.7
+mystery_and_detective_stories,6950216,Flying finish,1966,#223f4c #575b3d #747962 #1d1b1d #b1a325,dark,75.0,36.2,198.6
+mystery_and_detective_stories,384112,Say Cheese and Die!,1992,#231a0b #b70e0b #d6e0e7 #c48759 #5a5338,dark,94.8,73.8,37.5
+mystery_and_detective_stories,12667783,The House with a Clock in Its Walls,1973,#383235 #c89bb3 #a2828a #645855 #ddcdc2,dark,119.7,24.2,330.0
+mystery_and_detective_stories,283478,The Wave,1981,#087c7c #5fc8c9 #f72407 #e80405 #9f6d71,warm,111.0,148.7,180.0
+mystery_and_detective_stories,634667,The ruby in the smoke (Sally Lockhart #1),1985,#9e7395 #352726 #e5dfe8 #79555a #d0a7a9,warm,129.3,27.7,312.6
+mystery_and_detective_stories,15148693,The Secret at Shadow Ranch,1931,#61363a #37669a #9e534e #7b7068 #9d9da4,dark,97.8,59.7,354.4
+mystery_and_detective_stories,6998471,Surprise Island,1949,#a29e94 #686d72 #802622 #a0674c #401e20,dark,112.3,39.6,42.9
+mystery_and_detective_stories,15150724,The Secret of the Old Clock,1930,#857773 #a28f83 #685a57 #806957 #53494f,warm,117.7,23.8,13.3
+mystery_and_detective_stories,5870288,The house in the mist,1905,#fefefe #e6e6e6 #8a8a8a #c3c3c3 #f8f8f8,soft,216.1,0.0,0.0
+mystery_and_detective_stories,10540498,Mystery Ranch,1958,#ded57d #cc9b5c #574f52 #5f9c7b #1f1b26,dark,137.6,72.7,54.4
+mystery_and_detective_stories,254688,The Shadow in the North (Sally Lockhart #2),1986,#030306 #054af1 #3a425c #a1abb7 #3b68d8,dark,75.5,84.1,240.0
+mystery_and_detective_stories,296451,A dark-adapted eye,1986,#e6e7c4 #d2cea7 #b0977d #885d4e #35201b,warm,171.1,42.8,61.7
+mystery_and_detective_stories,6918732,Bonecrack,1971,#764958 #200f0e #53343b #6c2912 #a5988f,dark,67.0,39.5,340.0
+mystery_and_detective_stories,403944,DEVIL IN A BLUE DRESS (Easy Rawlins Mysteries),1990,#ebeced #f8f8f7 #dcdee0 #b2b4b3 #907c61,soft,221.1,5.1,210.0
+mystery_and_detective_stories,15150725,The Bungalow Mystery,1930,#b3977d #917f60 #5b5a65 #41413c #78673b,warm,116.8,38.0,28.9
+mystery_and_detective_stories,7232508,"A dark, dark tale",1981,#2e400e #1c2708 #555c19 #090c02 #7e8654,dark,42.6,43.0,81.6
+mystery_and_detective_stories,404297,"Weep No More, My Lady",1987,#3b555f #6d6d67 #9f9785 #dbdcc9 #4d4842,calm,117.8,22.1,196.7
+mystery_and_detective_stories,14361811,One for the Money,1994,#9c9287 #1d114c #5f5664 #98422c #1b110b,dark,91.0,41.0,31.4
+mystery_and_detective_stories,1814344,The House of Whispers,1910,#f7ddaa #fbc042 #be835d #cdb291 #7a5846,warm,173.4,105.9,39.7
+mystery_and_detective_stories,13156188,A Good Girl's Guide to Murder,2019,#f8f9f8 #e1dfdf #916368 #b6afb2 #1f191a,dark,191.2,11.4,120.0
+mystery_and_detective_stories,1813769,The Bobbsey Twins at School,1913,#f4db9c #5b92d0 #a9796a #daba89 #884334,warm,164.4,89.5,43.0
+mystery_and_detective_stories,14575874,Five on Finniston Farm,1960,#182b17 #a58a28 #625528 #a3390c #928f73,warm,74.6,73.8,117.0
+mystery_and_detective_stories,4319082,I Am the Messenger,2002,#010001 #846651 #170a08 #472d22 #d2bc8f,dark,49.6,26.3,300.0
+mystery_and_detective_stories,11616486,Shelter,2011,#121110 #73751b #2c2318 #4c4125 #090908,dark,44.0,33.9,30.0
+mystery_and_detective_stories,14600237,Five on a Secret Trail,1956,#0e0b0c #2a1d20 #524c52 #9a883e #632522,dark,48.7,22.3,340.0
+mystery_and_detective_stories,77157,More Work for the Undertaker,1949,#2f3a33 #d1d3a9 #54584e #7a837a #aaaa90,dark,113.8,19.8,141.8
+mystery_and_detective_stories,4068534,The Bridesmaid,1989,#c5c8b3 #a5998b #dfdfd2 #fbfaf9 #7b685d,soft,188.8,18.8,68.6
+mystery_and_detective_stories,12670586,"Behold, Here's Poison",1936,#87c0dd #73a0b4 #4d6469 #191f25 #a9d3df,calm,137.7,56.8,200.2
+mystery_and_detective_stories,6681655,George's Secret Key to the Universe,1998,#30373c #e4e8e1 #acb8bc #637683 #c9a163,dark,141.0,20.1,205.0
+mystery_and_detective_stories,10537063,Mike's Mystery,1960,#291f25 #d8b384 #c47f5b #586a7b #e3d5c0,dark,114.7,53.7,324.0
+mystery_and_detective_stories,491676,L'étoile mystérieuse,1960,#e3ebe3 #995635 #cdd5c3 #bc966d #f2f2e7,warm,179.1,44.2,120.0
+mystery_and_detective_stories,9619468,Exclusive,1996,#01013f #04022a #665467 #23204a #bfb7be,dark,49.6,41.3,240.0
+mystery_and_detective_stories,12163672,Five go to the Mystery Moor,1954,#1e1a16 #404540 #233c41 #202c2d #373731,dark,45.8,12.1,30.0
+mystery_and_detective_stories,14320,The House of Dies Drear,1968,#f0dda7 #29231d #493d2c #696247 #bdb28e,dark,114.5,41.0,44.4
+mystery_and_detective_stories,14605173,Five Fall into Adventure,1950,#8e6f48 #4a3728 #1e1510 #7c4a2b #606f5f,dark,73.0,47.1,33.4
+mystery_and_detective_stories,13180440,The House on the Cliff,1927,#b78f66 #be9770 #ab835c #593227 #845d47,warm,128.6,74.3,30.4
+mystery_and_detective_stories,3324757,La Sonrisa De Mona Ratisa,1999,#f7dd41 #b5d2e2 #c19a36 #aaa885 #61734f,warm,168.2,107.8,51.4
+mystery_and_detective_stories,278421,"Giù le zampe, faccia di fontina!",2000,#e5dce1 #e4c76f #8e774c #f7d413 #a8a19b,warm,177.2,78.7,326.7
+mystery_and_detective_stories,2540322,Un Disparatado Viaje A Ratikistan,2000,#f2f7f8 #d3ab6b #c1d9e6 #635f55 #92aec4,soft,191.9,42.3,190.0
+mystery_and_detective_stories,5418308,The tiger in the well,1990,#060303 #f9a939 #5b462e #a07f4f #e7d5a1,dark,87.1,76.7,0.0
+mystery_and_detective_stories,14605188,Five go down to the sea,1953,#840b0d #891317 #7b1112 #571214 #bb845c,dark,58.5,108.5,359.0
+mystery_and_detective_stories,14603046,Second Form at Malory Towers,1941,#3b4222 #c4b191 #875230 #a38f6d #29747d,warm,106.1,54.5,73.1
+mystery_and_detective_stories,6577272,The Yellow House Mystery,1953,#86654d #d3b888 #c59758 #262025 #8e2915,dark,120.2,69.7,25.3
+mystery_and_detective_stories,25900,The Moon-Spinners,1962,#1c2e74 #76518f #23242f #a990b6 #393258,dark,85.7,55.9,227.7
+mystery_and_detective_stories,7002667,Detection Unlimited,1953,#1b1518 #2b2223 #526438 #b8665c #742b27,dark,55.0,30.6,330.0
+mystery_and_detective_stories,3962592,"Loves Music, Loves to Dance",1991,#fefefe #f9f9f9 #aaaaaa #4b4b4b #dcdcdc,soft,209.7,0.0,0.0
+mystery_and_detective_stories,756328,Aunt Jane's Nieces on Vacation,1912,#869a8e #c6c6c6 #8a8a8a #a3ada8 #939393,dark,160.4,8.0,144.0
+mystery_and_detective_stories,3369815,"Encyclopedia Brown, Boy Detective",1963,#cd861c #a4712e #7d5121 #eda72c #372e23,warm,108.4,135.9,35.9
+mystery_and_detective_stories,6794558,Encyclopedia Brown Strikes Again,1965,#9f160e #b8af95 #9a7362 #530d0a #624e42,dark,101.4,80.7,3.3
+mystery_and_detective_stories,12718970,I am the Cheese,1977,#968f8d #4c4545 #6d6664 #343134 #252226,dark,97.2,7.3,13.3
+mystery_and_detective_stories,10985686,The Shore Road Mystery,1928,#b12204 #791f08 #a06223 #3a1508 #b59a5e,dark,71.0,125.3,10.4
+mystery_and_detective_stories,14603709,The Mystery of the Burnt Cottage,1943,#1c1a38 #ba7233 #953419 #4d211c #47583b,dark,69.5,79.3,244.0
+mystery_and_detective_stories,2137654,Noisy Nora,1973,#3890d2 #e79b72 #838d86 #d7e1e9 #d93557,warm,154.9,97.9,205.7
+mystery_and_detective_stories,9320679,Hoot,2002,#5382cf #5a79b4 #dddee4 #93a894 #cbd55a,calm,158.0,77.7,217.3
+mystery_and_detective_stories,35633,Get Shorty,1990,#e48151 #e3c58a #160d0e #945c4b #3a302e,dark,119.3,85.1,19.6
+mystery_and_detective_stories,12503935,One Of Us Is Lying,2014,#fdfcfc #d3cdcd #908383 #1d1d1d #d61f28,dark,176.6,16.7,0.0
+mystery_and_detective_stories,13199799,The secret of the old mill,1927,#171415 #2a1f1e #68231a #313c3d #836746,dark,41.6,25.5,340.0
+mystery_and_detective_stories,15150730,The Mystery at Lilac Inn,1930,#ae9c7e #352524 #a47f4b #784e37 #3d5e68,warm,103.3,49.9,37.5
+mystery_and_detective_stories,14599593,The Mystery of the Secret Room,1950,#7d261f #852b25 #70221a #90342f #501f19,dark,65.8,90.7,4.5
+mystery_and_detective_stories,8349916,"Mister Monday (The Keys to the Kingdom, Book 1)",2003,#090806 #3a392b #7f806f #6c0605 #85342a,dark,51.3,28.2,40.0
+mystery_and_detective_stories,6990699,Five Go Off to Camp,1948,#010101 #600e05 #3b0d09 #1a0705 #82601d,dark,23.3,43.8,0.0
+mystery_and_detective_stories,5408818,While my pretty one sleeps,1989,#fdfdfd #d8d8d8 #4b4b4c #9d9d9d #f2f2f2,soft,194.1,0.2,0.0
+mystery_and_detective_stories,5277552,The Time of the Hunter's Moon,1983,#79769a #f2d1c7 #b39a79 #bda5b0 #5a5a76,warm,161.9,40.1,245.0
+mystery_and_detective_stories,7884650,Night of the Seventh Moon,1879,#7c6192 #ab8faf #7d5f4f #342428 #dad2db,dark,124.2,36.8,273.1
+mystery_and_detective_stories,6600151,Five Go to Demon's Rocks,1970,#bbb5a6 #614d5b #a71c23 #330e19 #987977,dark,110.9,47.3,42.9
+mystery_and_detective_stories,11014054,El galeón de los Gatos Piratas,2000,#26241d #3a3d66 #82440d #5c5e61 #848584,dark,66.6,38.9,46.7
+mystery_and_detective_stories,11683889,The Mystery of Tally-Ho Cottage,1949,#110a08 #907032 #2f1813 #56422d #2e254a,dark,49.3,41.6,13.3
+mystery_and_detective_stories,289668,The Bobbsey Twins on a Houseboat,1915,#bb1934 #baa79c #5c5051 #ba7463 #a43d3e,warm,115.6,82.9,350.0
+mystery_and_detective_stories,5006979,Il mistero della piramide di formaggio,2000,#f6f09d #efeed6 #e79762 #c1b9a6 #665d63,soft,195.6,67.1,56.0
+mystery_and_detective_stories,14576928,Five Are Together Again,1966,#3d4140 #201b0f #796328 #2e352f #631906,dark,54.4,29.2,165.0
+mystery_and_detective_stories,14596585,Secret Seven on the Trail,1952,#7496ae #1e294b #141e3c #536a87 #334363,dark,88.4,49.5,204.8
+mystery_and_detective_stories,287743,School's Out Forever,2006,#130b0f #b0262e #3c4f6d #c0d4e1 #6f95b0,dark,82.3,58.0,330.0
+mystery_and_detective_stories,282839,The Egypt game,1967,#151217 #5d2414 #bd461f #4a3e49 #8d909a,dark,58.5,55.2,276.0
+mystery_and_detective_stories,5020675,Il castello di Zampaciccia Zanzamiao,2000,#8f9a99 #537487 #ced6d0 #e0ce7b #49463e,dark,150.7,33.3,174.5
+mystery_and_detective_stories,4191193,Proof,1984,#fefefe #f9f9f9 #b0b0b0 #6d6c6d #dedede,soft,215.6,0.1,0.0
+mystery_and_detective_stories,15146728,The clue in the old stagecoach,1960,#343630 #514d40 #9a9b90 #6a7871 #af7842,dark,90.1,17.9,80.0
+mystery_and_detective_stories,6603341,Pale Gray For Guilt,1968,#949f94 #778375 #ccccb8 #1f2b22 #1b77a1,dark,134.3,21.9,120.0
+mystery_and_detective_stories,8274937,Let's Get Invisible!,1993,#061109 #a0230e #23262b #989489 #3c515d,dark,54.5,48.4,136.4
+mystery_and_detective_stories,15151020,The secret of Red Gate Farm,1931,#201a15 #523928 #362319 #292e2a #745c4b,dark,44.3,24.1,27.3
+mystery_and_detective_stories,15148374,Password to Larkspur Lane,1933,#323022 #646d48 #d6a323 #ab6b24 #7c1c12,dark,84.8,76.1,52.5
+mystery_and_detective_stories,5723136,The Maze of Bones,2008,#167fb4 #0b5080 #082840 #90b3c2 #5e7581,calm,94.0,104.1,200.1
+mystery_and_detective_stories,15151338,The haunted showboat,1957,#23231e #394641 #885b49 #643324 #a39584,dark,66.4,28.3,60.0
+mystery_and_detective_stories,6992389,Lion in the valley,1986,#826a6a #22212a #4a4657 #9f938a #cbcebc,dark,96.1,17.8,0.0
+humor,8157718,Adventures of Huckleberry Finn,1876,#222527 #303230 #191a1d #685a41 #0d0d10,dark,43.0,8.4,204.0
+humor,14428305,Don Quijote de la Mancha,1600,#d8413b #8e6158 #be6254 #3d3431 #c49a95,warm,109.9,92.7,2.3
+humor,12736044,Candide,1746,#50220a #5a2d13 #381b0a #190c03 #6e4a2b,dark,40.5,58.9,20.6
+humor,1991009,A history of New York,1800,#825642 #201f1c #634635 #413328 #ada49d,dark,72.1,36.0,18.8
+humor,1260453,The Importance of Being Earnest,1893,#fdfee1 #f5f1a5 #bcb9b2 #dcdbd2 #7a7294,soft,213.3,36.6,62.1
+humor,12968864,The History of Tom Jones,1749,#4f1103 #481003 #4e1608 #440e02 #4c0e01,dark,32.0,71.5,11.1
+humor,8243128,Idle Thoughts of an Idle Fellow,1880,#b3a381 #ad9975 #aa8b65 #a17851 #a05935,warm,141.8,63.2,40.8
+humor,6060585,Satyricon,1575,#dcba90 #d0ab81 #ba966d #9c7b56 #735536,warm,157.8,75.2,33.2
+humor,5706716,Three Men on the Bummel,1900,#f2e1c1 #eed9ba #e4cfb1 #ccb99f #9e8e79,warm,204.8,48.9,39.2
+humor,12671319,The Devil's Dictionary,1840,#2b1407 #1d0e08 #59422a #3b2716 #130805,dark,31.5,32.9,21.7
+humor,8236357,American notes,1800,#ae854e #8d562e #a06b3c #7b3b1c #522611,warm,101.2,94.3,34.4
+humor,8242217,Castle Rackrent,1800,#610201 #45432f #17150d #7f725a #783829,dark,50.7,50.1,0.6
+humor,5609568,Colloquia,1519,#faedc6 #f3e0b9 #e1cfab #ccbb98 #b19f7e,warm,208.7,53.9,45.0
+humor,6336288,The Admirable Crichton,1900,#f1d8a2 #e8cd95 #d3b785 #c2a271 #a48557,warm,185.4,80.0,41.0
+humor,5895405,Nonsense novels,1900,#ebdcb8 #decda9 #bfb295 #9e9276 #544834,warm,181.9,47.0,42.4
+humor,9158278,The True-Born Englishman,1700,#fefefe #a6a6a6 #5e5e5e #dbdbdb #f4f4f4,soft,193.2,0.0,0.0
+humor,14861758,1066 and All That,1930,#ceb983 #df3a03 #bf9e64 #8c7f54 #6b442b,warm,133.6,113.6,43.2
+humor,5830537,Arcadian adventures with the idle rich,1914,#fefefe #b1b1b1 #dadada #818181 #f2f2f2,soft,208.8,0.0,0.0
+humor,39665,Thurber Carnival,1940,#f0ebe7 #69f1b1 #ea7e92 #5cb489 #9d505d,warm,184.2,77.7,26.7
+humor,5156908,Novel Notes,1893,#fefefe #fbfbfb #858585 #cdcdcd #ececec,soft,221.3,0.0,0.0
+humor,962725,Astérix le Gaulois,1961,#37652e #959752 #e1edef #66b6f1 #bcb2ae,dark,138.5,59.0,110.2
+humor,6046060,An Unsocial Socialist,1887,#fefefe #f8f8f8 #b8b8b8 #e6e6e6 #6e6e6e,soft,225.6,0.0,0.0
+humor,15064600,"Ramona Quimby, Age 8",1981,#d5b695 #e27648 #c55833 #673f35 #6698ae,warm,139.1,103.1,30.9
+humor,13119364,Tropic of Capricorn,1939,#ce2e15 #096056 #0f7266 #104e45 #65372a,dark,74.4,116.9,8.1
+humor,5707537,Stage-land,1889,#d7caaa #ddd0af #cfc2a4 #b5ab8f #877f69,warm,186.7,42.9,42.7
+humor,11172914,Freakonomics,2005,#d7d2be #c6bb8f #44571e #e06519 #92976d,warm,152.2,63.7,48.0
+humor,7247522,Cabin Fever,2007,#53aad0 #ebebe9 #a1c5d7 #939e8a #343e4a,dark,175.8,57.1,198.2
+humor,10637325,1601,1880,#620301 #540101 #440101 #620e06 #652710,dark,32.4,85.8,1.2
+humor,12725620,A short history of nearly everything,2003,#3c3750 #333149 #6e6c79 #c7c6c7 #2f2c41,dark,89.6,18.9,252.0
+humor,2808675,"Sketches of Lavender, Blue, and Green",1897,#f7dca9 #9a61a7 #ba7c66 #d5b48f #7a524a,warm,165.3,74.0,39.2
+humor,14645769,Wintersmith,2006,#070604 #81847c #625b53 #3f3b36 #251f1b,dark,64.2,8.0,40.0
+humor,5563880,The Green Carnation,1894,#e2cfa0 #d5bf95 #c6b089 #b59d7b #72664f,warm,176.2,61.3,42.7
+humor,14648051,Wyrd Sisters,1988,#d89c39 #bd5b29 #271a17 #753b28 #5f5d81,warm,98.7,108.3,37.4
+humor,14645777,The Amazing Maurice and His Educated Rodents,2001,#b59a61 #20181c #8b714b #d2bd9a #544435,dark,106.4,52.5,40.7
+humor,7396124,The Ugly Truth,2010,#f6d617 #f1eee9 #ebd795 #712717 #a08170,warm,173.6,108.9,51.4
+humor,10236612,Haroun and the Sea of Stories,1990,#013e76 #0a5686 #738484 #06335d #122135,dark,74.8,89.4,208.7
+humor,447899,The egg and I,1945,#f5e00d #f0ebe3 #967a27 #e7650f #2c190f,warm,154.0,133.7,54.6
+humor,9274698,"""Surely You're Joking, Mr. Feynman""",1984,#85726b #625252 #f0ede7 #524457 #a79b96,soft,130.8,18.4,16.2
+humor,1014327,Защита Лужина,1930,#fefefe #e7dee6 #261329 #bdadc7 #835e8f,dark,185.0,13.5,0.0
+humor,33319,"Is sex necessary?, or, why you always feel the way you do",1929,#f5453f #fbe76c #ec6862 #f7f7f5 #dd9d98,warm,168.2,131.3,2.0
+humor,6030130,"The chronicle of the Kings of England, from the Norman conquest unto the present time. Written in the manner of the ancient Jewish historians",1740,#fbfcf3 #f7f9eb #edeee3 #d4d5cd #9e9f98,soft,233.1,10.5,66.7
+humor,4975840,"Carry On, Jeeves",1925,#e0031a #c85e76 #452b36 #d00921 #b92b3b,warm,93.3,143.1,353.8
+humor,9259683,Zahradníkův rok,1929,#a78636 #9d8033 #93782e #78672c #3a5738,warm,106.5,98.3,42.5
+humor,8233629,Physiologie du mariage,1830,#d3d6bc #cdceb4 #d5cfaf #c8c2a6 #b4ae95,warm,196.4,29.8,66.9
+humor,10323405,Diary of a Wimpy Kid,2009,#7ebde6 #a5cde8 #eae8e6 #665a79 #8198b6,calm,184.7,61.0,203.7
+humor,4618640,How to Fail in Literature (Reprint),1890,#446459 #425a50 #516c60 #32473e #809481,dark,85.7,26.6,159.4
+humor,14649230,Hogfather,1996,#18356d #39517a #648a99 #b5bdae #a36b42,dark,101.5,64.7,219.5
+humor,7437001,En man som heter Ove,2012,#869b9e #b3bbad #eae8de #6d6f57 #424135,dark,161.2,18.2,187.5
+humor,1846674,True Irish Ghost Stories,1914,#7a4012 #552a0d #a05d20 #050302 #2a1509,dark,56.2,82.1,26.5
+humor,14645780,Soul Music,1994,#350404 #920d09 #967965 #ac9992 #8e3f35,dark,73.2,72.1,0.0
+humor,1814229,Mr. Bonaparte of Corsica,1895,#f3da9b #f30e06 #b5795e #dcbc8e #7c3b33,warm,147.9,125.2,43.0
+humor,27023,The Whipping Boy,1986,#2f2a2c #897656 #326889 #574d41 #c8b785,dark,86.1,40.1,336.0
+humor,13615191,The Complete Works of Lewis Carroll,1900,#3b5f57 #355952 #30534c #43685e #1f1c15,dark,74.0,34.2,166.7
+humor,5742866,A Christmas garland,1912,#e0d6b1 #d9ceaa #cfc2a0 #beb090 #877860,warm,188.9,46.3,47.2
+humor,588492,Tarka the Otter,1927,#575a46 #e4d5a8 #4b3f36 #7b6c5b #aea47f,dark,119.0,34.3,69.0
+humor,8245431,Mr. Sponge's sporting tour,1852,#0b2657 #04163c #1e3a67 #131017 #172534,dark,40.6,57.7,218.7
+humor,544664,Don't Let the Pigeon Drive the Bus!,2003,#e9caa5 #f5f5ed #b4c7c6 #868477 #edeadf,soft,202.3,31.5,32.6
+humor,5259805,Le dictionnaire des idées reçues,1913,#fefefe #cbd0d0 #e5e9e8 #f2f7f7 #8cb4b2,soft,229.7,5.5,0.0
+humor,7005914,Down Under (In a Sunburned Country),2000,#271b0a #052c60 #03194e #424c59 #7d807f,dark,47.1,52.2,35.2
+humor,6037964,Ginx's baby,1870,#fdefd1 #fbeccc #f4e6c7 #e6dbbe #d3c8ab,soft,225.5,44.2,40.9
+humor,896711,Transformers,2003,#353c5d #281c26 #07040b #a18c78 #773e22,dark,57.3,29.1,229.5
+humor,8580447,Dress Your Family in Corduroy and Denim,2004,#a92b07 #d9e1eb #de4a09 #751c07 #c6915f,warm,121.3,122.9,13.3
+humor,1950034,Ignoramus,1630,#3079a3 #337799 #6796a2 #91afab #48819b,calm,123.0,86.9,201.9
+humor,5273458,La Guia Facil del Sexo for Dummies,1995,#f3ef1b #3d4237 #f5f3ed #bca428 #a7938d,dark,148.6,98.0,58.9
+humor,4526591,L.A. Requiem,1999,#1e201a #686139 #433d26 #92a065 #bdc7ae,dark,74.4,29.9,80.0
+humor,12965019,The Vagina Monologues,1998,#f2eadf #efe7db #c8bbb1 #ded2c7 #a89a90,soft,214.9,20.9,34.7
+humor,5815237,Curiosities of literature,1791,#fefefe #c4c4c4 #9b9b9b #f7f7f7 #e7e7e7,soft,216.3,0.0,0.0
+humor,11451715,A Midsummer Night's Dream,1800,#fefefe #0f0e12 #bfc1bf #69696d #fefefe,dark,158.3,2.0,0.0
+humor,10527372,Alice's Adventures in Wonderland / Through the Looking-Glass / The Hunting of the Snark,1924,#4f1316 #5f3932 #d6dad9 #8e9193 #956632,dark,100.5,40.1,357.0
+humor,42544,Bel Kaufman's up the down stair case,1964,#f2e2b8 #d1a291 #ed226a #d7110d #b54d4d,warm,161.8,110.9,43.4
+humor,332367,Apocolocyntosis,1729,#fef302 #14520f #3a7756 #e7e411 #c9d11a,warm,114.2,154.8,57.4
+humor,7091838,Committed,2010,#cc490e #d36123 #d59d47 #dbbfb6 #994014,warm,123.8,152.5,18.6
+humor,14645701,Making Money,2007,#060b06 #243e16 #6b981d #4b5b41 #82947c,dark,51.6,42.0,120.0
+humor,9168450,Letters from the Earth,1962,#000101 #060606 #1b1411 #a7a8a8 #342b26,dark,31.4,3.4,180.0
+humor,8567510,Me Talk Pretty One Day,2000,#2e726d #43817e #1d6761 #80a6a2 #0d5750,calm,98.0,64.0,175.6
+humor,3960936,Sueños,1668,#0d1d7c #322f52 #826d4e #604c31 #404f9f,dark,72.0,69.3,231.4
+humor,286408,"Dude, where's my country?",2003,#a50706 #a47841 #663a1f #dcc883 #231408,dark,89.4,107.3,0.4
+humor,13953728,Naked,1997,#fdcc66 #eecc7a #b89d5b #39494c #f9eebd,warm,165.2,106.4,40.5
+humor,497392,Dilbert,1992,#9ebede #954c2f #747d86 #c49d7f #eee7d6,warm,149.0,62.9,210.0
+humor,1993482,The book of snobs,1848,#f4d8a8 #e3c59a #265b6f #b6947b #995042,warm,163.9,73.1,37.9
+humor,2270980,A Light in the Attic,1981,#fefefe #e3e5e4 #bcbfbe #818585 #38383c,dark,204.8,1.9,0.0
+humor,13953728,Naked,1997,#fdcc66 #eecc7a #b89d5b #39494c #f9eebd,warm,165.2,106.4,40.5
+humor,8294078,Born a Crime,2016,#425187 #a66f41 #242325 #54413e #beb7ba,dark,90.7,53.7,227.0
+humor,497392,Dilbert,1992,#9ebede #954c2f #747d86 #c49d7f #eee7d6,warm,149.0,62.9,210.0
+humor,1993482,The book of snobs,1848,#f4d8a8 #e3c59a #265b6f #b6947b #995042,warm,163.9,73.1,37.9
+humor,2270980,A Light in the Attic,1981,#fefefe #e3e5e4 #bcbfbe #818585 #38383c,dark,204.8,1.9,0.0
+humor,10201431,The Thursday Murder Club,2020,#fef8ed #b03d39 #d5beb7 #f3eadf #a4837e,warm,187.8,48.6,38.8
+humor,8294078,Born a Crime,2016,#425187 #a66f41 #242325 #54413e #beb7ba,dark,90.7,53.7,227.0
+humor,5924702,Stories of American life and adventure,1895,#fdf6e1 #fcf2db #f7edd5 #e2ddca #c3bdab,soft,231.5,29.7,45.0
+humor,6112687,The flush times of Alabama and Mississippi,1853,#e2d3b0 #dfcea9 #dcc9a0 #d4c098 #bcac88,warm,195.7,54.5,42.0
+humor,10201431,The Thursday Murder Club,2020,#fef8ed #b03d39 #d5beb7 #f3eadf #a4837e,warm,187.8,48.6,38.8
+humor,9694281,Uncommon law,1935,#000000 #010101 #020202 #020401 #010200,dark,1.0,0.5,0.0
+humor,540949,Stupid white men,2001,#1f2230 #cf4f2c #e9bc9d #814c3e #42687d,warm,98.8,77.2,229.4
+humor,5924702,Stories of American life and adventure,1895,#fdf6e1 #fcf2db #f7edd5 #e2ddca #c3bdab,soft,231.5,29.7,45.0
+humor,6112687,The flush times of Alabama and Mississippi,1853,#e2d3b0 #dfcea9 #dcc9a0 #d4c098 #bcac88,warm,195.7,54.5,42.0
+humor,814110,Adrian Mole,1999,#8498c3 #adbfdf #65667e #3c3647 #0d0e13,dark,136.6,42.0,221.0
+humor,191145,The City Boy,1948,#7f6354 #41332c #b29179 #f9f7f5 #ddcab9,warm,124.7,34.3,20.9
+humor,9694281,Uncommon law,1935,#000000 #010101 #020202 #020401 #010200,dark,1.0,0.5,0.0
+humor,6353709,The four men; a farrago,1900,#fefefe #cccccc #a7a7a7 #f9f9f9 #e8e8e8,soft,221.1,0.0,0.0
+humor,540949,Stupid white men,2001,#1f2230 #cf4f2c #e9bc9d #814c3e #42687d,warm,98.8,77.2,229.4
+humor,2398104,La galère d'Obélix,1982,#e87812 #4c0989 #66bcb8 #8f4a3a #d4c129,warm,114.6,145.4,28.6
+humor,814110,Adrian Mole,1999,#8498c3 #adbfdf #65667e #3c3647 #0d0e13,dark,136.6,42.0,221.0
+humor,191145,The City Boy,1948,#7f6354 #41332c #b29179 #f9f7f5 #ddcab9,warm,124.7,34.3,20.9
+humor,6353709,The four men; a farrago,1900,#fefefe #cccccc #a7a7a7 #f9f9f9 #e8e8e8,soft,221.1,0.0,0.0
+humor,2398104,La galère d'Obélix,1982,#e87812 #4c0989 #66bcb8 #8f4a3a #d4c129,warm,114.6,145.4,28.6
+humor,9266747,Correspondence,1844,#50131a #4b1017 #541920 #460e14 #4c1920,dark,41.0,58.7,353.1
+humor,5403304,Le petit Nicolas et les copains,1963,#fcfdfb #b5af85 #ced1c2 #e4e9e3 #4f6864,soft,204.9,18.9,90.0
+humor,9266747,Correspondence,1844,#50131a #4b1017 #541920 #460e14 #4c1920,dark,41.0,58.7,353.1
+humor,278416,"Ci tengo alla pelliccia, io!",2000,#eef8fb #d2e4ea #cca55c #3f6f72 #9bb2b3,soft,196.5,41.5,193.8
+humor,5403304,Le petit Nicolas et les copains,1963,#fcfdfb #b5af85 #ced1c2 #e4e9e3 #4f6864,soft,204.9,18.9,90.0
+humor,785970,The theory & practice of gamesmanship,1940,#808080 #58776d #959d9a #657d75 #7c7d7d,dark,125.0,13.1,0.0
+humor,278416,"Ci tengo alla pelliccia, io!",2000,#eef8fb #d2e4ea #cca55c #3f6f72 #9bb2b3,soft,196.5,41.5,193.8
+humor,535987,X-Men,2005,#050509 #232934 #475567 #e1c6ad #948680,dark,66.4,20.5,240.0
+humor,785970,The theory & practice of gamesmanship,1940,#808080 #58776d #959d9a #657d75 #7c7d7d,dark,125.0,13.1,0.0
+humor,535987,X-Men,2005,#050509 #232934 #475567 #e1c6ad #948680,dark,66.4,20.5,240.0
+humor,9171544,"Red, White & Royal Blue",2019,#eaa3b0 #397194 #bb8d9b #f7edee #cd3e42,warm,163.6,68.0,349.0
+humor,9171544,"Red, White & Royal Blue",2019,#eaa3b0 #397194 #bb8d9b #f7edee #cd3e42,warm,163.6,68.0,349.0
+humor,11162245,Satyrs upon the Jesuits,1681,#e7d7c4 #d0baa0 #15345b #b5997d #696869,dark,158.9,46.0,32.6
+humor,11162245,Satyrs upon the Jesuits,1681,#e7d7c4 #d0baa0 #15345b #b5997d #696869,dark,158.9,46.0,32.6
+humor,29537,Under the duvet,1600,#e95663 #eecbb3 #ae3f48 #e11d27 #441514,warm,137.6,116.3,354.7
+humor,29537,Under the duvet,1600,#e95663 #eecbb3 #ae3f48 #e11d27 #441514,warm,137.6,116.3,354.7
+humor,5438322,"Harris's list of Covent-garden ladies: or, New Atalantis for the year 1764",1764,#fefefe #b7b7b7 #d2d2d2 #fafafa #e6e6e6,soft,224.1,0.0,0.0
+humor,5438322,"Harris's list of Covent-garden ladies: or, New Atalantis for the year 1764",1764,#fefefe #b7b7b7 #d2d2d2 #fafafa #e6e6e6,soft,224.1,0.0,0.0
+humor,12670954,The Cynic's Word Book,1906,#120e06 #2a210f #1c1709 #090703 #2c1207,dark,18.6,18.3,40.0
+humor,12670954,The Cynic's Word Book,1906,#120e06 #2a210f #1c1709 #090703 #2c1207,dark,18.6,18.3,40.0
+humor,6243650,Krazy Kat,1946,#da4018 #c3ae36 #a04b24 #397983 #4a2e20,warm,106.8,139.7,12.4
+humor,6243650,Krazy Kat,1946,#da4018 #c3ae36 #a04b24 #397983 #4a2e20,warm,106.8,139.7,12.4
+humor,10080180,Dog Man,2002,#111228 #3e345d #db5f61 #6b6f8d #e8e4e1,dark,85.3,48.4,237.4
+humor,8567959,"Eats, Shoots & Leaves",2002,#f1efc4 #e5e2b4 #cdca9b #908c73 #2e2c26,dark,189.6,42.5,57.3
+humor,11358314,The Man Who Died Twice,2019,#faf6eb #0b7aba #c0b8b9 #181716 #ac6763,dark,158.4,58.4,44.0
+humor,6262032,The Widow Bedott papers,1855,#fefefe #c6c6c6 #f5f5f5 #a4a4a4 #e3e3e3,soft,223.5,0.0,0.0
+humor,745776,The Zombie Survival Guide,2003,#ecede8 #f3f4ef #9e8380 #d0c8c3 #2a2a28,dark,200.2,10.9,72.0
+humor,5277845,Holidays on Ice,1997,#fbfcfb #811727 #f1eae8 #dbc5c1 #e39b3f,dark,184.8,44.8,120.0
+humor,5659541,Mr. Dooley in peace and in war,1898,#fdf8d8 #faf0ce #ebe1c3 #aca693 #514c42,soft,211.7,36.4,51.9
+humor,1791984,Further foolishness,1916,#fdfdfd #f9d148 #b9b6a9 #dededb #877a60,warm,204.5,53.4,0.0
+humor,4387792,The history of John Bull,1889,#fefefe #fafafa #c4c4c4 #8a8a8a #e7e7e7,soft,224.3,0.0,0.0
+humor,1464191,Basket case,1993,#febb01 #fdbb0b #d29f19 #b54614 #3e6518,warm,131.7,212.5,44.1
+humor,1992636,Bordados / Embroideries,2004,#fcefe0 #505250 #b16974 #cabab4 #e5eddf,soft,168.0,28.1,32.1
+humor,5684267,My discovery of England,1922,#fcedc8 #f8e2be #ead3b4 #beb097 #887b69,warm,208.3,50.9,42.7
+humor,472802,Thurber Country Lt,1901,#f6f6f7 #f3edbb #d7d7d8 #b1b8bc #d4cca0,soft,221.7,20.4,240.0
+humor,4136506,Escenas matritenses,1862,#fefefe #f7f7f7 #6a6a6a #aeaeae #dddddd,soft,209.7,0.0,0.0
+humor,8351530,When You Are Engulfed in Flames,2007,#040303 #362e24 #71614b #ab9579 #e3d4ba,dark,65.7,22.1,0.0
+humor,991168,Comment Obélix est tombé dans la marmite du druide quand il était petit,1989,#fce7c1 #e2cdaf #9fa0a7 #c98d45 #63573c,warm,185.1,55.1,38.6
+humor,8596367,Less,2017,#bedcd7 #8d8f91 #3b4566 #e7eceb #d5cfcb,calm,168.0,21.0,170.0
+humor,2837882,A Parody Outline of History,1921,#eeefea #0b0d0d #e0e2db #b8bdb7 #6f7a73,dark,159.3,5.1,72.0
+humor,4289247,On Humour,2002,#e6eefc #c1cbfa #d8e0fb #a7b1e6 #636773,soft,216.0,39.0,218.2
+humor,6018946,Le quinze joyes de mariage,1507,#fefefe #f8f8f8 #e6e6e6 #a3a3a3 #191919,soft,220.2,0.0,0.0
+humor,10716589,As Good As Dead,2021,#1e1e1f #2f3033 #5b5257 #878e96 #050405,dark,59.7,5.3,240.0
+humor,786004,"Some notes on lifemanship, with a summary of recent researches in gamesmanship",1950,#ba3743 #f8df8d #c45955 #c4aa79 #705236,warm,140.4,108.3,354.5
+humor,475457,Rationale of the dirty joke,1968,#fefefe #f3f3f2 #84453d #ac9c97 #dad4d2,soft,202.4,17.8,0.0
+humor,4969838,"Teach Us, Amelia Bedelia",1977,#f29f65 #ecba83 #f7d7a6 #a0805e #9e422b,warm,169.7,107.7,24.7
+humor,407973,Nigger,1965,#100a0c #908486 #211b1d #654544 #e4e2e3,dark,72.3,10.9,340.0
+humor,811524,The Peter principle,1969,#f8f8f8 #623c0f #c6b3b0 #998774 #e5dbd9,dark,167.6,32.3,0.0
+humor,2137573,Eloise a Paris/Eloise in Paris,1957,#494f97 #cf524d #eae9e7 #3e3d71 #a394aa,calm,133.9,69.7,235.4
+humor,1409121,Notes from a Big Country,1998,#ebebdf #7e332e #bfcdd2 #737f88 #c7897a,warm,164.2,37.1,60.0
+humor,207410,Side Effects,1975,#0d0c0a #efeeed #4c4a49 #060503 #999796,dark,92.9,2.7,40.0
+humor,6601829,Dave Barry Hits Below the Beltway,2001,#ebefe9 #1c111c #dcddd4 #7d6465 #b8aea1,dark,154.6,11.6,100.0
+humor,785954,One-Upmanship,1952,#364b7c #985941 #32436c #677698 #4f4550,calm,92.0,65.4,222.0
+humor,798447,Superman,1997,#d37312 #d8c89c #877645 #16749e #2c2017,warm,125.9,113.1,30.2
+humor,4470738,The dispensary,1699,#fefefe #fbfbfb #cdcdcd #a0a0a0 #eeeeee,soft,229.8,0.0,0.0
+humor,7879431,The Princess in Black and the Perfect Princess Party,2015,#eb8389 #201d1e #f3f5f5 #a06d54 #aeb0b9,dark,140.4,46.7,356.5
+humor,473236,The men who stare at goats,2004,#fcfdfe #9d9293 #cdc9c8 #58464c #ebeaea,soft,190.8,7.1,210.0
+humor,42459,Bart Simpson's Guide to Life,1993,#93d603 #0f7593 #8abd20 #b9b147 #64563b,warm,113.9,154.9,79.1
+humor,12750531,Calypso,1900,#efd39e #eecd95 #ebc88c #d9b784 #ad926d,warm,191.7,85.3,39.3
+humor,541447,I Feel Bad About My Neck,1998,#d6b993 #79bce4 #a28265 #9dc3ad #aed7eb,calm,171.8,72.2,34.0
+humor,8754143,Dog Man,2018,#27231f #74542f #495860 #d5e5ec #9c9784,dark,90.6,30.3,30.0
+humor,6767307,Pete the Cat,2008,#fad916 #e9d44a #1e4b73 #cdd5c0 #b18b38,warm,150.5,146.3,51.3
+humor,5776247,Passages from the diary of a late physician,1832,#fdfdde #fdfce2 #fbf6d9 #f5ecd0 #d9ccb5,soft,237.5,31.7,60.0
+humor,9915859,Sir John Cockle at Court. Being the sequel of the King and the Miller of Mansfield. A dramatick tale,1738,#fefefe #b0b0b0 #dadada #6f6f6f #f3f3f3,soft,206.2,0.0,0.0
+humor,8351531,Squirrel Seeks Chipmunk,2010,#000000 #080805 #1b1911 #383325 #655740,dark,18.5,7.8,0.0
+humor,5124311,Joyce Studies 2004,2005,#fefefe #fbfbfb #b8b8b8 #e7e7e7 #4a4a4a,soft,224.1,0.0,0.0
+humor,5666469,More Fables,1900,#c0b191 #635c4d #494236 #8d836e #2b251c,dark,113.2,30.5,40.9
+humor,9300904,My Teacher Fried My Brains,1991,#c23825 #491661 #72a568 #392011 #e5bc4f,dark,90.2,99.9,7.3
+humor,10974421,The dispensary,1699,#e5d0b2 #dbc5a5 #c9b496 #b19d81 #7d6b55,warm,183.0,50.7,35.3
+humor,1844757,Observations by Mr. Dooley,1902,#880000 #060203 #4c0607 #76080a #9c413c,dark,34.3,81.5,0.0
+poetry,368541,Robinson Crusoe,1686,#180a0c #f1b279 #4c302f #b77d64 #8c4a3f,dark,88.8,58.7,351.4
+poetry,11621024,La Divina Commedia,1472,#151a1d #171c1f #1b1f21 #13181a #111618,dark,26.3,7.4,202.5
+poetry,7083790,Ἰλιάς,1505,#e2a176 #ab3621 #d26d3f #f3e2d4 #a5301b,warm,140.1,115.5,23.9
+poetry,9045853,Ὀδύσσεια,1488,#e1343a #382126 #902f34 #fbf6f5 #d38486,warm,108.3,89.3,357.9
+poetry,9000447,Leaves of Grass,1855,#70842a #556218 #f5e9c9 #34460c #a39f64,dark,110.8,70.5,73.3
+poetry,5701612,Metamorfosi,1474,#d6c69f #cebf9c #c5b795 #b3a585 #988c6e,warm,178.0,50.2,42.5
+poetry,5767180,The Canterbury Tales,1478,#dfd4ad #d7cca6 #ccc29e #b9b08f #9b9373,warm,188.3,47.2,46.8
+poetry,5273998,Aeneis,1592,#d3c7b7 #74788d #433a33 #a5657e #ce8931,dark,137.3,38.2,34.3
+poetry,8222090,Sonnets,1609,#222538 #1d2031 #181c25 #432a1c #817b5b,dark,43.5,23.0,231.8
+poetry,6499459,Faust,1800,#b0a773 #ac6410 #9f9460 #595134 #c7a817,warm,121.9,91.2,51.1
+poetry,418324,The Prophet,1923,#f1e5c8 #dec194 #181616 #c8a57f #ead7b2,warm,164.8,47.3,42.4
+poetry,566208,De rerum natura,1486,#f1e3ab #595247 #1f1511 #b4b4ac #888471,dark,129.2,33.5,48.0
+poetry,7212118,Metamorphoses,1479,#ecd9a2 #e5d099 #d9c38e #c8ad79 #b28a58,warm,188.6,76.5,44.6
+poetry,129771,La Poetica,1479,#23549e #5c83ba #265397 #7da0cd #3f68a7,calm,114.5,106.3,216.1
+poetry,755980,Flower Fables,1854,#010201 #cc6908 #232410 #51401f #95652d,dark,48.8,70.2,120.0
+poetry,6387077,Inferno,1767,#0b0e0a #7e2121 #482420 #21130f #c68e45,dark,42.4,45.1,105.0
+poetry,5992814,Paradise Lost,1667,#f5dcac #fbe7bb #e8cf9e #ccb586 #998559,warm,201.4,69.8,39.5
+poetry,8236410,The Night Before Christmas,1857,#edc693 #d4a46e #b77e4f #9c5532 #522f18,warm,150.1,96.0,34.0
+poetry,102874,Poems,1807,#c8a058 #f8f4b7 #91733c #191a1a #bfbd97,warm,146.3,74.5,38.6
+poetry,5943496,Os Lusíadas,1572,#fefed7 #fdfcd1 #e8dab5 #f1f1cc #dfb895,soft,228.7,44.8,60.0
+poetry,756373,Tender Buttons,1914,#869a8e #c6c6c6 #8a8a8a #a4ada9 #939493,dark,160.5,7.9,144.0
+poetry,8236412,Les fleurs du mal,1855,#bea770 #b19962 #9e8a58 #b48152 #9e6640,warm,140.3,80.4,42.3
+poetry,976209,Fables,1678,#f7f6f5 #7f6634 #958562 #4d3818 #bdb59a,warm,150.9,40.3,30.0
+poetry,5954727,Godfrey of Bulloigne,1581,#ebe4ce #ddd7be #e5dec7 #d3ccb3 #beb8a1,soft,211.6,30.1,45.5
+poetry,14538511,An essay on man,1733,#f3f3f3 #e6e6e6 #0c0c0c #c3c3c3 #898989,dark,179.9,0.0,0.0
+poetry,9048263,The complete poetical works,1786,#422d2a #ebe9e7 #a14738 #b0a597 #0f0a09,dark,121.0,33.8,7.5
+poetry,8235508,Milton's Poems,1605,#d1b886 #a89466 #8c7b50 #695c38 #4c4324,warm,133.8,63.8,40.0
+poetry,6549496,Il Paradiso,1595,#000000 #877b40 #77430c #090907 #432814,dark,45.8,43.7,0.0
+poetry,8246077,The Raven,1845,#5d4917 #513e11 #393314 #877042 #1a200e,dark,59.3,58.2,42.9
+poetry,9829028,Ἱστορίαι,1494,#ffffff #fcfcfc #ababab #d1d1d1 #ebebeb,soft,229.9,0.0,0.0
+poetry,9938523,Hudibras,1662,#fefefe #444444 #989898 #cbcbcb #ececec,dark,176.0,0.0,0.0
+poetry,5556502,Helen of Troy,1882,#e7dab2 #ded0a8 #d3c59f #bbaf8d #867b62,warm,190.9,51.0,45.3
+poetry,8236274,Poems,1827,#08140e #0c1a12 #050e09 #44432b #030704,dark,19.7,13.1,150.0
+poetry,4910995,Poema de mio Cid,1868,#f8f8fb #6c5744 #a79a8d #d2c8c4 #eeeaea,soft,179.8,19.0,240.0
+poetry,8243028,The Hunting of the Snark,1876,#7a5e3e #967652 #534530 #b5936a #252317,dark,96.7,56.1,32.0
+poetry,6528920,Poetics,1536,#c3be9f #b8b495 #cbc5a7 #a39f82 #878368,warm,172.2,35.0,51.7
+poetry,2035834,"The History of Rasselas, Prince of Abyssinia",1759,#45504f #69838f #a7ad77 #70775c #889ea9,warm,114.3,30.4,174.5
+poetry,2810356,"The Georgics of Virgil translated by Thomas Neville, ..",1523,#fefefe #6f6f6f #f8f8f8 #aaaaaa #dfdfdf,soft,201.4,0.0,0.0
+poetry,6924561,Q. Horatii Flacci opera,1498,#f4ebc8 #f0e6c3 #eae0bd #d8cca8 #b5ad8e,soft,214.8,44.7,47.7
+poetry,1990809,The Ballad of Reading Gaol,1896,#d9c09f #83715c #a39179 #635240 #3e2f22,warm,135.6,44.7,34.1
+poetry,5807889,The seasons,1726,#e5dcc0 #e0d6b5 #d0c5a4 #615b45 #a39a7d,warm,185.4,38.9,45.4
+poetry,8231548,Poems,1800,#445764 #354854 #273a45 #08395b #a6a99d,dark,75.8,36.8,204.4
+poetry,11696250,Poems,1796,#1b1b1c #5b6769 #343735 #050708 #624b12,dark,51.5,10.4,240.0
+poetry,8236950,Vita nuova,1829,#262113 #382e1e #493d2a #fefefe #c5c2bb,dark,80.2,20.1,44.2
+poetry,7130072,Rime,1475,#ebd9aa #e3d1a1 #d7c496 #beae83 #a2916a,warm,190.8,63.9,43.4
+poetry,1277085,Πολιτικά (Politiká),1492,#c1bcb4 #cbc8c2 #d8d4ce #b2a79e #b46164,warm,188.4,16.9,36.9
+poetry,8246100,Gitanjali (song offerings),1910,#dacfbb #d0c4b0 #c6baa4 #b9ae94 #aaa086,warm,188.9,33.0,38.7
+poetry,120731,Il purgatorio,1768,#63675f #949281 #2b2f2b #b2b8b0 #d5d9d1,dark,117.6,10.1,90.0
+poetry,8779054,"Works [37 plays, 6 poems, sonnets]",1730,#21312d #15201f #0f1514 #080a09 #72714d,dark,33.3,12.2,165.0
+poetry,5788251,Moralia,1500,#f3eccf #736b61 #9c9586 #c5beaa #453e38,dark,162.8,25.7,48.3
+poetry,9202418,The Professor,1856,#37668b #eff2f3 #eea363 #8a9da9 #687780,warm,159.0,62.6,206.4
+poetry,698488,The ballad of the white horse,1911,#fefefe #e4e3e0 #9e8f51 #beb8a1 #f5f4f1,soft,210.5,20.6,0.0
+poetry,5635209,Poems by John Keats,1800,#fdfbe2 #f7f2d9 #cdc9bb #e3e0ce #aca9a0,soft,223.7,24.2,55.6
+poetry,12733518,Ars Amatoria,1494,#26140a #3b2514 #120a06 #583e26 #82694c,dark,35.4,32.4,21.4
+poetry,332444,Virgils Eclogues translated into English,1556,#ebfd36 #024b01 #417825 #bbd435 #77a04c,warm,109.9,129.5,65.4
+poetry,9043037,The Song of Hiawatha and Other Poems,1800,#e9cbb2 #fae8ce #956a2a #d0ad90 #242607,warm,174.3,62.1,27.3
+poetry,8236406,The complete works of Robert Browning Volume XVI,1800,#e2d5a2 #c0966d #b7835d #d2bb8a #b95b3d,warm,165.3,79.3,47.8
+poetry,5602118,Carmina,1712,#cabea1 #c3b79b #bcad91 #b0a288 #928972,warm,172.4,40.4,42.4
+poetry,10857892,Pharsalia,1486,#121012 #191618 #310d11 #5d4d47 #a8b6b8,dark,39.9,12.7,300.0
+poetry,6981246,Opera,1502,#bdb294 #b5ab8b #b1a380 #9d886b #b69170,warm,159.6,46.0,43.9
+poetry,8477115,The Bell Jar,1948,#160214 #2c112c #b88f51 #d1c9c0 #b2131c,dark,73.2,47.3,306.0
+poetry,6153860,Evangeline,1847,#fefefe #b5b5b5 #f7f7f7 #7d7d7d #e2e2e2,soft,214.1,0.0,0.0
+poetry,14840050,Lays of ancient Rome,1800,#9f9350 #797347 #605d3c #3e3d2f #e3e3d5,warm,109.2,49.8,50.9
+poetry,5806149,Moments of vision,1889,#fcefd2 #eddebd #cdbfa0 #483d2a #a09174,dark,189.7,42.7,41.4
+poetry,13100876,Spoon River Anthology,1914,#467d41 #2f6229 #377032 #d4c8ad #84976c,warm,94.6,55.7,115.0
+poetry,756212,Effi Briest,1894,#400101 #813839 #612930 #9e6658 #3a0707,dark,58.3,64.4,0.0
+poetry,6532951,L' Orlando furioso,1545,#eae0c3 #f0e7cc #e0d5b7 #c0b79d #978f79,warm,206.8,37.5,44.6
+poetry,7305347,The lady of the lake,1800,#f8e7e3 #eedad1 #dcc4b1 #a79076 #483a36,dark,200.2,31.1,11.4
+poetry,8225489,Rime of the ancient mariner,1827,#0e1009 #1c2012 #060804 #5a4d2f #aeaca4,dark,33.3,13.3,77.1
+poetry,6495991,Epigrammata,1501,#e0d9c1 #dad4b7 #ada992 #cdc6ab #6a6854,warm,189.5,31.1,46.5
+poetry,11752466,Eureka,1848,#181814 #1e1e1a #fafafa #151511 #666665,dark,74.6,3.0,60.0
+poetry,8237825,The song of Hiawatha,1855,#080d21 #03051a #020311 #010107 #43311f,dark,14.2,20.7,228.0
+poetry,5946488,Elegiae,1780,#fdfdfd #f1f1f1 #d4d4d4 #a4a4a4 #515151,soft,218.3,0.0,0.0
+poetry,8236924,The Poems of Emily Dickinson Volume II,1890,#ada093 #9b8e83 #554e47 #7f7670 #4b443c,dark,127.4,20.9,30.0
+poetry,10527036,Phantasmagoria and Other Poems,1869,#080a1c #0e1229 #05050d #2d2c2c #020105,dark,19.2,15.9,234.0
+poetry,297680,Troilus and Criseyde,1483,#595b55 #767668 #ecdcae #c19f4e #101111,dark,121.9,33.5,80.0
+poetry,8236962,Poems,1783,#13224a #0b132d #090810 #1e3a7a #614c35,dark,37.3,44.2,223.6
+poetry,10310012,The Pied Piper of Hamelin,1888,#98976b #63695c #634e38 #877d5e #a3a379,warm,113.1,35.3,58.7
+poetry,5804540,Faerie queene,1590,#a69173 #8c795e #b6a387 #6e5e46 #d6d3d4,warm,137.2,44.2,35.3
+poetry,997805,Gedichte,1700,#d1e29e #adbbab #929d83 #656d5e #bdcdc2,warm,168.6,35.2,75.0
+poetry,747596,Veinte poemas de amor y una canción desesperada,1924,#ce8c30 #986027 #451d18 #b4aaac #68626c,dark,107.5,93.8,34.9
+poetry,6968826,Poems,1895,#cbc9b3 #c1c0a9 #9ba695 #657d6f #2b4239,dark,164.0,22.5,55.0
+poetry,8242238,The poetical works of Sir Walter Scott,1800,#353022 #433e2e #272015 #5a523b #150d08,dark,47.9,20.5,44.2
+poetry,12909777,"Aminta, favola boschereccia",1590,#f1e5ce #efe2c8 #f1e5d2 #dacab5 #c4b39e,soft,218.1,35.7,39.4
+poetry,8774996,Poems (Lover's Complaint / Passionate Pilgrim / Phoenix and the Turtle / Rape of Lucrece / Sonnets / Venus and Adonis),1771,#1c1c14 #25241a #171811 #716847 #161518,dark,35.8,12.8,60.0
+poetry,5149469,The Barrack-Room Ballads of Rudyard Kipling,1892,#fefefe #fbfbfb #c8c8c8 #919191 #ececec,soft,226.7,0.0,0.0
+poetry,7371683,The Deserted Village,1770,#fbfdf3 #f8faec #eef1e3 #caccc6 #90928d,soft,231.7,11.0,72.0
+poetry,8243308,Odes,1635,#250604 #170403 #0d0202 #35170f #060101,dark,13.2,23.9,3.6
+poetry,8234360,The Rape of the Lock,1714,#b7a18c #776551 #99846f #514130 #cebba8,warm,128.0,39.8,29.3
+poetry,6062894,Cyropaedia,1527,#dcb973 #d0aa62 #bf9953 #a58242 #85632a,warm,150.7,105.2,40.0
+poetry,5985154,Pan Tadeusz,1834,#ebe2c1 #e8dcb7 #e1d5ad #cac3a3 #b0a888,warm,205.4,45.3,47.1
+poetry,12474938,The Odyssey,1946,#e6cf88 #763036 #ddc77d #875a56 #b29b6b,warm,143.2,80.5,45.3
+poetry,102890,Idylls of the King,1859,#654834 #8c7e5e #f8f8ab #241715 #bcbca4,dark,117.0,47.6,24.5
+poetry,8237802,De consolatione philosophiae,1483,#e9d7a4 #dfcb96 #d5bf89 #c4ae76 #a99663,warm,186.2,72.7,44.3
+poetry,7897916,Fasti,1482,#bdad8c #a99a78 #b5a684 #94876b #645b4b,warm,150.3,46.3,40.4
+poetry,8237873,Satirae,1763,#d9d9cb #d2d2c2 #c7c6b6 #afafa0 #898776,soft,195.3,15.6,60.0
+poetry,1861228,The Light of Asia,1879,#e3debb #d3cca5 #85815f #b2ad84 #fbfbfa,warm,184.2,39.4,52.5
+poetry,2208564,Sein und Zeit,1927,#f8f57b #f9f076 #f8e479 #e7ce65 #caa848,warm,195.9,128.0,58.6
+poetry,8777530,A Child's Garden of Verses,1885,#c2b6a2 #a79a83 #eee6d6 #8a7c63 #5b4c39,warm,166.4,32.5,37.5
+poetry,8980957,Among my books,1870,#fbfbfa #6c6c65 #3a3b35 #9c9d96 #cdcec9,dark,157.2,4.7,60.0
+poetry,8242280,Lalla Rookh,1800,#454355 #705f46 #9f8a5e #312f31 #cbc6b9,dark,94.7,31.7,246.7
+poetry,5788272,Poems,1782,#a5998b #b1a495 #968a7c #6c665b #383832,dark,138.8,24.0,32.3
+poetry,8238736,"Ramayana, a Holy Bible of India",1823,#84c8d7 #65a3ab #b88e44 #674a1f #c8c7af,dark,147.7,80.8,190.8
+poetry,3362684,Martín Fierro,1894,#5f545c #383640 #4a424a #9b816b #d6d2c4,dark,91.0,15.5,316.4
+poetry,8244561,Poems,1853,#0a0c05 #15140d #a29f91 #574830 #050701,dark,48.4,13.5,77.1
+poetry,2760839,Drum-taps,1865,#86998d #c6c6c6 #8b8b8b #869b8f #a1aca7,dark,158.5,9.9,142.1
+poetry,8238738,John Donne Poetry,1633,#b2d4cf #aacbc6 #a3c1be #8cabaf #617d90,calm,183.2,33.9,171.2
+poetry,5792560,The works of Robert Burns,1800,#eaddbf #e1d4b8 #d4c7af #bbb39f #9b9483,warm,199.0,38.0,41.9
+poetry,8231991,Evgeniĭ Onegin,1833,#e0995f #d18d55 #ba7c48 #8c5730 #e2bf82,warm,141.0,117.5,27.0
+poetry,8242305,Lucile,1800,#fbfddf #444141 #f0eecf #bac6ba #8d8476,dark,178.1,20.5,64.0
+poetry,5982338,P. Vergilii Maronis opera,1532,#fefefe #bcbcbc #cfcfcf #a7a7a7 #e5e5e5,soft,213.7,0.0,0.0
+poetry,1813198,Biographia literaria,1817,#710202 #690000 #630101 #91524a #4c0a09,dark,44.6,98.5,0.0
+poetry,8247749,Libro de buen amor,1900,#f6daa0 #e1c58a #edd094 #d0b37b #9f8a61,warm,190.1,85.1,40.5
+poetry,8982674,Venus and Adonis,1593,#160808 #0d0302 #2a1813 #010000 #736b5a,dark,18.5,14.0,0.0
+poetry,8919179,'Twas the Night before Christmas,1912,#e3f1e8 #905b53 #2b2a28 #aaa9a0 #d1d0c7,dark,150.2,23.5,141.4
+poetry,6826629,Кобзар,1840,#cdc5a4 #c6bb98 #bcae88 #a89a76 #897958,warm,171.1,46.3,48.3
+poetry,6885523,Apollonius Rhodius,1550,#d2c4a0 #d0bb90 #c2af84 #a99b74 #827656,warm,171.2,56.1,43.2
+poetry,8240334,Poems,1844,#c1c2ba #190c72 #2c2d2c #5b576e #929197,dark,108.6,33.5,67.5
+poetry,709757,John Brown's Body,1927,#fdfdfd #443530 #b87a6d #e3e0dd #cfb6af,dark,169.4,23.3,0.0
+poetry,5888425,The grave,1743,#baa189 #c7ae96 #a89079 #8b735c #725a43,warm,150.5,48.2,29.4
+poetry,9042942,Meditations and contemplations,1748,#ede0bc #f5ebce #e2d5ae #b5ad92 #837c64,warm,204.1,43.9,44.1
+poetry,8259480,Barrack-room ballads and other verses,1890,#fefefe #7d2a2e #9c8c76 #ddc8b5 #eae9e5,warm,173.4,35.4,0.0
+poetry,8243295,Roman de la Rose,1493,#8e8e78 #0c0b08 #2d170e #787764 #514c3e,dark,73.0,18.5,60.0
+poetry,5673946,The Life and Death of Jason,1867,#c2b193 #b5a488 #a7977d #96876e #6f6652,warm,154.0,43.3,38.3
+poetry,8245154,Paradise Regained,1671,#97836f #a3917f #8a7461 #796554 #57473a,warm,124.1,38.0,30.0
+poetry,8231997,Essays,1865,#4c4b4c #3d3c3a #302e2b #bab9b0 #77736a,dark,82.1,4.3,300.0
+poetry,341046,Heroides,1502,#e4eb01 #035b35 #b7ce1d #438145 #dde84f,warm,116.1,155.3,61.8
+poetry,8244458,Poems,1800,#b7cbb9 #adbfae #9e8c7f #a8aa9a #8b6d64,warm,169.2,22.4,126.0
+poetry,5573449,Poems,1836,#fefcd7 #fcf7d1 #f8efc9 #e0dbbc #beb69c,soft,228.7,40.9,56.9
+poetry,900685,Livro do Desassossego,1982,#220409 #400e17 #6a1c2b #dcd4d1 #a8344c,dark,61.1,48.1,350.0
+poetry,12942615,Poems of Ossian.,1762,#552206 #663912 #371608 #1a0502 #7e5d30,dark,42.7,66.5,21.3
+poetry,7217209,"The Shipwreck, a poem",1762,#ead69e #e3d094 #d8c489 #c8b47d #a79767,warm,187.6,76.5,44.2
+poetry,14445077,Dunciad,1727,#290504 #2d0908 #391310 #5e371b #120905,dark,25.7,40.2,1.6
+poetry,14538209,Essay on criticism,1711,#d1bfa5 #ccb699 #c2a588 #a79279 #be6f52,warm,171.5,53.2,35.5
+poetry,1889599,Vepʻxistqaosani,1888,#e9ecd9 #363734 #7c7e74 #afb1a4 #d4d7c7,dark,151.8,11.9,69.5
+poetry,8236969,Ovid with an English translation: Heroides and Amores,1637,#fefefe #cfcfcf #b0b0b0 #e9e9e9 #808080,soft,214.7,0.0,0.0
+poetry,8250493,Marmion,1800,#1b0703 #110302 #2d1206 #0a0101 #552f0d,dark,14.4,25.8,10.0
+poetry,7289642,Apparition Poems,2006,#fefefe #f0f0ef #f5f5f2 #fafaf7 #ebece7,soft,246.2,1.6,0.0
+poetry,8231549,A Shropshire lad,1896,#600d0b #440e0d #cfd1c6 #7d422c #918370,dark,81.8,58.2,1.4
+poetry,5777911,The  five nations,1903,#e8deb8 #dfd2ad #cdc1a0 #a49f85 #6b6b5b,warm,189.0,43.5,47.5
+poetry,8244546,Poems,1800,#2d1107 #270c04 #36180a #210703 #62431d,dark,24.6,39.4,15.8
+poetry,8243932,De profundis,1905,#525053 #534f4b #0f0d14 #7f6f5b #434140,dark,70.5,9.5,280.0
+poetry,3735166,The earthly paradise,1868,#515257 #56575c #4e4f54 #6a6b70 #4c4d51,dark,87.0,5.9,230.0
+poetry,8246253,Lyrical Ballads,1798,#481936 #d8c699 #b9a983 #968969 #6a5f49,warm,123.0,51.5,323.0
+poetry,7006350,Poems by Thomas Hood,1800,#a18a6e #2f304d #847162 #685955 #c1a880,dark,106.8,38.7,32.9
+poetry,5574088,Token for children,1636,#c0a894 #b9a08d #b19986 #a58f7c #927d6b,warm,158.2,43.1,27.3
+poetry,6368588,Night thoughts,1742,#fcf7dc #f8eccd #e0d7ba #5a5644 #a59e88,soft,203.8,34.6,50.6
+poetry,5788266,Poems,1800,#e9dfb5 #efe5bb #e2d8ae #c5bc99 #9d9476,warm,203.4,50.1,48.5
+poetry,310414,Les chansons de Bilitis,1894,#a79dbd #7897c3 #7d89b0 #6d7290 #394056,calm,148.5,47.5,258.8
+poetry,5747854,Poetical works of Robert Bridges,1898,#f6eec8 #ded6b6 #8e8d7b #b0ad97 #737263,warm,187.5,34.2,49.6
+historical_fiction,14348537,Pride and Prejudice,1813,#d37944 #971210 #a01211 #a01918 #8d120f,dark,87.0,138.8,22.2
+historical_fiction,5654516,The Scarlet Letter,1800,#172e1e #243b27 #112316 #0b160d #6b6442,dark,36.0,21.6,138.3
+historical_fiction,13300802,Oliver Twist,1822,#090813 #040408 #725b45 #362c28 #aeadab,dark,41.3,15.8,245.5
+historical_fiction,13301713,A Tale of Two Cities,1800,#40746a #335b52 #28473f #1f342d #13211b,dark,70.7,37.9,168.5
+historical_fiction,11929973,Les trois Mousquetaires,1844,#020202 #1a1616 #110f10 #090808 #000000,dark,11.2,1.6,0.0
+historical_fiction,12043351,The Adventures of Tom Sawyer,1817,#df9b7a #84553b #ae7859 #583627 #f7ecce,warm,129.0,79.4,19.6
+historical_fiction,8236937,The Last of the Mohicans,1826,#c1ac96 #544818 #6b5c24 #846b37 #383215,dark,104.8,57.1,30.7
+historical_fiction,1048892,David Copperfield,1800,#aa9981 #9a7861 #6f5a50 #c9c1af #f8f7f1,warm,143.6,39.0,35.1
+historical_fiction,8221267,The Prince and the Pauper,1881,#91060b #6b0709 #430707 #962a21 #b9573b,dark,51.7,109.0,357.8
+historical_fiction,8231790,The Jungle,1791,#4a410c #5b511f #322d0d #80764e #1a1708,dark,57.7,51.9,51.3
+historical_fiction,12621906,War and Peace,1845,#dbdad9 #1e180a #5f4f27 #938058 #bdbec0,dark,121.4,25.3,30.0
+historical_fiction,8236915,The Red Badge of Courage,1855,#7b6f5a #716650 #675c43 #594734 #49271b,dark,92.2,35.0,38.2
+historical_fiction,8242999,O Pioneers!,1913,#442626 #a7b1aa #504a51 #7b7b79 #131b2d,dark,95.7,16.1,0.0
+historical_fiction,13136548,Ulysses,1914,#5e7974 #536e68 #455d55 #55685a #7a897f,dark,100.6,24.5,168.9
+historical_fiction,2328315,A Little Princess,1905,#0b8c25 #589faf #cf8772 #87375e #46954d,dark,108.0,100.7,132.1
+historical_fiction,479102,The Scarlet Pimpernel,1900,#61aa65 #473b39 #694940 #b9caa1 #a57152,warm,106.0,47.3,123.3
+historical_fiction,8243267,His Last Bow [8 stories],1917,#baa694 #495547 #75766b #b37250 #273930,dark,118.5,33.0,28.4
+historical_fiction,11024634,Shirley,1800,#a4a10e #8f452f #382f10 #f6f2e9 #cda582,warm,111.8,90.3,58.8
+historical_fiction,12721865,Les Misérables,1862,#bda271 #d7c396 #351101 #9c7950 #4a1d05,dark,124.3,67.8,38.7
+historical_fiction,8237593,The deerslayer,1841,#a0864d #866529 #503c1d #291d0f #0d0804,dark,81.4,66.7,41.2
+historical_fiction,314235,Ivanhoe,1800,#585039 #162018 #2c3227 #876d4a #c3b182,dark,66.1,27.7,44.5
+historical_fiction,10956643,The House of Seven Gables Readalong,1851,#010000 #d78427 #544631 #000000 #000000,dark,48.0,54.3,0.0
+historical_fiction,833096,Quo Vadis? Powieść z czasów Nerona,1895,#dd836c #ebc2a7 #a6635e #6c4849 #36282f,warm,142.4,75.9,12.2
+historical_fiction,3240273,Orlando,1928,#f8f7ec #7b8690 #3f3d3e #b8bcc5 #f2dda1,dark,168.4,17.1,55.0
+historical_fiction,6596872,Metamorphoses,1500,#c2aa81 #c9b28a #bba276 #ae9669 #977e54,warm,159.0,65.9,37.8
+historical_fiction,12044954,The Red Badge of Courage,1871,#fbfbfa #6d4f2f #bdb0ad #967d6b #dbd4d4,warm,171.6,26.3,60.0
+historical_fiction,11226648,Идиот,1874,#060300 #e63135 #100d09 #2b1d15 #6b472c,dark,42.1,58.8,30.0
+historical_fiction,8980913,The Pathfinder,1800,#e1dfca #99836d #633b2d #110b0b #3a378c,dark,128.0,36.7,54.8
+historical_fiction,5578106,The Prairie,1800,#ba9e85 #b1957d #a28972 #cbaf95 #85705b,warm,151.5,51.1,28.3
+historical_fiction,14565101,La tulipe noire,1800,#97917a #8a8671 #a09b84 #737363 #575b50,dark,130.8,24.8,47.6
+historical_fiction,314604,The moon and sixpence,1919,#9c6943 #5d5340 #737562 #bba06a #33352b,dark,103.2,52.7,25.6
+historical_fiction,7160877,The Narrative of Arthur Gordon Pym,1838,#b68e52 #be9c62 #a88047 #906d3d #5a4023,warm,127.2,92.0,36.0
+historical_fiction,8236920,White Fang,1905,#70571b #816a2b #5d4612 #952b0a #2c210c,dark,72.8,86.9,42.4
+historical_fiction,107982,Where Angels Fear to Tread,1920,#c6c5b1 #4f7135 #1d3a16 #45a4c0 #a29668,dark,120.7,50.5,57.1
+historical_fiction,8240340,Rob Roy,1817,#7c3a05 #864107 #713107 #5d200a #410a04,dark,58.1,109.9,26.7
+historical_fiction,10223473,Twice-Told Tales,1800,#480404 #e3d9c5 #3d0303 #4d1913 #ae9383,dark,85.8,52.9,0.0
+historical_fiction,14817133,Gone With the Wind,1936,#af7722 #c2a36b #190d05 #866630 #4f3517,dark,96.6,89.4,36.2
+historical_fiction,14564690,"Le vicomte de Bragelonne, ou, dix ans plus tard",1848,#070606 #110b0a #251913 #4c2c1e #893c21,dark,22.7,18.9,0.0
+historical_fiction,8267822,Kidnapped,1886,#f0e8d8 #ece3d5 #d0c7ba #ded5c8 #bcb3a7,soft,216.2,22.9,40.0
+historical_fiction,8239493,The  black arrow,1888,#632019 #5a120f #4b0e0b #350e0b #1d0a07,dark,39.4,64.5,5.7
+historical_fiction,502823,The Elusive Pimpernel (Scarlet Pimpernel),1908,#9b192b #592f2a #241513 #9d6759 #e6c9b2,dark,74.7,71.8,351.7
+historical_fiction,12715902,The Grapes of Wrath,1939,#4b6658 #466051 #536d5f #40594b #1c1a15,dark,82.3,24.9,148.9
+historical_fiction,6984433,Tender is the Night,1933,#030303 #20190f #553c21 #937245 #212f30,dark,36.8,26.3,0.0
+historical_fiction,14319003,Of Mice and Men,1937,#baa89c #ae9a8b #98461c #a08673 #282526,warm,135.6,50.3,24.0
+historical_fiction,8244483,David Balfour,1883,#131611 #1c2019 #0e100b #090b05 #a4a3a0,dark,28.7,5.6,96.0
+historical_fiction,8247711,The Last Days of Pompeii,1800,#232b1f #181e18 #303325 #64573c #101410,dark,40.2,14.0,100.0
+historical_fiction,14564526,Vingt ans apres̀,1800,#1c1517 #110d0e #080607 #2f2624 #3a1f07,dark,20.8,8.7,342.9
+historical_fiction,5696059,Montezuma's daughter,1893,#efe7c1 #e3dab7 #46473f #cfc7a8 #a9a48c,dark,179.1,35.8,49.6
+historical_fiction,6309101,Voskresenīe,1899,#e8e2bf #2a2b36 #ddd5aa #96624c #bfaf86,warm,150.2,40.7,51.2
+historical_fiction,2890729,El Dorado,1913,#e86e20 #bb9a77 #1d2d51 #756869 #b3673b,warm,114.8,104.9,23.4
+historical_fiction,3078356,Salammbô,1863,#eb3336 #373138 #d49e56 #93554e #e4ddd9,warm,111.0,98.3,359.0
+historical_fiction,5671229,A Final Reckoning,1800,#cebf9b #c5b795 #d5c5a1 #b8aa8c #9a8d70,warm,177.4,48.9,42.4
+historical_fiction,6608849,Tarzan of the Apes,1912,#b80905 #480706 #8d0504 #734832 #b78e71,dark,59.8,118.0,1.3
+historical_fiction,13151356,The Murder of Roger Ackroyd,1926,#6a5b3b #5e4e32 #524029 #352b1b #831910,dark,69.9,46.7,40.9
+historical_fiction,78741,The Sun Also Rises,1926,#f9f39d #cdc896 #9a9263 #232420 #eeede8,dark,168.3,57.3,56.1
+historical_fiction,2783870,The League of the Scarlet Pimpernel,1919,#fefefe #828282 #c3c3c3 #e8e8e8 #f9f9f9,soft,205.9,0.0,0.0
+historical_fiction,4986307,Boyhood,1854,#fefefe #b5b5b5 #f5f5f5 #787878 #dfdfdf,soft,212.8,0.0,0.0
+historical_fiction,6562535,Siddhartha,1922,#000000 #8b8b86 #565652 #242422 #0b0b0a,dark,59.0,2.5,0.0
+historical_fiction,8230370,The master of Ballantrae,1888,#c19f63 #b89457 #c7a76d #a7844b #715b38,warm,141.4,91.3,38.3
+historical_fiction,6456470,Ben Hur,1800,#0c0906 #83644a #a08e6e #514233 #282119,dark,68.6,32.2,30.0
+historical_fiction,8239512,The Sea-Hawk,1900,#43768b #376b82 #2a586a #182b36 #afbbb9,calm,95.2,61.6,197.5
+historical_fiction,603550,Betty Zane,1903,#12160f #153019 #623424 #c46040 #d0bfb0,dark,55.5,41.7,94.3
+historical_fiction,419697,Смерть Ивана Ильича,1887,#2797f7 #1b51d9 #0b2a92 #841e3c #b0dbf0,dark,114.7,164.9,207.7
+historical_fiction,2560810,For Whom the Bell Tolls,1940,#9baed8 #7a939a #aec7b8 #d3e4df #305354,calm,169.5,38.5,221.3
+historical_fiction,880230,Midwinter,1923,#8eb8dd #6e99c6 #b1cfe2 #4a4f3f #979884,calm,161.7,63.1,208.1
+historical_fiction,2784809,Eine aegyptische Königstochter,1800,#fdfdfd #b4b4b4 #737373 #f6f6f6 #e1e1e1,soft,203.1,0.0,0.0
+historical_fiction,2668686,Heidi,1885,#a3c2ca #eaecdf #989d8e #ab8442 #474a3d,dark,174.8,34.3,192.3
+historical_fiction,5605000,Marius the Epicurean,1885,#e1cfa2 #bbad8b #cfbe95 #aa9c7e #8e8265,warm,175.1,54.0,42.9
+historical_fiction,8245225,The spy,1821,#0482a1 #017396 #1790ac #4da2b5 #99bbc2,calm,109.6,138.5,191.8
+historical_fiction,9164717,Life on the Mississippi,1883,#1f120c #331d0f #110a07 #070403 #947c3a,dark,25.4,24.5,18.9
+historical_fiction,10393209,Michel Strogoff,1876,#8b8164 #96733a #990e06 #33160d #7b491e,dark,90.0,78.2,44.6
+historical_fiction,6579995,The deluge,1888,#dcdcdc #020202 #c0c0c0 #8a8a8a #404040,dark,134.9,0.0,0.0
+historical_fiction,8233401,"The adventures of Captain Bonneville, U.S.A.",1800,#f6eee3 #f3ecde #e9e2d5 #d5cdc2 #bbb3a9,soft,225.2,19.7,34.7
+historical_fiction,2523104,The Pearl,1945,#4b535e #bfa89d #70757e #353a45 #282a32,dark,108.5,21.0,214.7
+historical_fiction,2121829,Through Russian Snows,1895,#fc3139 #5d5049 #ebd0af #a98b77 #e75859,warm,130.9,101.2,357.6
+historical_fiction,8158074,Zanoni,1842,#3c2621 #722114 #664641 #912612 #a47558,dark,62.3,63.5,11.1
+historical_fiction,997432,Bel-Ami,1893,#eedc1a #d9ddcf #909674 #3e462d #ccc23a,dark,156.4,94.3,54.9
+historical_fiction,230635,Democracy,1880,#090406 #f8f5e2 #c992bd #491a2e #915164,dark,115.4,29.1,336.0
+historical_fiction,5738053,Noli Me Tangere,1902,#f4e7b9 #e7daae #d6c99f #b7ab85 #9b906c,warm,197.7,55.7,46.8
+historical_fiction,5837987,Long Live the King!,1917,#fefefe #989898 #dedede #ececec #f8f8f8,soft,217.6,0.0,0.0
+historical_fiction,14655106,The way of all flesh,1900,#a89882 #a39480 #937061 #a08775 #595046,warm,136.4,39.0,34.7
+historical_fiction,6384571,The Bostonians,1885,#440201 #b7b187 #908867 #533d2e #1a0a07,dark,86.8,49.5,0.9
+historical_fiction,4345363,The Power and the Glory,1940,#fbfcfc #688f95 #363f41 #dde1e4 #a7bbc5,dark,173.4,17.5,180.0
+historical_fiction,11277564,Little House on the Prairie,1935,#706d5d #a78650 #543a24 #805526 #2f1d0f,dark,93.8,53.3,50.5
+historical_fiction,14846827,The Kite Runner,2003,#3a4e43 #e3e7bf #b8bc84 #76835c #4f130f,dark,131.5,38.0,147.0
+historical_fiction,15267110,The Book Thief,1998,#170c0f #cab199 #3d241f #8a634b #080407,dark,75.7,31.4,343.6
+historical_fiction,8242138,"The Trumpet-Major, and Robert His Brother",1880,#a01006 #850e07 #6d0d08 #530c08 #370906,dark,48.7,118.4,3.9
+historical_fiction,8373389,The Lost Symbol,2009,#ecdda5 #a8966d #110a0a #49332e #9c161a,dark,121.6,53.3,47.3
+historical_fiction,2099170,Sunshine sketches of a little town,1900,#374c29 #e2e9e8 #749aa4 #b2c5c9 #b1804e,dark,143.6,32.8,96.0
+historical_fiction,12518492,The Mammoth Hunters,1611,#7d888d #1b110b #653425 #b0c4b7 #2f5862,dark,92.1,28.5,198.8
+historical_fiction,6666143,Lord Tony's Wife,1917,#867465 #e7c162 #dfb447 #b08040 #5a432d,warm,137.8,94.8,27.3
+historical_fiction,647501,Dom Casmurro,1899,#2a2c1f #e5c40a #038f36 #717d5b #dcd9c0,dark,93.6,97.1,69.2
+historical_fiction,419922,Die Blechtrommel,1959,#f1f2f3 #2a2b2f #b3a9aa #606165 #cf4c45,dark,147.8,13.9,210.0
+historical_fiction,8261367,Beloved,1987,#bab6a7 #332d26 #787c70 #a10808 #bc5d53,dark,111.0,39.6,47.4
+historical_fiction,9269909,The Pillars of the Earth,1989,#0d0607 #451513 #9b1c0f #6b6559 #bfbdac,dark,51.2,47.3,351.4
+historical_fiction,1979349,Typhoon,1902,#050c9c #c8d0c7 #1d220f #898735 #5c7ab8,dark,101.7,73.9,237.2
+historical_fiction,9278181,The Red Pony,1933,#87170c #9f9784 #801f14 #53514c #9a4e3f,dark,87.3,76.8,5.4
+historical_fiction,8564628,The Color Purple,1976,#ddd1be #efe3cb #73688a #aa9eaa #3c2e53,dark,178.5,30.8,36.8
+historical_fiction,10910286,Das Parfum,1985,#010101 #696663 #382d30 #d5d4c3 #130e10,dark,66.1,6.5,0.0
+historical_fiction,11386937,East of Eden,1952,#e0c288 #9d855d #5a4e39 #ef2009 #1b1812,warm,124.6,84.3,39.5
+historical_fiction,8231782,Memoirs of a Geisha,1997,#232023 #3b3637 #060507 #141113 #6e6f6d,dark,37.3,3.3,300.0
+historical_fiction,1787861,Coniston,1906,#fdfefe #f8d048 #d5cfbf #8b774a #dfe1d4,warm,201.6,61.2,180.0
+historical_fiction,1972357,In Freedom's Cause,1884,#2f548d #1a1f3c #6a3457 #b70c3b #a67679,warm,77.2,77.2,216.4
+historical_fiction,1408997,Admiral Hornblower in the West Indies,1956,#3889a5 #e1e5d5 #9ac0c9 #b6ab52 #6d6735,warm,160.8,67.1,195.4
+historical_fiction,12720687,The Boy in the Striped Pyjamas,2006,#829da4 #a1b0b1 #6f8d97 #5a747c #384044,dark,141.5,28.9,192.4
+historical_fiction,1876696,Sea Tales,1823,#101114 #8b8371 #2f2f36 #575657 #dbd8d9,dark,75.8,10.0,225.0
+historical_fiction,6000716,The Wept of Wish-ton-wish: A Tale,1829,#fefefe #cdcdcd #a9a9a9 #e9e9e9 #f8f8f8,soft,220.7,0.0,0.0
+historical_fiction,13560557,Pan Michael  An historical novel,1893,#8ba2d2 #000101 #687894 #2a2e35 #7b8db1,dark,97.8,37.8,220.6
+historical_fiction,14420,Ogniem i mieczem,1890,#5d3621 #885b31 #320f0a #b08654 #e2cf96,dark,80.0,68.5,21.0
+historical_fiction,1049045,Il Gattopardo,1958,#aa988e #765c3d #d4c9c8 #412c1c #a1701e,dark,129.3,40.6,21.4
+historical_fiction,12816943,Things Fall Apart,1958,#d1c9a4 #79502c #372e22 #9e946d #d8c819,warm,122.8,59.0,49.3
+historical_fiction,417585,The English Patient,1992,#545551 #acb0ae #d7dad6 #878a87 #2b2b27,dark,138.2,3.9,75.0
+historical_fiction,225215,The Fixer,1901,#7c5d67 #9b7f82 #241f20 #563c48 #e0bd84,dark,100.6,28.4,340.6
+historical_fiction,5715627,Pharos,1899,#fefbcb #fefbd0 #dfdab3 #f4f0c6 #c2bb97,soft,225.5,47.1,56.5
+historical_fiction,13249599,Number the Stars,1901,#055392 #8ba0ae #c4cabf #6b7b8b #3c607c,calm,129.9,67.1,206.8
+historical_fiction,1846352,The water-witch,1830,#bde7f1 #9fbecf #5184b0 #060910 #2d517a,calm,155.7,55.6,191.5
+historical_fiction,9223569,Billy Budd,1900,#fdfcfc #e0e1e2 #f5f2f1 #c6cacd #9298a3,soft,229.8,3.7,0.0
+historical_fiction,1758827,The Gadfly,1897,#8e2013 #817249 #a3916e #89452b #622813,dark,92.0,84.3,6.3
+historical_fiction,12529015,The Clan of the Cave Bear,1900,#495535 #1f2818 #828a63 #cdd1c4 #801a08,dark,87.1,32.5,82.5
+historical_fiction,5021868,Island of the Blue Dolphins,1960,#030403 #81b1a6 #698a4d #396238 #1b2a18,dark,75.8,32.1,120.0
+historical_fiction,95742,The Remains of the Day,1989,#ede4c4 #2d1310 #5b3d33 #c9ae96 #947161,dark,125.4,39.6,46.8
+historical_fiction,1846064,The Story of Siegfried,1882,#5d3321 #bb5e27 #a9331a #de8b2d #ebca0e,warm,92.6,126.4,18.0
+historical_fiction,1788012,A Far Country,1915,#fefefe #fac91c #8d7d49 #e9e7e0 #c3b995,warm,192.2,77.1,0.0
+historical_fiction,2789520,"The Wing-and-wing: Or, Le Feu-follet. A Tale",1800,#fdfdfd #f8d048 #c0bbaa #e7e9e5 #8b7d5b,warm,206.6,55.1,0.0
+historical_fiction,5742734,The Red Rover,1827,#c2b191 #cbbb99 #b3a386 #968870 #706554,warm,161.6,45.6,39.2
+historical_fiction,8431392,The Crucible,1953,#e2e1c6 #e5f1d8 #c3bea8 #302525 #997464,dark,183.6,26.4,57.9
+historical_fiction,5984981,Der Kaiser,1880,#efebd1 #ece6cb #e3e0c6 #d7d2b7 #a8a48d,soft,216.2,30.7,52.0
+historical_fiction,9381751,Novels (The Call of the Wild / White Fang),1962,#decfc9 #102d5c #577787 #100b20 #b2acab,dark,120.5,40.1,17.1
+historical_fiction,30787,On the Banks of Plum Creek,1937,#f5f2df #c2d0a1 #b2bbc5 #82ab70 #4973ae,warm,192.8,38.3,51.8
+historical_fiction,5121977,"The snow-image, and other tales",1851,#fefefe #fafafa #d5d5d5 #ececec #b0b0b0,soft,237.1,0.0,0.0
+historical_fiction,5678531,Precaution,1800,#c4b59c #b6a790 #d3c4a8 #a89982 #92836d,warm,170.0,39.6,37.5
+historical_fiction,11279169,Kane & Abel,1979,#034988 #625e51 #074e68 #8b9189 #436b85,dark,86.0,73.7,208.4
+historical_fiction,10574160,Hija de la fortuna,1998,#181615 #5e3e33 #472e25 #786253 #e03309,dark,55.8,38.5,20.0
+historical_fiction,8381043,Atonement,2001,#343232 #565656 #161415 #7e7f7e #b6b7b6,dark,73.0,1.3,0.0
+historical_fiction,8244485,The Bride of Lammermoor,1800,#273e1f #1b3315 #7b743f #0f240b #cfcfc3,dark,59.9,34.5,104.5
+historical_fiction,5691512,Among Malay Pirates,1899,#ecd2b4 #e6cbac #f4dcc0 #ceb79e #a5917b,warm,201.0,53.7,32.1
+historical_fiction,1760533,Afloat and Ashore a Sea Tale,1800,#85998d #c6c6c6 #8a8b8a #8a9b90 #a4aca8,dark,158.5,9.7,144.0
+historical_fiction,12387482,The sword in the stone,1938,#403f32 #777359 #c4bb89 #2a291f #0f0f09,dark,89.0,26.3,55.7
+historical_fiction,9052295,The bravo,1831,#9fe9e0 #446638 #030403 #859873 #222c1c,dark,109.3,43.1,172.7
+historical_fiction,8387264,The Help,2009,#d6b743 #b9921d #996f9e #dac68a #724e2f,warm,141.6,115.1,47.3
+historical_fiction,1801459,"Satanstoe ; or, The littlepage manuscripts, a tale of the colony",1845,#fdfdfd #f9c81d #e1e1de #adaba5 #6b6557,soft,200.8,61.7,0.0
+historical_fiction,14559680,All the Light We Cannot See,2014,#365374 #5c8a97 #243457 #a3c8c8 #181e33,dark,101.0,53.3,211.9
+historical_fiction,5445126,Romance of the three kingdoms,1644,#fefefd #f2f3ec #d4d8d0 #a9aca7 #565655,soft,219.3,4.5,60.0
+historical_fiction,12697200,Retrato en sepia,2000,#392b29 #55403a #78675d #221f23 #98928d,dark,69.3,19.2,7.5
+historical_fiction,282869,Johnny Tremain,1943,#0c1d37 #28436f #688ba7 #893e7d #804f2e,dark,77.4,61.3,216.3
+historical_fiction,6480627,Captain Corelli's Mandolin,1994,#040403 #1d1a13 #443b2e #836741 #b2a67c,dark,43.0,19.8,60.0
+historical_fiction,77394,The Day of the Jackal,1971,#733b30 #17181c #d6cccb #101013 #3d392a,dark,78.6,27.5,9.9
+historical_fiction,14364503,St. George and St. Michael,1876,#817f6d #757363 #5c5d52 #45463d #c3bdc2,dark,109.5,15.3,54.0
+historical_fiction,1749530,Die Nilbraut,1880,#fefefe #b4b4b4 #f6f6f6 #707070 #dcdcdc,soft,211.5,0.0,0.0
+historical_fiction,763441,"The Headsman: Or, The Abbaye Des Vignerons. A Tale",1800,#fcfcfc #fbcb1a #ada894 #d6d6cd #6b6453,soft,193.8,67.8,0.0

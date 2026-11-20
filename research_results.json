@@ -1,0 +1,351 @@
+{
+ "total": 1225,
+ "genres": [
+  {
+   "key": "horror",
+   "name": "Horror",
+   "count": 150,
+   "brightness": 90.0,
+   "saturation": 38.7,
+   "colors": [
+    "#161010",
+    "#42443f",
+    "#928d7c",
+    "#d8d5ca",
+    "#9a4025"
+   ],
+   "moods": {
+    "dark": 83,
+    "warm": 12,
+    "calm": 1,
+    "soft": 3
+   },
+   "examples": [
+    "14314858",
+    "12356249",
+    "12216503",
+    "1260617",
+    "2760301",
+    "448130"
+   ],
+   "recognized": 62
+  },
+  {
+   "key": "romance",
+   "name": "Romance",
+   "count": 150,
+   "brightness": 104.8,
+   "saturation": 45.7,
+   "colors": [
+    "#1d1315",
+    "#a39171",
+    "#dad4c5",
+    "#414850",
+    "#874832"
+   ],
+   "moods": {
+    "dark": 67,
+    "warm": 23,
+    "calm": 3,
+    "soft": 6
+   },
+   "examples": [
+    "12818862",
+    "9278312",
+    "9278292",
+    "8775559",
+    "2560652",
+    "10590366"
+   ],
+   "recognized": 3
+  },
+  {
+   "key": "fantasy",
+   "name": "Fantasy",
+   "count": 150,
+   "brightness": 111.8,
+   "saturation": 53.2,
+   "colors": [
+    "#a89a77",
+    "#291d16",
+    "#8f5433",
+    "#ddd9c6",
+    "#435860"
+   ],
+   "moods": {
+    "dark": 56,
+    "warm": 35,
+    "calm": 5,
+    "soft": 5
+   },
+   "examples": [
+    "10527843",
+    "552443",
+    "13859660",
+    "12717083",
+    "7205924",
+    "12726168"
+   ],
+   "recognized": 11
+  },
+  {
+   "key": "science_fiction",
+   "name": "Science fiction",
+   "count": 150,
+   "brightness": 106.5,
+   "saturation": 46.7,
+   "colors": [
+    "#1c1414",
+    "#939386",
+    "#524940",
+    "#dad5c5",
+    "#b96533"
+   ],
+   "moods": {
+    "dark": 65,
+    "warm": 28,
+    "calm": 3,
+    "soft": 5
+   },
+   "examples": [
+    "9009316",
+    "8231823",
+    "8243314",
+    "10069547",
+    "6419199",
+    "14357835"
+   ],
+   "recognized": 1
+  },
+  {
+   "key": "mystery_and_detective_stories",
+   "name": "Mystery",
+   "count": 150,
+   "brightness": 106.1,
+   "saturation": 49.2,
+   "colors": [
+    "#281e1e",
+    "#af9978",
+    "#5c5f5f",
+    "#dbddd6",
+    "#97311e"
+   ],
+   "moods": {
+    "dark": 66,
+    "warm": 21,
+    "calm": 5,
+    "soft": 9
+   },
+   "examples": [
+    "12622062",
+    "13405534",
+    "8063264",
+    "6717853",
+    "9247987",
+    "4684227"
+   ],
+   "recognized": 5
+  },
+  {
+   "key": "humor",
+   "name": "Humor",
+   "count": 175,
+   "brightness": 141.1,
+   "saturation": 53.2,
+   "colors": [
+    "#b7ac93",
+    "#eae7dc",
+    "#495760",
+    "#2a1714",
+    "#ad6038"
+   ],
+   "moods": {
+    "dark": 40,
+    "warm": 35,
+    "calm": 4,
+    "soft": 21
+   },
+   "examples": [
+    "8157718",
+    "14428305",
+    "12736044",
+    "1991009",
+    "1260453",
+    "12968864"
+   ],
+   "recognized": 54
+  },
+  {
+   "key": "poetry",
+   "name": "Poetry",
+   "count": 150,
+   "brightness": 136.2,
+   "saturation": 41.2,
+   "colors": [
+    "#a59677",
+    "#cfc6a7",
+    "#251a17",
+    "#6c5947",
+    "#f1eddf"
+   ],
+   "moods": {
+    "dark": 44,
+    "warm": 41,
+    "calm": 2,
+    "soft": 13
+   },
+   "examples": [
+    "368541",
+    "11621024",
+    "7083790",
+    "9045853",
+    "9000447",
+    "5701612"
+   ],
+   "recognized": 17
+  },
+  {
+   "key": "historical_fiction",
+   "name": "Historical fiction",
+   "count": 150,
+   "brightness": 118.4,
+   "saturation": 47.9,
+   "colors": [
+    "#a29677",
+    "#d9d8cb",
+    "#241914",
+    "#4f554f",
+    "#9a4227"
+   ],
+   "moods": {
+    "dark": 64,
+    "warm": 22,
+    "calm": 4,
+    "soft": 10
+   },
+   "examples": [
+    "14348537",
+    "5654516",
+    "13300802",
+    "13301713",
+    "11929973",
+    "12043351"
+   ],
+   "recognized": 1
+  }
+ ],
+ "decades": [
+  {
+   "decade": 1850,
+   "count": 20,
+   "brightness": 120.1,
+   "saturation": 38.2
+  },
+  {
+   "decade": 1860,
+   "count": 19,
+   "brightness": 123.3,
+   "saturation": 39.6
+  },
+  {
+   "decade": 1870,
+   "count": 25,
+   "brightness": 108.7,
+   "saturation": 38.5
+  },
+  {
+   "decade": 1880,
+   "count": 47,
+   "brightness": 117.8,
+   "saturation": 51.9
+  },
+  {
+   "decade": 1890,
+   "count": 54,
+   "brightness": 138.5,
+   "saturation": 48.5
+  },
+  {
+   "decade": 1900,
+   "count": 90,
+   "brightness": 124.9,
+   "saturation": 43.5
+  },
+  {
+   "decade": 1910,
+   "count": 75,
+   "brightness": 130.1,
+   "saturation": 50.8
+  },
+  {
+   "decade": 1920,
+   "count": 57,
+   "brightness": 127.3,
+   "saturation": 53.1
+  },
+  {
+   "decade": 1930,
+   "count": 52,
+   "brightness": 97.7,
+   "saturation": 51.4
+  },
+  {
+   "decade": 1940,
+   "count": 41,
+   "brightness": 104.0,
+   "saturation": 52.1
+  },
+  {
+   "decade": 1950,
+   "count": 66,
+   "brightness": 99.5,
+   "saturation": 51.2
+  },
+  {
+   "decade": 1960,
+   "count": 78,
+   "brightness": 111.8,
+   "saturation": 47.7
+  },
+  {
+   "decade": 1970,
+   "count": 44,
+   "brightness": 91.2,
+   "saturation": 43.9
+  },
+  {
+   "decade": 1980,
+   "count": 75,
+   "brightness": 101.0,
+   "saturation": 42.8
+  },
+  {
+   "decade": 1990,
+   "count": 96,
+   "brightness": 100.7,
+   "saturation": 50.9
+  },
+  {
+   "decade": 2000,
+   "count": 116,
+   "brightness": 109.3,
+   "saturation": 48.2
+  },
+  {
+   "decade": 2010,
+   "count": 47,
+   "brightness": 102.8,
+   "saturation": 41.2
+  }
+ ],
+ "accuracy": 19.9,
+ "chance": 12.5,
+ "findings": [
+  "Horror has the darkest covers, Humor the brightest.",
+  "Fantasy covers are the most colorful.",
+  "Colors alone guessed the genre 20% of the time. Random guessing would get 12%.",
+  "Horror is the easiest genre to recognize by color (62%), Science fiction the hardest (1%).",
+  "Covers of books first published in the 2010s are darker than those from the 1850s."
+ ],
+ "updated": "2026-11-20"
+}
