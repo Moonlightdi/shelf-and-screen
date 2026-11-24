@@ -1,0 +1,21 @@
+{
+  "name": "Shelf & Screen",
+  "short_name": "Shelf & Screen",
+  "description": "A night library: find a book's mood in its cover colors, read classics for free and play the daily cover game.",
+  "start_url": "/?source=app",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0d24",
+  "theme_color": "#0b0d24",
+  "categories": ["books", "education", "entertainment"],
+  "icons": [
+    {"src": "/static/icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/static/icons/icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "/static/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ],
+  "shortcuts": [
+    {"name": "Today's drawer", "url": "/daily", "icons": [{"src": "/static/icons/icon-192.png", "sizes": "192x192"}]},
+    {"name": "My shelf", "url": "/shelf", "icons": [{"src": "/static/icons/icon-192.png", "sizes": "192x192"}]}
+  ]
+}

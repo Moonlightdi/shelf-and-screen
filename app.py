@@ -1,4 +1,5 @@
 # Parts of this file written with help from Claude.
+import csv
 import hmac
 import json
 import os
@@ -11,12 +12,13 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 
-from flask import Flask, jsonify, redirect, render_template, request, url_for, Response
+from flask import Flask, jsonify, redirect, render_template, request, url_for, Response, send_from_directory
 import requests
 
 from gutenberg import find_free_book, load_pages
 from moods import MOODS, detect_mood, get_films
 from palette import get_palette
+from research import GENRES, features as cover_features
 
 app = Flask(__name__)
 
@@ -238,6 +240,20 @@ def notes_db():
         )
     """)
     db.execute("CREATE INDEX IF NOT EXISTS events_by_day ON events (day, kind)")
+
+    # answers from the "beat the computer" game on the research page
+    db.execute("""
+        CREATE TABLE IF NOT EXISTS guesses (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            day TEXT NOT NULL,
+            visitor TEXT NOT NULL,
+            cover_id TEXT NOT NULL,
+            genre TEXT NOT NULL,
+            guess TEXT NOT NULL,
+            correct INTEGER NOT NULL,
+            computer_correct INTEGER NOT NULL
+        )
+    """)
     return db
 
 
@@ -283,6 +299,19 @@ def warm_up():
 
 
 threading.Thread(target=warm_up, daemon=True).start()
+
+
+@app.route("/sw.js")
+def service_worker():
+    """The service worker has to live at the root so it can look after every page"""
+    response = send_from_directory(os.path.join(BASE_DIR, "static"), "sw.js", mimetype="application/javascript")
+    response.headers["Cache-Control"] = "no-cache"
+    return response
+
+
+@app.route("/offline")
+def offline():
+    return render_template("offline.html")
 
 
 @app.route("/")
@@ -422,16 +451,159 @@ def shelf():
     return render_template("shelf.html")
 
 
+# ---------- "Beat the computer": people guess a genre from cover colors ----------
+
+GAME = {}
+
+
+def game_data():
+    """Load the research covers once, and prepare the computer's 'judge'"""
+    if "rows" in GAME:
+        return GAME
+    rows, seen = [], set()
+    try:
+        with open(os.path.join(BASE_DIR, "research_covers.csv"), newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                if row["cover_id"] not in seen:
+                    seen.add(row["cover_id"])
+                    rows.append(row)
+    except OSError:
+        pass
+    GAME["rows"] = rows
+    GAME["by_id"] = {row["cover_id"]: row for row in rows}
+    if rows:
+        X = [cover_features(row) for row in rows]
+        n = len(X[0])
+        mean = [sum(x[i] for x in X) / len(X) for i in range(n)]
+        std = [max(1e-9, (sum((x[i] - mean[i]) ** 2 for x in X) / len(X)) ** 0.5) for i in range(n)]
+        GAME["z"] = {row["cover_id"]: [(x[i] - mean[i]) / std[i] for i in range(n)] for row, x in zip(rows, X)}
+        GAME["sums"], GAME["counts"] = {}, {}
+        for row in rows:
+            g, z = row["genre"], GAME["z"][row["cover_id"]]
+            GAME["sums"][g] = [a + b for a, b in zip(GAME["sums"].get(g, [0] * n), z)]
+            GAME["counts"][g] = GAME["counts"].get(g, 0) + 1
+    return GAME
+
+
+def computer_guess(cover_id):
+    """The same nearest-centroid judge as research.py. It never learns from the cover it is guessing."""
+    g = game_data()
+    z = g["z"][cover_id]
+    own = g["by_id"][cover_id]["genre"]
+    best, best_distance = None, None
+    for genre, total in g["sums"].items():
+        n = g["counts"][genre]
+        if genre == own:
+            if n < 2:
+                continue
+            center = [(a - b) / (n - 1) for a, b in zip(total, z)]
+        else:
+            center = [a / n for a in total]
+        distance = sum((a - b) ** 2 for a, b in zip(z, center))
+        if best_distance is None or distance < best_distance:
+            best, best_distance = genre, distance
+    return best
+
+
+def guess_stats():
+    db = notes_db()
+    row = db.execute("SELECT COUNT(*) AS n, SUM(correct) AS h, SUM(computer_correct) AS c, COUNT(DISTINCT visitor) AS p FROM guesses").fetchone()
+    db.close()
+    n = row["n"] or 0
+    return {
+        "total": n,
+        "players": row["p"] or 0,
+        "human_pct": round(100 * (row["h"] or 0) / n) if n else None,
+        "computer_pct": round(100 * (row["c"] or 0) / n) if n else None,
+    }
+
+
+@app.route("/api/guess/next")
+def guess_next():
+    rows = game_data()["rows"]
+    if not rows:
+        return jsonify({"error": "no covers yet"}), 404
+    row = random.choice(rows)
+    return jsonify({"id": row["cover_id"], "palette": row["palette"].split()})
+
+
+def clue_text(row, n):
+    """Clue 2: when the book was first published. Clue 3: the shape of its title."""
+    if n == 2:
+        year = row["year"]
+        return f"first published in the {int(year) // 10 * 10}s" if year.isdigit() else "the year of publication is lost"
+    words = row["title"].split()
+    first = row["title"].strip()[:1].upper() or "?"
+    return f"title: {len(words)} word{'s' if len(words) != 1 else ''}, begins with \u201c{first}\u201d"
+
+
+@app.route("/api/guess", methods=["POST"])
+def guess_answer():
+    """One guess at one clue. Only first-clue guesses (colors alone) go into the research data."""
+    data = request.get_json(silent=True) or {}
+    cover_id, guess = str(data.get("id", "")), str(data.get("guess", ""))
+    try:
+        clue = min(3, max(1, int(data.get("clue", 1))))
+    except (TypeError, ValueError):
+        clue = 1
+    row = game_data()["by_id"].get(cover_id)
+    if not row or guess not in GENRES:
+        return jsonify({"error": "bad guess"}), 400
+    correct = guess == row["genre"]
+    computer = computer_guess(cover_id)
+    computer_correct = computer == row["genre"]
+    if clue == 1:
+        visitor = request.cookies.get("reader") or getattr(request, "new_reader", "")
+        db = notes_db()
+        db.execute(
+            "INSERT INTO guesses (day, visitor, cover_id, genre, guess, correct, computer_correct) VALUES (?, ?, ?, ?, ?, ?, ?)",
+            (datetime.now(timezone.utc).date().isoformat(), visitor, cover_id, row["genre"], guess, int(correct), int(computer_correct))
+        )
+        db.commit()
+        db.close()
+    if not correct and clue < 3:
+        return jsonify({"correct": False, "next_clue": clue_text(row, clue + 1)})
+    return jsonify({
+        "correct": correct, "points": (4 - clue) if correct else 0,
+        "genre": row["genre"], "genre_name": GENRES[row["genre"]], "title": row["title"], "year": row["year"],
+        "computer": computer, "computer_name": GENRES.get(computer, "?"), "computer_correct": computer_correct,
+        "stats": guess_stats(),
+    })
+
+
+DAILY_START = datetime(2026, 11, 24, tzinfo=timezone.utc).date()
+
+
+@app.route("/api/daily")
+def daily_books():
+    """Five covers of the day: the same for everyone, like Wordle"""
+    rows = sorted(game_data()["rows"], key=lambda row: row["cover_id"])
+    if not rows:
+        return jsonify({"error": "no covers yet"}), 404
+    today = datetime.now(timezone.utc).date()
+    picks = random.Random(today.isoformat()).sample(rows, min(5, len(rows)))
+    return jsonify({
+        "number": (today - DAILY_START).days + 1,
+        "books": [{"id": row["cover_id"], "palette": row["palette"].split()} for row in picks],
+    })
+
+
+@app.route("/api/guess/stats")
+def guess_stats_api():
+    return jsonify(guess_stats())
+
+
 @app.route("/research")
+@app.route("/daily")
 def research():
     """Can you judge a book by its cover? Results made by research.py"""
     try:
-        with open("research_results.json", encoding="utf-8") as f:
+        with open(os.path.join(BASE_DIR, "research_results.json"), encoding="utf-8") as f:
             data = json.load(f)
     except (OSError, ValueError):
         data = None
     count("research")
-    return render_template("research.html", data=data)
+    return render_template("research.html", data=data, daily=request.path == "/daily")
 
 
 @app.route("/api/readable/<work_id>")

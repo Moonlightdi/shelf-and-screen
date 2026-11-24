@@ -3,6 +3,8 @@
 {% block title %}Can you judge a book by its cover? · Shelf & Screen{% endblock %}
 
 {% block head %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 <meta property="og:title" content="Can you judge a book by its cover? · Shelf & Screen">
 <meta property="og:description" content="I looked at the colors of {{ data.total if data else 'hundreds of' }} book covers to find out if colors can tell a book's genre.">
 <style>
@@ -35,6 +37,65 @@
     .method code { color: var(--moonglow); }
     .method p { margin: 0 0 14px; }
     @media (max-width: 700px) { .genre-row { grid-template-columns: 1fr; } }
+
+    /* ---------- the catalog card game ---------- */
+    .catalog { margin: 34px 0 14px; }
+    .catalog-head { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 14px; margin-bottom: 18px; }
+    .catalog-head h2 { margin: 6px 0 0; }
+    .catalog-head p { margin: 6px 0 0; color: var(--silver); max-width: 520px; line-height: 1.6; }
+    .drawer { display: flex; gap: 18px; font-family: "Special Elite", "Courier New", monospace; font-size: 15px; }
+    .drawer button { padding: 0 0 3px; border: 0; border-bottom: 1px solid transparent; background: none; color: var(--silver); font: inherit; cursor: pointer; }
+    .drawer button.on { color: var(--moon); border-bottom-color: var(--moon); }
+    .card {
+        position: relative; max-width: 760px; margin: 0 auto; padding: 30px 34px 26px 64px;
+        color: #2b2118; font-family: "Special Elite", "Courier New", monospace; font-size: 17px; line-height: 30px;
+        background:
+            linear-gradient(90deg, transparent 46px, rgba(200, 70, 70, 0.45) 46px, rgba(200, 70, 70, 0.45) 48px, transparent 48px),
+            repeating-linear-gradient(180deg, transparent 0 29px, rgba(70, 110, 160, 0.22) 29px 30px),
+            #f2e8d2;
+        border-radius: 4px; box-shadow: 0 1px 0 #d8ccb1, 0 24px 60px rgba(0, 0, 0, 0.45); transform: rotate(-0.4deg);
+    }
+    .card::before { content: ""; position: absolute; left: 50%; bottom: 14px; width: 18px; height: 18px; margin-left: -9px; border-radius: 50%; background: #1b1d33; box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.6); }
+    .card-top { display: flex; justify-content: space-between; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d5d47; }
+    .chips { display: flex; gap: 6px; margin: 14px 0 12px; height: 92px; }
+    .chips i { flex: 1; border-radius: 2px; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12), inset 0 0 0 1px rgba(0, 0, 0, 0.08); transform-origin: left; animation: lay 0.45s ease both; }
+    .chips i:nth-child(1) { flex: 2.2; } .chips i:nth-child(2) { flex: 1.8; } .chips i:nth-child(3) { flex: 1.4; }
+    @keyframes lay { from { transform: scaleX(0.2); opacity: 0; } }
+    .clue { min-height: 30px; }
+    .clue s { color: #8a7a62; }
+    .tried { color: #a33a2e; min-height: 30px; }
+    .answer { display: none; grid-template-columns: 1fr auto; gap: 20px; align-items: start; margin-top: 6px; }
+    .answer.show { display: grid; }
+    .answer img { width: 104px; aspect-ratio: 2 / 3; object-fit: cover; border: 6px solid #fff; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25); transform: rotate(3deg); background: #ddd; }
+    .answer .t { font-size: 20px; }
+    .card .next { margin-top: 10px; padding: 4px 14px; border: 1px solid #2b2118; border-radius: 2px; background: none; color: #2b2118; font: inherit; cursor: pointer; }
+    .card .next:hover { background: #2b2118; color: #f2e8d2; }
+    .stamp {
+        position: absolute; right: 30px; top: 60px; padding: 4px 14px; border: 4px double currentColor; border-radius: 4px;
+        font-family: "Special Elite", monospace; font-size: 34px; letter-spacing: 3px; transform: rotate(-14deg); opacity: 0; pointer-events: none;
+    }
+    .stamp.on { animation: stamp 0.35s cubic-bezier(.2, 1.6, .4, 1) forwards; }
+    .stamp.ok { color: rgba(40, 110, 70, 0.85); } .stamp.no { color: rgba(170, 40, 35, 0.85); }
+    @keyframes stamp { from { transform: rotate(-14deg) scale(2.2); opacity: 0; } to { transform: rotate(-14deg) scale(1); opacity: 1; } }
+    .tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; max-width: 760px; margin: 22px auto 0; }
+    .tabs button {
+        padding: 12px 8px; border: 1px solid rgba(220, 200, 160, 0.35); border-radius: 3px; background: rgba(242, 232, 210, 0.06);
+        color: var(--moon); font-family: "Special Elite", monospace; font-size: 15px; text-transform: lowercase; cursor: pointer; transition: background 0.15s;
+    }
+    .tabs button:hover:not(:disabled) { background: rgba(242, 232, 210, 0.16); }
+    .tabs button:disabled { cursor: default; opacity: 0.35; text-decoration: line-through; }
+    .tabs button.right { opacity: 1; text-decoration: none; border-color: #7fd0a0; color: #bfeccc; }
+    .ledger { max-width: 760px; margin: 16px auto 0; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-family: "Special Elite", monospace; font-size: 14px; color: var(--silver); }
+    .ledger b { color: var(--moon); font-weight: normal; }
+    .summary { display: none; }
+    .summary.show { display: block; }
+    .summary .grid { font-size: 22px; letter-spacing: 2px; margin: 8px 0; }
+    @media (max-width: 700px) {
+        .card { padding: 22px 18px 24px 40px; font-size: 15px; transform: none; background-position: -18px 0, 0 0, 0 0; }
+        .tabs { grid-template-columns: repeat(2, 1fr); }
+        .stamp { font-size: 24px; right: 14px; }
+        .answer { grid-template-columns: 1fr; }
+    }
 </style>
 {% endblock %}
 
@@ -48,6 +109,60 @@
 {% if not data %}
     <section class="panel finding">The covers are still being collected. Come back soon ☾</section>
 {% else %}
+
+<section class="catalog rise" id="game">
+    <div class="catalog-head">
+        <div>
+            <span class="label">your turn</span>
+            <h2>Judge it by its cover</h2>
+            <p>A catalog card with only the colors of a real cover. Name the genre. Miss, and the card gives you another clue. The machine only ever sees the colors, and gets {{ data.accuracy | round | int }}% right.</p>
+        </div>
+        <div class="drawer">
+            <button id="m-daily">today's drawer <span id="d-num"></span></button>
+            <button id="m-free">open stacks</button>
+        </div>
+    </div>
+
+    <div class="card" id="card">
+        <div class="card-top"><span id="c-no">card</span><span>shelf &amp; screen catalog</span></div>
+        <div id="play">
+            <div class="chips" id="chips"></div>
+            <div class="clue" id="clue1">clue 1 &mdash; the colors above</div>
+            <div class="clue" id="clue2"></div>
+            <div class="clue" id="clue3"></div>
+            <div class="tried" id="tried"></div>
+            <div class="answer" id="answer">
+                <div>
+                    <div class="t" id="a-title"></div>
+                    <div id="a-genre"></div>
+                    <div id="a-machine"></div>
+                    <button class="next" id="a-next">next card</button>
+                </div>
+                <img id="a-cover" alt="">
+            </div>
+        </div>
+        <div class="summary" id="summary">
+            <div class="t" id="sum-title"></div>
+            <div class="grid" id="sum-grid"></div>
+            <div id="sum-score"></div>
+            <div id="sum-streak"></div>
+            <div id="sum-next"></div>
+            <button class="next" id="sum-share">copy my card</button>
+            <button class="next" id="sum-more">open stacks</button>
+        </div>
+        <div class="stamp" id="stamp"></div>
+    </div>
+
+    <div class="tabs" id="tabs">
+        {% for g in data.genres %}<button data-genre="{{ g.key }}">{{ g.name }}</button>{% endfor %}
+    </div>
+    <div class="ledger">
+        <span>card <b id="l-card">1</b> of <b id="l-total">5</b></span>
+        <span>your points <b id="l-you">0</b></span>
+        <span>machine <b id="l-bot">0</b></span>
+    </div>
+    <p class="world ledger" id="world"></p>
+</section>
 
 <div class="stats">
     <div class="stat panel"><strong>{{ data.total }}</strong><span>book covers analyzed</span></div>
@@ -126,4 +241,161 @@
 {% endif %}
 
 <a href="/" class="back">← back to the night sky</a>
+{% endblock %}
+
+{% block scripts %}
+{% if data %}
+<script>
+(function() {
+    const $ = function(id) { return document.getElementById(id); };
+    const tabs = Array.from(document.querySelectorAll("#tabs button"));
+    const store = {
+        get: function(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } },
+        set: function(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+    };
+    let mode = "daily", total = 5, daily = null, book = null, card = 1, clue = 1, you = 0, bot = 0, busy = false, marks = [];
+
+    function type(el, text) {
+        el.textContent = "";
+        let i = 0;
+        const t = setInterval(function() { el.textContent = text.slice(0, ++i); if (i >= text.length) clearInterval(t); }, 22);
+    }
+    function stamp(ok) {
+        const st = $("stamp");
+        st.className = "stamp " + (ok ? "ok" : "no");
+        st.textContent = ok ? "RETURNED" : "OVERDUE";
+        void st.offsetWidth;
+        st.classList.add("on");
+    }
+    function ledger() { $("l-card").textContent = card; $("l-total").textContent = total; $("l-you").textContent = you; $("l-bot").textContent = bot; }
+    function world(s) {
+        $("world").textContent = (s && s.total)
+            ? s.players + (s.players === 1 ? " reader has" : " readers have") + " judged " + s.total + (s.total === 1 ? " cover." : " covers.") + " on the first clue, people are right " + s.human_pct + "% of the time, the machine " + s.computer_pct + "%."
+            : "";
+    }
+
+    function showCard() {
+        busy = true; clue = 1;
+        $("summary").classList.remove("show");
+        $("play").style.display = "";
+        $("answer").classList.remove("show");
+        $("stamp").className = "stamp";
+        ["clue2", "clue3", "tried"].forEach(function(id) { $(id).textContent = ""; });
+        $("clue1").innerHTML = "clue 1 &mdash; the colors above";
+        tabs.forEach(function(b) { b.disabled = false; b.classList.remove("right"); });
+        $("c-no").textContent = mode === "daily" ? "drawer no. " + daily.number + " / card " + card : "open stacks / card " + card;
+        ledger();
+        const load = mode === "daily" ? Promise.resolve(daily.books[card - 1]) : fetch("/api/guess/next").then(function(r) { return r.json(); });
+        load.then(function(b) {
+            book = b;
+            $("chips").innerHTML = "";
+            b.palette.forEach(function(c, i) { const chip = document.createElement("i"); chip.style.background = c; chip.style.animationDelay = (i * 0.07) + "s"; $("chips").appendChild(chip); });
+            busy = false;
+        }).catch(function() { $("world").textContent = "the drawer is stuck. try reloading."; });
+    }
+
+    function reveal(res) {
+        tabs.forEach(function(b) { b.disabled = true; if (b.dataset.genre === res.genre) b.classList.add("right"); });
+        stamp(res.correct);
+        you += res.points; if (res.computer_correct) bot++;
+        marks.push(res.correct ? ["▰▱▱", "▱▰▱", "▱▱▰"][3 - res.points] : "✕✕✕");
+        ledger();
+        $("a-title").textContent = res.title + (res.year ? " (" + res.year + ")" : "");
+        $("a-genre").textContent = res.correct ? "filed under " + res.genre_name.toLowerCase() + " · +" + res.points + (res.points === 1 ? " point" : " points") : "it was " + res.genre_name.toLowerCase();
+        $("a-machine").textContent = "the machine said " + res.computer_name.toLowerCase() + (res.computer_correct ? " (right)" : " (wrong)");
+        $("a-cover").onerror = function() { this.style.visibility = "hidden"; };
+        $("a-cover").style.visibility = "";
+        $("a-cover").src = "/api/cover/" + book.id;
+        $("a-next").textContent = card >= total ? "close the drawer" : "next card";
+        $("answer").classList.add("show");
+        world(res.stats);
+    }
+
+    function guess(btn) {
+        if (busy || !book) return;
+        busy = true;
+        btn.disabled = true;
+        fetch("/api/guess", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({id: book.id, guess: btn.dataset.genre, clue: clue})})
+            .then(function(r) { return r.json(); })
+            .then(function(res) {
+                busy = false;
+                if (res.next_clue !== undefined) {
+                    $("tried").textContent = "not " + btn.textContent.toLowerCase() + ".";
+                    $("clue" + clue).innerHTML = "<s>" + $("clue" + clue).innerHTML + "</s>";
+                    clue++;
+                    type($("clue" + clue), "clue " + clue + " — " + res.next_clue);
+                    return;
+                }
+                busy = true;
+                reveal(res);
+            })
+            .catch(function() { busy = false; btn.disabled = false; });
+    }
+
+    function until() {
+        const now = new Date(), next = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1);
+        const m = Math.max(1, Math.round((next - now) / 60000));
+        return Math.floor(m / 60) + "h " + (m % 60) + "m";
+    }
+
+    function summary(res) {
+        $("play").style.display = "none";
+        $("stamp").className = "stamp";
+        tabs.forEach(function(b) { b.disabled = true; b.classList.remove("right"); });
+        $("summary").classList.add("show");
+        const max = res.cards * 3;
+        $("sum-title").textContent = mode === "daily" ? "drawer no. " + daily.number + ", closed." : "you went through " + res.cards + " cards.";
+        $("sum-grid").textContent = res.marks.join(" ");
+        $("sum-score").textContent = "your points: " + res.you + " of " + max + ". the machine, with colors only: " + res.bot + " of " + res.cards + ".";
+        const s = store.get("daily-streak");
+        $("sum-streak").textContent = (mode === "daily" && s && s.streak > 1) ? s.streak + " days in a row." : "";
+        $("sum-next").textContent = mode === "daily" ? "the next drawer opens in " + until() + "." : "";
+        $("sum-share").style.display = mode === "daily" ? "" : "none";
+        $("c-no").textContent = mode === "daily" ? "drawer no. " + daily.number : "open stacks";
+    }
+
+    function finish() {
+        const res = {you: you, bot: bot, marks: marks.slice(), cards: total};
+        if (mode === "daily") {
+            store.set("drawer-" + daily.number, res);
+            const s = store.get("daily-streak") || {last: 0, streak: 0};
+            if (s.last !== daily.number) { s.streak = s.last === daily.number - 1 ? s.streak + 1 : 1; s.last = daily.number; store.set("daily-streak", s); }
+        }
+        summary(res);
+    }
+
+    function setMode(m) {
+        mode = m; total = m === "daily" ? 5 : 10; card = 1; you = 0; bot = 0; marks = [];
+        $("m-daily").classList.toggle("on", m === "daily");
+        $("m-free").classList.toggle("on", m === "free");
+        if (m === "daily") {
+            const done = store.get("drawer-" + daily.number);
+            if (done) { you = done.you; bot = done.bot; card = total; ledger(); summary(done); return; }
+        }
+        showCard();
+    }
+
+    tabs.forEach(function(b) { b.addEventListener("click", function() { guess(b); }); });
+    $("a-next").addEventListener("click", function() { if (card >= total) { finish(); return; } card++; showCard(); });
+    $("m-daily").addEventListener("click", function() { if (daily) setMode("daily"); });
+    $("m-free").addEventListener("click", function() { setMode("free"); });
+    $("sum-more").addEventListener("click", function() { setMode("free"); });
+    $("sum-share").addEventListener("click", function(e) {
+        const res = store.get("drawer-" + daily.number);
+        if (!res) return;
+        const text = "shelf & screen · drawer no. " + daily.number + "\n" + res.marks.join(" ") + "\n" + res.you + "/15 · the machine " + res.bot + "/5\n" + location.origin + "/daily";
+        const btn = e.currentTarget;
+        navigator.clipboard.writeText(text).then(function() { btn.textContent = "copied"; setTimeout(function() { btn.textContent = "copy my card"; }, 1500); }).catch(function() {});
+    });
+
+    fetch("/api/guess/stats").then(function(r) { return r.json(); }).then(world).catch(function() {});
+    fetch("/api/daily").then(function(r) { return r.json(); }).then(function(d) {
+        daily = d;
+        $("d-num").textContent = "no. " + d.number;
+        setMode("daily");
+    }).catch(function() { $("m-daily").hidden = true; setMode("free"); });
+    {% if daily %}$("game").scrollIntoView({behavior: "smooth"});{% endif %}
+})();
+</script>
+{% endif %}
 {% endblock %}

@@ -4,7 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Shelf & Screen{% endblock %}</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☾</text></svg>">
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/icons/icon-192.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+    <meta name="theme-color" content="#0b0d24">
+    <link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Shelf & Screen">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
@@ -385,6 +391,7 @@
             <a href="/first-lines" class="{{ 'here' if request.path == '/first-lines' }}">first lines ❝</a>
             <a href="/blind" class="{{ 'here' if request.path == '/blind' }}">blind date ✧</a>
             <a href="/shelf" class="{{ 'here' if request.path == '/shelf' }}">my shelf ☾</a>
+            <a href="/daily" class="{{ 'here' if request.path == '/daily' }}">daily ✦</a>
             <a href="/research" class="{{ 'here' if request.path == '/research' }}">research ◐</a>
         </nav>
         <form action="/search" method="get" class="search">
@@ -511,5 +518,10 @@
     })();  
     </script>
     {% block scripts %}{% endblock %}
+<script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function() { navigator.serviceWorker.register("/sw.js").catch(function() {}); });
+    }
+</script>
 </body>
 </html>
