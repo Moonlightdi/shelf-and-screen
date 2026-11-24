@@ -198,6 +198,16 @@
     .progress { height: 4px; margin-top: 8px; border-radius: 4px; background: var(--line); overflow: hidden; }
     .progress div { height: 100%; background: linear-gradient(90deg, var(--moonglow), var(--star)); border-radius: 4px; }
 
+    /* jumping around a long book */
+    .book-map { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px;
+        margin: 0 0 18px; color: var(--silver); font-size: 14px; }
+    .book-map select, .book-map input { font: inherit; font-size: 14px; color: var(--moon); background: var(--glass);
+        border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; }
+    .book-map select { max-width: 320px; }
+    .book-map input { width: 76px; }
+    .book-map form { display: flex; align-items: center; gap: 6px; margin: 0; }
+    .book-map .left { white-space: nowrap; }
+
     .not-free { max-width: 580px; margin: 6vh auto; padding: 44px 36px; text-align: center; }
 
     @media (max-width: 700px) {
@@ -215,10 +225,10 @@
 {% if not free %}
 
     <div class="not-free panel rise">
-        <div style="font-size: 46px;">📚</div>
         <h2>{{ info.title }}</h2>
         <p class="note" style="margin: 0 auto 10px;">This book isn't free to read online yet. It's still protected by copyright, which is how authors are paid for their work.</p>
-        <p class="note" style="margin: 0 auto 24px;">But it's waiting for you at your library ☾</p>
+        <p class="note" style="margin: 0 auto 24px;">You can often borrow it for free as an e-book from Open Library, or find it at your local library.</p>
+        <a href="https://openlibrary.org/works/{{ work_id }}" class="btn primary" target="_blank" rel="noopener">borrow on Open Library</a>
         <a href="/book/{{ work_id }}" class="btn">← back to the book</a>
     </div>
 
@@ -242,6 +252,22 @@
                     <button type="button" id="bigger" title="bigger text">A+</button>
                 </div>
             </div>
+        </div>
+
+        <div class="book-map">
+            {% if contents | length > 1 %}
+                <select id="contents" aria-label="chapters">
+                    {% for chapter in contents %}
+                        <option value="{{ chapter.page }}" {% if chapter.page <= page and (loop.last or loop.nextitem.page > page) %}selected{% endif %}>{{ chapter.title[:60] }}</option>
+                    {% endfor %}
+                </select>
+            {% endif %}
+            <span class="left">{% set minutes = (words_left / 230) | round | int %}{% if minutes >= 120 %}about {{ (minutes / 60) | round | int }} hours left in the book{% else %}about {{ [minutes, 1] | max }} min left in the book{% endif %}</span>
+            <form method="get">
+                <label for="go">page</label>
+                <input id="go" name="page" type="number" min="1" max="{{ total }}" value="{{ page }}">
+                <span>of {{ total }}</span>
+            </form>
         </div>
 
         <article class="reader" id="reader">
@@ -295,6 +321,10 @@
     const hasPage = {{ has_page | tojson }};
     const workId = {{ work_id | tojson }};
     const bookmarkKey = "reading:" + workId;
+
+    // ---------- chapters: jump straight to one ----------
+    const contents = document.getElementById("contents");
+    if (contents) contents.addEventListener("change", function() { location.href = "?page=" + contents.value; });
 
     function readValue(key) {
         try { return localStorage.getItem(key); } catch (e) { return null; }
@@ -351,7 +381,7 @@
 
     // ---------- turning pages: arrow keys and swipes ----------
     document.addEventListener("keydown", function(event) {
-        if (event.target.tagName === "INPUT" || event.target.tagName === "TEXTAREA") return;
+        if (["INPUT", "TEXTAREA", "SELECT"].includes(event.target.tagName)) return;
         if (event.key === "ArrowRight" && page < total) location.href = "?page=" + (page + 1);
         if (event.key === "ArrowLeft" && page > 1) location.href = "?page=" + (page - 1);
     });

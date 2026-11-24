@@ -10,7 +10,7 @@ import re
 import requests
 from flask import Blueprint, abort, jsonify, redirect, render_template, request
 
-from gutenberg import find_free_book, load_pages
+from gutenberg import chapters, find_free_book, load_pages
 
 # app.py imports this file at its very end, so everything below already exists there
 from app import count, get_book, search_book
@@ -91,7 +91,7 @@ def short_reads():
     """The short stories that were found on Project Gutenberg"""
     stories = []
     for title, author, line in SHORT_READS:
-        found = find_free_book(title)
+        found = find_free_book(title, author)
         if found:
             stories.append({"id": found["id"], "title": title, "author": author, "line": line, "free": found})
     return stories
@@ -153,6 +153,8 @@ def read_short(book_id):
         offset=offset,
         page=page,
         total=len(pages),
+        contents=chapters(pages),
+        words_left=sum(len(p["text"].split()) for rest in pages[page - 1:] for p in rest),
         work_id=f"pg{book_id}",
         has_page="page" in request.args
     )

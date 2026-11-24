@@ -15,7 +15,7 @@ from datetime import datetime, timedelta, timezone
 from flask import Flask, jsonify, redirect, render_template, request, url_for, Response, send_from_directory
 import requests
 
-from gutenberg import find_free_book, load_pages
+from gutenberg import chapters, find_free_book, load_pages
 from moods import MOODS, detect_mood, get_films
 from palette import get_palette
 from research import GENRES, features as cover_features
@@ -204,9 +204,19 @@ def find_readable(work_id):
         return readable_cache[work_id]
 
     info = get_book(work_id)
-    found = find_free_book(info["title"])
+    found = find_free_book(info["title"], work_author(work_id))
     readable_cache[work_id] = found
     return found
+
+
+def work_author(work_id):
+    """The name of the first author of a book on Open Library, or None"""
+    work = requests.get(f"https://openlibrary.org/works/{work_id}.json", timeout=15).json()
+    for entry in work.get("authors", []):
+        key = (entry.get("author") or {}).get("key")
+        if key:
+            return requests.get(f"https://openlibrary.org{key}.json", timeout=15).json().get("name")
+    return None
 
 
 def notes_db():
@@ -417,6 +427,8 @@ def read(work_id):
         offset=offset,
         page=page,
         total=len(pages),
+        contents=chapters(pages),
+        words_left=sum(len(p["text"].split()) for rest in pages[page - 1:] for p in rest),
         work_id=work_id,
         has_page="page" in request.args
     )

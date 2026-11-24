@@ -19,6 +19,9 @@ pages_cache = {}
 FIRST_CHAPTER = re.compile(
     r"^(?:(?:chapter|letter|stave|book|part|volume)\s+)?(?:i|1|one)(?:[.:\s].*)?$"
 )
+# where the book itself starts and ends inside the Project Gutenberg file
+START = re.compile(r"\*\*\* ?START OF (?:THE |THIS )?PROJECT GUTENBERG[^*]*\*\*\*", re.IGNORECASE)
+END = re.compile(r"\*\*\* ?END OF (?:THE |THIS )?PROJECT GUTENBERG|^End of (?:the )?Project Gutenberg", re.IGNORECASE | re.MULTILINE)
 # a line made only of dashes, stars or underscores = a break between scenes
 DIVIDER = re.compile(r"^[\s\-*_=~.]{3,}$")
 
@@ -58,22 +61,39 @@ def load_catalog():
             key = clean_title(row["Title"])
             if not key:
                 continue
-            book_id = int(row["Text#"])
-            # many editions of one book: keep the oldest (usually the classic one)
-            if key not in catalog or book_id < catalog[key]["id"]:
-                catalog[key] = {
-                    "id": book_id,
-                    "title": row["Title"].split("\n")[0].strip(),
-                    "author": nice_author(row.get("Authors", "")),
-                }
+            # one title can mean many books (and many editions), so keep them all
+            catalog.setdefault(key, []).append({
+                "id": int(row["Text#"]),
+                "title": row["Title"].split("\n")[0].strip(),
+                "author": nice_author(row.get("Authors", "")),
+                "authors": row.get("Authors", "").lower(),
+            })
+    for books in catalog.values():
+        books.sort(key=lambda b: b["id"])
 
 
-def find_free_book(title):
-    """Find a free public-domain copy of this book on Project Gutenberg"""
+def same_author(wanted, authors):
+    """'F. Scott Fitzgerald' and 'Fitzgerald, F. Scott (Francis Scott), 1896-1940' are the same person"""
+    words = re.findall(r"[a-z]+", wanted.lower().replace("’", "'"))
+    words = [w for w in words if len(w) > 2]
+    return bool(words) and words[-1] in authors
+
+
+def find_free_book(title, author=None):
+    """Find a free public-domain copy of this book on Project Gutenberg.
+
+    The title alone is not enough: "Twilight" or "Wonder" on Project Gutenberg
+    is a different, much older (and often tiny) book than the one people mean.
+    So the author has to match too.
+    """
     load_catalog()
-    found = catalog.get(clean_title(title))
-    if not found:
+    books = catalog.get(clean_title(title), [])
+    if author:
+        books = [b for b in books if same_author(author, b["authors"])]
+    if not books:
         return None
+    # many editions of one book: the oldest one is usually the classic text
+    found = books[0]
     return {
         "id": found["id"],
         "title": found["title"],
@@ -84,7 +104,10 @@ def find_free_book(title):
 
 def skip_front_matter(paragraphs):
     """Start the book at chapter one, without the title page and table of contents"""
-    for i, paragraph in enumerate(paragraphs):
+    # chapter one is near the beginning; a "Chapter I" deep inside is a later part
+    # of the book, and starting there would hide most of it
+    limit = max(40, len(paragraphs) // 6)
+    for i, paragraph in enumerate(paragraphs[:limit]):
         line = paragraph["text"].lower()
         if len(line) > 60 or not FIRST_CHAPTER.match(line) or line.startswith("i ii"):
             continue
@@ -106,12 +129,13 @@ def load_pages(book):
     text = response.text.replace("\r\n", "\n")
 
     # Keep only the book itself, without the Project Gutenberg header and license
-    start = re.search(r"\*\*\* ?START OF.*?\*\*\*", text)
+    start = START.search(text, 0, len(text) // 3)
     if start:
         text = text[start.end():]
-    end = re.search(r"\*\*\* ?END OF", text)
-    if end:
-        text = text[:end.start()]
+    # the license is at the very end; an "END OF" in the middle is part of the story
+    ends = [m for m in END.finditer(text) if m.start() > len(text) * 0.6]
+    if ends:
+        text = text[:ends[-1].start()]
 
     # Paragraphs are separated by empty lines
     paragraphs = []
@@ -149,3 +173,24 @@ def load_pages(book):
 
     pages_cache[book["id"]] = pages
     return pages
+
+
+def nice_heading(text):
+    """'CHAPTER VI. THE BALL' -> 'Chapter VI. The Ball' (Roman numbers stay as they are)"""
+    if not text.isupper():
+        return text
+    words = []
+    for word in text.split():
+        bare = word.strip(".,:;")
+        words.append(word if bare and re.fullmatch(r"(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})", bare) else word.capitalize())
+    return " ".join(words)
+
+
+def chapters(pages):
+    """The table of contents: every chapter heading and the page it is on"""
+    found = []
+    for number, page in enumerate(pages, start=1):
+        for paragraph in page:
+            if paragraph["heading"] and len(found) < 400:
+                found.append({"title": nice_heading(paragraph["text"]), "page": number})
+    return found
