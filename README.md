@@ -1,6 +1,6 @@
 # Shelf & Screen
 
-### Video Demo: https://youtu.be/Gh4zDBMH5gw
+## Video Demo: https://youtu.be/Gh4zDBMH5gw
 
 # Live site: *coming soon*
 
